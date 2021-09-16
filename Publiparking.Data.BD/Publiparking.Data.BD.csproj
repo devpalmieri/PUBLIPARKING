@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
+    <AssemblyName>Publiparking.Data</AssemblyName>
+  </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Publiparking.Data.SqlServer\Publiparking.Data.SqlServer.csproj" />
+      <ProjectReference Include="..\Publisoftware.Data.SqlServer\Publisoftware.Data.SqlServer.csproj" />
+      <ProjectReference Include="..\Publisoftware.Data\Publisoftware.Data.BD.csproj" />
+      <ProjectReference Include="..\Publisoftware.Utilities\Publisoftware.Utilities.csproj" />
+      <ProjectReference Include="..\Publisoftware.Utility.Log\Publisoftware.Utility.Log.csproj" />
+      <ProjectReference Include="..\Publisoftware.Utility\Publisoftware.Utility.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Not Found";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row box-min-height">
+    <div class="col-xs-12 col-md-12">
+        <h1>@ViewBag.ErrorMessage</h1>
+        <h1>@ViewBag.OriginalPath</h1>
+        <h1>@ViewBag.QS</h1>
+        <br />
+        <a asp-action="Index" asp-controller="HomeUtenteLogged">
+            Ritorna alla Home Page
+        </a>
+    </div>
+</div>

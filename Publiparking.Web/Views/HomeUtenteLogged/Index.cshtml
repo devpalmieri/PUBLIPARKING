@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @using Microsoft.AspNetCore.Authentication
+}
+@*<dl>
+        @foreach (var claim in User.Claims)
+        {
+            <dt>@claim.Type</dt>
+            <dd>@claim.Value</dd>
+        }
+    </dl>*@
+<div class="row">
+    <br />
+    <div class="col-xs-12 col-md-12" style="margin-top: -15px !important;">
+        <div class="box_simple box-default-simple box-min-height" style="text-align:center">
+            <div class="box-header-orange" style="background-color: #f38b00 !important;">
+                <h1 class="box-title" style="font-size:35px;color:#FFF">Il partner qualificato nella gestione della sosta e ZTL</h1>
+            </div>
+            <div class="box-body">
+                <div class="box-body">
+                    <div class="row" style="height: 50%; min-height: 100px; max-height: 150px;"></div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label></label>
+                            </div>
+                            <div class="form-group">
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label></label>
+                                <img src="~/Images/Park/ico_ztl.png" style="width:60%" />
+                            </div>
+                            <div class="form-group">
+                                <h2>Gestione ZTL</h2>
+                                <p style="text-align:justify;font-size: 17px;">
+                                    Accedere a questa sezione per acquistare o prenotare un Pass per accedere alle zone a traffico limitato e leggere il regolamento e le tariffe.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label></label>
+                            </div>
+                            <div class="form-group">
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label></label>
+                                <img src="~/Images/Park/ico-circle-park.jpg" style="width:60%" />
+                            </div>
+                            <div class="form-group">
+                                <h2>Gestione Sosta</h2>
+                                <p style="text-align:justify;font-size: 17px;">
+                                    Accedere a questa sezione per verificare le modalità di pagamento, la gestione degli stalli, la sosta prolungata e leggere il regolamento e le tariffe.
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label></label>
+                            </div>
+                            <div class="form-group">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

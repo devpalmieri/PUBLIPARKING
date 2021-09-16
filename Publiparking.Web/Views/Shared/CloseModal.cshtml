@@ -1,0 +1,41 @@
+﻿@model Publiparking.Web.Models.CloseModal
+<script src="~/js/plugins/jquery/jquery-3.3.1.js"></script>
+@if (Model.SetClose)
+{
+<script type="text/javascript">
+    $(function () {
+        $('body').children('.container').children('.pb-3').children('#modal-container').css("display", "none");
+        $('body').children('.modal-backdrop').removeClass("show");
+        $('#modal-container').modal('hide').removeClass("in").removeClass("modal-backdrop");
+        $('#modal-container').css("display", "none");
+        $(".modal-dialog").attr('aria-hidden', 'true');
+        $(".modal-backdrop").removeClass("show");
+        $(".modal-backdrop").removeClass("in");
+        $(".modal-backdrop").remove();
+        $("[class*='modal-backdrop show']").remove();
+    });
+</script>}
+
+@if (Model.SetManageData)
+{
+<script type="text/javascript">
+        $(function () {
+            $.ajax({
+                method: "GET",
+                datatype: "text/plain",
+                url:@Model.Destination,
+                cache: false
+            }).done(function (result) {
+                $("#@Model.Target").html(result);
+                @if (!string.IsNullOrWhiteSpace(Model.OnSuccess))
+                {
+                    <text>
+                    var onSuccess = @Model.OnSuccess;
+                    if(typeof onSuccess === 'function'){
+                        onSuccess();
+                    }
+                    </text>
+                }
+            });
+        });
+</script>}

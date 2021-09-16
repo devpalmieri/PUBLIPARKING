@@ -1,0 +1,90 @@
+﻿@model Publiparking.Web.Models.Account.UserProfileViewModel
+
+@{
+    ViewData["Title"] = "Profilo";
+    ViewBag.Title = "Profilo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string labelCFPiva = ViewBag.CFPiva != null ? (string)ViewBag.CFPiva : "Codice Fiscale"; ;
+}
+
+
+<div id="main" class="container-fluid body-content">
+    <div class="col-xs-12 col-md-7">
+        <div class="box box-default box-min-height">
+            <div class="box-header with-border">
+                <h3 class="box-title">Profilo Utente: dati anagrafici</h3>
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    @if (Model.CFPIva.Length == 16)
+                    {
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Cognome</label>
+                                <input class="form-control" asp-for="Cognome" readonly="readonly">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Nome</label>
+                                <input class="form-control" asp-for="Nome" readonly="readonly">
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Ragione Sociale</label>
+                                <input class="form-control" asp-for="RagSociale" readonly="readonly">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label></label>
+
+                            </div>
+                        </div>
+                    }
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label>@labelCFPiva</label>
+                            <input class="form-control" asp-for="CFPIva" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>E-Mail</label>
+                            <input class="form-control" asp-for="Email" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Telefono</label>
+                            <input type="password" class="form-control" asp-for="PhoneNumber" readonly="readonly">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Mobile</label>
+                            <input class="form-control" asp-for="Mobile">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label></label>
+                            <a asp-controller="HomeUtenteLogged" asp-action="Profile" asp-route-id="@ViewBag.encryptedUser"><h5>Dati di Accesso</h5></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

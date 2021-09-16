@@ -1,0 +1,153 @@
+﻿@model Publiparking.Web.Models.CambiaEnteWebViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .btn-dark {
+        color: #fff !important;
+        background-color: #343a40;
+        border-color: #343a40;
+    }
+</style>
+<h1>Index</h1>
+<div id="main" class="container-fluid body-content">
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <div class="row">
+        <div class="col-sm-4">
+            @Html.DropDownListFor(m => m.selEnteId, new SelectList(Model.listEnte, "id_ente", "descrizione_ente"), new { @id = "ddlEnte" })
+            <span asp-validation-for="selEnteId" class="text-danger"></span>
+        </div>
+        <div class="col-sm-5">
+            <div id="id_url" style="display: none;">
+                <a id="link_ente" href='#' target="_blank" class="btn btn-drop-dark" style="height:49px;padding-top: 13px;">
+                    <span></span>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-7">
+            @Html.ActionLink("Carrello Pagamenti", "Index", "tab_carrello")
+            @*<a class="nav-link text-dark" asp-area="" asp-controller="tab_avv_pag" asp-action="Index">Avvisi</a>*@
+        </div>
+    </div>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Codice Ente
+                </th>
+                <th>
+                    Descrizione
+                </th>
+
+                <th>
+                    P. IVA
+                </th>
+
+                <th>
+                    Nome Database
+                </th>
+
+                <th>
+                    Username
+                </th>
+                <th>
+                    Password
+                </th>
+                <th>
+                    IP
+                </th>
+                <th>
+                    Codice
+                </th>
+
+                @*<th></th>*@
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.listEnte)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.codice_ente)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.descrizione_ente)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.p_iva)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nome_db)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.user_name_db)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.password_db)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.indirizzo_ip_db)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cod_ente)
+                    </td>
+
+                    @*<td>
+                            <a asp-action="Edit" asp-route-id="@item.id_ente">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.id_ente">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.id_ente">Delete</a>
+                        </td>*@
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        EnteChange();
+
+    });
+    $(function () {
+        $("#ddlEnte").change(function (e) {
+            EnteChange();
+        });
+    });
+         function EnteChange() {
+          if ($("#ddlEnte").val() != "") {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("SelectEnte", "anagrafica_ente")",
+                data: { "IdEnte": $("#ddlEnte").val()},
+                success: function (data) {
+                    var arr = data.split(';');
+                    if (arr[0] == null || arr[0] == '') {
+                        $("#id_url").css("display", "none");
+                    }
+                    else {
+                        $("#id_url").css("display", "block");
+                        $("#link_ente").attr('href', arr[0]);
+                        $("#link_ente").html('Visita il sito del ' + arr[1]);
+
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    bootbox.alert(messageErroreAjax);
+                }
+            });
+        }
+        else {
+            $('#ddlEnte').attr('disabled', 'disabled');
+            $("#ddlEnte").html('');
+        }
+    }
+</script>

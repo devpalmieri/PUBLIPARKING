@@ -1,0 +1,41 @@
+﻿@using WebHelpers.Mvc5
+@*@using FiscoLocale.Models*@
+@using Microsoft.AspNet.Identity;
+@*@using Microsoft.AspNet.Identity.EntityFramework;*@
+@using Microsoft.Owin;
+@using Owin;
+@Html.AntiForgeryToken()
+<style>
+    .wrapword {
+        white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        white-space: pre-wrap; /* css-3 */
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+        word-break: break-all;
+        white-space: normal;
+    }
+</style>
+<aside class="main-sidebar">
+    <section class="sidebar">
+        @* BEGIN Search *@
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search...">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+        @* END Search *@
+        @* BEGIN Menu *@
+        <ul class="sidebar-menu" data-widget="tree">
+            @*<li class="header">HEADER</li>*@
+            <partial name="_Menu" />
+
+        </ul>
+        @* END Menu *@
+    </section>
+</aside>

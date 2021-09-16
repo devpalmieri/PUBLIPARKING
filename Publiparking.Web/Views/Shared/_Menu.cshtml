@@ -1,0 +1,54 @@
+﻿@{
+    @using Publiparking.Web.Models.Menu
+    @using Publiparking.Web.Classes
+    @using Publiparking.Web.Classes.Helper
+    List<MenuNodeFirstLevel> menu = null;
+}
+
+@{
+    if (Sessione.GetCurrentNodesMenu() != null)
+        menu = Sessione.GetCurrentNodesMenu();
+
+}
+@if (menu != null)
+{
+    @foreach (var currNodeFirst in menu)
+    {
+        if (currNodeFirst.IsLink)
+        {
+            <li>
+                @*<a href="@Url.Action(currNodeFirst.Action, currNodeFirst.controller)">
+                        <i class="fa fa-link"></i> <span>@currNodeFirst.Descrizione</span>
+                    </a>*@
+                <a asp-action="@currNodeFirst.Action" asp-controller="@currNodeFirst.controller">
+                    <i class="fa fa-link"></i> <span>@currNodeFirst.Descrizione</span>
+                </a>
+            </li>
+        }
+        else
+        {
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-link"></i> <span>@currNodeFirst.Descrizione</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                @if (currNodeFirst.ListMenuSecondLevel != null)
+                {
+                    <ul class="treeview-menu">
+                        <li>
+                            @foreach (var currNodeSecond in currNodeFirst.ListMenuSecondLevel)
+                            {
+                                <a href="@Url.Action(currNodeSecond.Action, currNodeSecond.controller)">@currNodeSecond.Descrizione</a>
+                            }
+                        </li>
+                    </ul>
+                }
+            </li>
+        }
+    }
+
+
+}
+

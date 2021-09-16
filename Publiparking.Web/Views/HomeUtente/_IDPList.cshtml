@@ -1,0 +1,85 @@
+﻿@using Italia.Spid.Authentication.IdP
+@using Publiparking.Web.Classes
+@{
+    List<IdentityProviderConfigData> listIDP = null;
+    var messageInfo = ViewBag.MessageInfo;
+    var messageTitle = ViewBag.MessageTitle;
+    var messageType = ViewBag.MessageType;
+    var callController = ViewBag.CallController;
+}
+<style>
+    ul {
+        list-style: none;
+    }
+
+        ul li:before {
+            content: '✓';
+            color: #0066cc;
+            font-weight: 600;
+        }
+</style><div class="modal-body" style="margin-top: -16px;">
+    <div style="background-color:#0066cc; color:#FFF; text-align:center;font-size:22px;padding-top: 0px;padding-bottom: 0px;margin-left:-16px;width:106%">
+        <strong>Entra con SPID</strong>
+        <button type="button" title="Annulla e Chiudi" class="btn btn-danger" data-dismiss="modal" style="float:right;margin-top: -2px;">X</button>
+    </div>
+    @using (Html.BeginForm("IDPList", (String)ViewBag.CallController, FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label></label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label></label>
+                </div>
+                <ul class="spid-idp-button-menu" id="spid-idp-list-large-root-post" aria-labelledby="spid-idp" style="margin-top:-35px">
+                    @if (Sessione.GetListIDPd() != null)
+                    {
+                        listIDP = Sessione.GetListIDPd();
+                        foreach (IdentityProviderConfigData link in listIDP)
+                        {
+                            <li class="spid-idp-button-link" style="margin-bottom: -15px;">
+                                <a href='@Url.Action("SpidRequest", "HomeUtente", new { IdPName = link.EntityId })'>
+                                    <img class="idp-button-idp-logo" style="width:70% !important;padding-top:8px !important" title=@link.Description alt=@link.Description src='@Url.Content(link.logo)' />
+                                </a>
+                            </li>
+                        }
+                    }
+
+                </ul>
+                <hr style="background-color:#0066cc; color:#0066cc;margin-top: 17px;" />
+                <ul>
+                    <li class="spid-idp-support-link">
+                        <a style="font-size: 15px;" href="http://www.spid.gov.it" target="_blank">Maggiori informazioni</a>
+                    </li>
+
+                    <li class="spid-idp-support-link">
+                        <a style="font-size: 15px;" href="http://www.spid.gov.it/richiedi-spid" target="_blank">Non hai SPID?</a>
+                    </li>
+                    <li class="spid-idp-support-link">
+                        <a style="font-size: 15px;" href="http://www.spid.gov.it/serve-aiuto" target="_blank">Serve aiuto?</a>
+                    </li>
+                </ul>
+                @*</div>*@
+                @*</div>
+                    </div>*@
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label></label>
+                </div>
+            </div>
+
+        </div>
+
+    }
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#approve-btn').click(function () {
+            $('#modal-container').modal('hide');
+        });
+    });
+</script>

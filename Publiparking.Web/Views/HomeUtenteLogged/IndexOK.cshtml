@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @using Microsoft.AspNetCore.Authentication
+}
+@*<dl>
+        @foreach (var claim in User.Claims)
+        {
+            <dt>@claim.Type</dt>
+            <dd>@claim.Value</dd>
+        }
+    </dl>*@
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="box_simple box-default-simple" style="text-align:center">
+            <div class="box-header-blue" style="background-color: #007cba">
+                <h1 class="box-title" style="font-size:35px;color:#FFF">Il partner qualificato nella gestione della sosta</h1>
+            </div>
+            <div class="box-body">
+                <div class="box-body">
+                    <div class="row">
+                        @*<div class="col-md-1">
+                                <div class="form-group">
+                                    <label></label>
+                                </div>
+                                <div class="form-group">
+
+                                </div>
+                            </div>*@
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label></label>
+                                <img src="~/Images/bg-header-publiparking.jpg" style="width:60%" />
+                            </div>
+                            <div class="form-group">
+                                <h2>Soluzioni</h2>
+                                <p style="text-align:justify;font-size: 17px;">
+                                    Le soluzioni gestionali offerte da <strong>PUBLIPARKING</strong> si basano su una piattaforma tecnologicamente evoluta e innovativa. Le risorse umane impiegate sono altamente qualificate e in grado di garantire la massima efficienza.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label></label>
+                                <img src="~/Images/parcheggio-modalita-pagamento-2.jpg" style="width:60%" />
+                            </div>
+                            <div class="form-group">
+                                <h2>Area Riservata</h2>
+                                <p style="text-align:justify;font-size: 17px;">
+                                    Sezione del sito riservata ai soggetti debitori degli <strong>ENTI</strong> gestiti da <strong>PUBLIPARKING</strong>;  i soggetti debitori sono i contribuenti, i coobbligati ed i terzi debitori destinatari di un Atto di pagamento emesso dal
+                                    sistema <strong>PUBLIPARKING</strong>
+                                </p>
+                            </div>
+                        </div>
+                        @*<div class="col-md-1">
+                                <div class="form-group">
+                                    <label></label>
+                                </div>
+                                <div class="form-group">
+
+                                </div>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="box-header-blue" style="background-color: #007cba">
+                    <a class="nav-link text-blue" asp-area="" asp-controller="HomeUtenteLogged" asp-action="ModPagamento">
+                        <h1 class="box-title" style="font-size:35px;color:#FFF">Modalità di Pagamento</h1>
+                    </a>
+                </div>
+                <div class="box-header-orange" style=" background-color: #f38b00; margin-top:-9px">
+                    <br />
+                    <img src="~/Images/Defribillatore_Publiparking.jpg" style="width:60%;">
+                    <blockquote>
+                        <h2>
+                            <span style="color:#fff">
+                                IL PARCHEGGIO CHE CERCAVI!
+
+                            </span>
+                            <span style="color:#fff">
+                                IL PARCHEGGIO CHE CERCAVI!
+
+                            </span>
+                        </h2>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,368 @@
+﻿@using Publiparking.Web.Classes
+@{
+    ViewBag.Title = "_CookieBox";
+}
+
+@*@{
+        string messageModal = ViewBag.messageModal;
+        string messageModalType = ViewBag.messageModalType;
+
+    }*@
+<style>
+    .modal-content {
+        /*position: absolute;*/
+        left: 50%;
+        top: 50%;
+        width: 1150px !important;
+        min-width: 650px !important;
+        transform: translate(-50%, 385%);
+        z-index: 10040;
+        overflow: auto;
+        overflow-y: auto;
+    }
+
+    .opac {
+        opacity: 10 !important;
+        margin-top: 5px;
+        padding-right: 6px;
+    }
+
+    .modal-backdrop {
+        background-color: transparent !important;
+    }
+
+    .modal {
+        background: none !important;
+    }
+
+    .header-box {
+        background-color: #0b4a6d;
+        color: #FFF;
+    }
+
+    .close {
+        font-weight: 700;
+        line-height: 1;
+        color: red !important;
+        text-shadow: 0 1px 0 #fff;
+        filter: alpha(opacity=20);
+        opacity: 14.2;
+    }
+
+        .close:focus, .close:hover {
+            color: #FFF !important;
+            text-decoration: none;
+            cursor: pointer;
+            /*filter: alpha(opacity=50);*/
+            opacity: 10.5;
+        }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+        .switch input {
+            display: none;
+        }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+    }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
+
+    /* include generated hidden field here */
+    input[type="checkbox"]:checked + input[type="hidden"] + .slider,
+    input[type="checkbox"]:checked + .slider {
+        background-color: #2196F3;
+    }
+
+    /* include generated hidden field here */
+    input[type="checkbox"]:focus + input[type="hidden"] + .slider,
+    input[type="checkbox"]:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    /* include generated hidden field here */
+    input[type="checkbox"]:checked + input[type="hidden"] + .slider:before,
+    input[type="checkbox"]:checked + .slider:before {
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+</style>
+<div id="CookieBox" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="width:90%">
+        <div class="modal-content">
+            <div class="modal-header header-box-park">
+                <h4 class="modal-title">Il rispetto della tua riservatezza è la nostra priorità</h4>
+                <a href="@Url.Action("ClosePrivacy", "HomeUtente")" class="close">&times;</a>
+
+            </div>
+            <div class="modal-body">
+                <table class="responsive" style="background-color: #FFF;width:100%; color:#000000" id="tblmaster">
+                    <tr>
+                        <td style="width:75%; text-align:left"></td>
+                        <td style="width: 25%; text-align: right"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 75%; text-align: justify; padding-left: 16px;">
+                            <strong>Questo sito utilizza cookie tecnici e di terze parti</strong>.<br /><br />
+                            Con la tua autorizzazione noi e i nostri fornitori possiamo utilizzare dati precisi di geolocalizzazione e identificazione tramite la scansione del dispositivo. Puoi fare clic per consentire a noi e ai nostri fornitori il trattamento per le finalità sopra descritte. In alternativa puoi accedere a informazioni più dettagliate e modificare le tue preferenze prima di acconsentire o di negare il consenso.
+                            Si rende noto che alcuni trattamenti dei dati personali possono non richiedere il tuo consenso, ma hai il diritto di opporti a tale trattamento. Le tue preferenze si applicheranno solo a questo sito web.
+                            Puoi modificare le tue preferenze in qualsiasi momento ritornando su questo sito o consultando la nostra
+                            informativa sulla privacy.<br />
+
+                            Inoltre, il tuo eventuale consenso, può essere rimosso utilizzando il link "<strong>Cookie Rimuovi consenso</strong>" presente nel "footer" della pagina.
+                        </td>
+                        <td style="width: 25%; text-align: right">
+                            <table class="responsive">
+                                <tr>
+                                    <td style="width: 100%; text-align: center; padding-left: 50px; ">
+                                        @*<a href="@Url.Action("ViewPrivacy", "HomeUtente")" class="btn btn-default" id="option" style="margin-top: 4px; font-weight: 600; width: 100%;">Più Opzioni</a>*@
+                                        <button class="btn btn-default" id="option" style="margin-top: 4px; font-weight: 600; width: 100%;">Più Opzioni</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 100%; text-align: center; padding-left: 50px; ">
+                                        <a href="@Url.Action("ViewPrivacy", "HomeUtente")" class="btn btn-primary" id="consent" style="margin-top: 4px; font-weight: 500; width: 100%; ">Accetto</a>
+                                    </td>
+                                </tr>
+                                <tr style="padding-bottom: 6px;">
+                                    <td style="width: 100%; text-align: center; padding-left:50px;">
+                                        <a href="@Url.Action("ClosePrivacy", "HomeUtente")" class="btn btn-primary" id="consent" style="margin-top: 4px; font-weight: 500; width: 100%; ">Rifiuto</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+                <div id="dvOption" style="display:none">
+                    <div id="tabs" style="margin-left:16px">
+                        <ul class="nav nav-tabs">
+                            <li id="liC" class="active"><a href="#tabs-1" data-toggle="tab" class="btn btn-primary">Consenso</a></li>
+                            <li id="liD"><a href="#tabs-2" data-toggle="tab" class="btn btn-primary">Dettagli</a></li>
+                            <li id="liC"><a href="#tabs-3" data-toggle="tab" class="btn btn-primary">Informazioni sui cookie</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tabs-1" class="tab-pane active">
+                                <div>
+                                    <h2>Questo sito utilizza i cookie</h2>
+                                    <br />
+                                    <p style="text-align:justify; font-size:16px">
+                                        Utilizziamo i cookie per personalizzare contenuti ed annunci, per fornire funzionalità dei social media e per analizzare il nostro traffico. Condividiamo inoltre informazioni sul modo in cui utilizza il nostro sito con i nostri partner che si occupano di analisi dei dati web, pubblicità e social media,
+                                        i quali potrebbero combinarle con altre informazioni che ha fornito loro o che hanno raccolto dal suo utilizzo dei loro servizi.
+                                    </p>
+                                    <hr />
+                                    <center>
+                                        <a href="@Url.Action("ClosePrivacy", "HomeUtente")" class="btn btn-default" id="consent" style="font-weight: 500; font-size:18px">Rifiuto</a>
+                                        @*<button class="btn btn-default" id="pers" name="pers" style="font-weight: 500; font-size:18px">Personalizza</button>*@
+                                        <a href="#tabs-2" data-toggle="tab" class="btn btn-default" style="font-weight: 500; font-size: 18px">Personalizza</a>
+                                        <a href="@Url.Action("ViewPrivacy", "HomeUtente")" class="btn btn-default" id="consent" style="font-weight: 500; font-size: 18px">Accetto</a>
+
+                                    </center>
+                                </div>
+                            </div>
+                            <div id="tabs-2" class="tab-pane">
+                                <table class="responsive" style="width:100%; font-size:16px">
+                                    <tr>
+                                        <td style="text-align:justify; width:85%">
+                                            <h3>Necessari</h3>
+                                            I cookie necessari contribuiscono a rendere fruibile il sito web abilitandone funzionalità di base quali la navigazione sulle pagine e l'accesso alle aree protette del sito.
+                                            Il sito web non è in grado di funzionare correttamente senza questi cookie.
+                                        </td>
+                                        <td style="text-align: right; width: 10%; padding-top: 25px;">
+                                            @*<text style="float:left">
+                                                    @Html.RadioButton("necessari", "true", new { @class = "opac" })  <span style="padding-right:6px">Si</span>
+
+                                                    @Html.RadioButton("necessari", "false", true, new { @class = "opac" }) <span style="padding-right:6px">No</span>
+                                                </text>*@
+                                            @Html.DropDownList("necessari", new List<SelectListItem>
+                                            {
+                                                new SelectListItem{ Text="No", Value = "false" },
+                                                new SelectListItem{ Text="Si", Value = "true" },
+                                             })
+                                        </td>
+                                        <td style="text-align:right; width:5%"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:justify; width:85%">
+                                            <h3>Preferenze</h3>
+                                            I cookie di preferenza consentono al sito web di memorizzare informazioni che ne influenzano il comportamento oppure l'aspetto, quali la lingua preferita o la località nella quale ti trovi.
+                                        </td>
+                                        <td style="text-align: right; width: 10%; padding-top: 25px;">
+                                            @*<text style="float:left">
+                                                    @Html.RadioButton("preferenze", "true", new { @class = "opac" })  <span style="padding-right:6px">Si</span>
+                                                </text>
+                                                <text>
+                                                    @Html.RadioButton("preferenze", "false", true, new { @class = "opac" }) <span style="padding-right:6px">No</span>
+                                                </text>*@
+
+                                            @Html.DropDownList("preferenze", new List<SelectListItem>
+                                            {
+                                                new SelectListItem{ Text="No", Value = "false" },
+                                                new SelectListItem{ Text="Si", Value = "true" },
+                                             })
+                                        </td>
+                                        <td style="text-align:right; width:5%"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:justify; width:85%">
+                                            <h3>Statistiche</h3>
+                                            I cookie statistici aiutano i proprietari del sito web a capire come i visitatori interagiscono con i siti raccogliendo e trasmettendo informazioni in forma anonima.
+                                        </td>
+                                        <td style="text-align: right; width: 10%; padding-top: 25px;">
+                                            @*<text style="float:left">
+                                                    @Html.RadioButton("statistiche", "true", new { @class = "opac" })  <span style="padding-right:6px">Si</span>
+                                                </text>
+                                                <text>
+                                                    @Html.RadioButton("statistiche", "false", true, new { @class = "opac" }) <span style="padding-right:6px">No</span>
+                                                </text>*@
+                                            @Html.DropDownList("statistiche", new List<SelectListItem>
+                                            {
+                                                new SelectListItem{ Text="No", Value = "false" },
+                                                new SelectListItem{ Text="Si", Value = "true" },
+                                             })
+                                        </td>
+                                        <td style="text-align:right; width:5%"> </td>
+                                    </tr>
+                                </table>
+                                <hr />
+                                <center>
+                                    <a href="@Url.Action("ClosePrivacy", "HomeUtente")" class="btn btn-default" id="consent" style="font-weight: 500; font-size:18px">Rifiuto</a>
+                                    <button class="btn btn-default" id="btnSel" name="btnSel" onclick="btnSelected();" style="font-weight: 500; font-size:18px">Accetta Selezionati</button>
+                                    @*<a href="@Url.Action("ViewPrivacy", "HomeUtente")" id="btnSel" class="btn btn-default" style="font-weight: 500; font-size: 18px">Accetta Selezionati</a>*@
+
+                                    <a href="@Url.Action("ViewPrivacy", "HomeUtente")" class="btn btn-default" id="consent" style="font-weight: 500; font-size: 18px">Accetto</a>
+                                </center>
+                            </div>
+                            <div id="tabs-3" class="tab-pane">
+                                <div>
+                                    <h2>Informazione sui cookie</h2>
+                                    <br />
+                                    <p style="text-align:justify; font-size:16px">
+                                        I cookie sono piccoli file di testo che possono essere utilizzati dai siti web per rendere più efficiente l'esperienza per l'utente.
+                                        La legge afferma che possiamo memorizzare i cookie sul suo dispositivo se sono strettamente necessari per il funzionamento di questo sito.
+                                        Per tutti gli altri tipi di cookie abbiamo bisogno del suo permesso.
+                                        Questo sito utilizza diversi tipi di cookie. Alcuni cookie sono collocate da servizi di terzi che compaiono sulle nostre pagine.
+                                        In qualsiasi momento è possibile modificare o revocare il proprio consenso dalla Dichiarazione dei cookie sul nostro sito Web.
+                                        Scopra di più su chi siamo, come può contattarci e come trattiamo i dati personali nella nostra Informativa sulla privacy.
+                                        Specifica la data di quando ci hai contattati per quanto riguarda il tuo consenso.
+                                    </p>
+                                    <hr />
+                                    <center>
+                                        <a href="@Url.Action("ClosePrivacy", "HomeUtente")" class="btn btn-default" id="consent" style="font-weight: 500; font-size:18px">Rifiuto</a>
+                                        @*<button class="btn btn-default" id="pers2" name="pers2" style="font-weight: 500; font-size:18px">Personalizza</button>*@
+                                        <a href="#tabs-2" data-toggle="tab" class="btn btn-default" style="font-weight: 500; font-size: 18px">Personalizza</a>
+                                        <a href="@Url.Action("ViewPrivacy", "HomeUtente")" class="btn btn-default" id="consent" style="font-weight: 500; font-size: 18px">Accetto</a>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <a href="@Url.Action("Privacy", "HomeUtente")" target="_blank" class="btn btn-primary" id="learn-more" style="margin-top:-2px;">Clicca qui per visualizzare la Policy Privacy</a>
+            </div>
+        </div>
+    </div>
+</div>
+@if (!Sessione.GetPrivacy())
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            $(".modal-backdrop").removeClass("modal-backdrop");
+            $("#CookieBox").modal("show");
+        };
+    </script>
+}
+<script type="text/javascript">
+    function btnSelected() {
+        var radioValueNec = $('#necessari').val();/*$("input[name='necessari']:checked").val();*/
+        var radioValuePref = $('#preferenze').val();//$("input[name='preferenze']:checked").val();
+        var radioValueStat = $('#statistiche').val();//$("input[name='statistiche']:checked").val();
+        callCookie(radioValueNec, radioValuePref, radioValueStat);
+    }
+    function callCookie(valueN, valueP,valueS) {
+        var response = null;
+        $.ajax({
+            async: false,
+            type: "GET",
+            url: "@Url.Action("ViewPrivacy", "HomeUtente")",
+            data: { "isNecessari": valueN, "isPreferenze": valueP, "isStatistiche": valueS },
+            cache: false,
+            success: function (data) {
+                $("#CookieBox").modal("hide");
+            }
+        });
+    }
+    $(document).ready(function () {
+        $("#btnSel").click(function () {
+            var radioValueNec = $('#necessari').val();/*$("input[name='necessari']:checked").val();*/
+            var radioValuePref = $('#preferenze').val();//$("input[name='preferenze']:checked").val();
+            var radioValueStat = $('#statistiche').val();//$("input[name='statistiche']:checked").val();
+            callCookie(radioValueNec, radioValuePref, radioValueStat);
+
+            $('#btnSel').attr('href', "/HomeUtente/ViewPrivacy?isNecessari=" + radioValueNec + "&isPreferenze=" + radioValuePref + "&isStatistiche=" + radioValueStat);
+
+        });
+    });
+    //window.onload = function () {
+    //    $("#CookieBox").modal("show");
+    //};
+    $("#option").click(function () {
+        $("#tblmaster").css("display", "none");
+        $("#dvOption").css("display", "block");
+    });
+    $("#pers2").click(function () {
+        $("#tblmaster").css("display", "none");
+        $("#dvOption").css("display", "block");
+    });
+</script>
+
+
+
+

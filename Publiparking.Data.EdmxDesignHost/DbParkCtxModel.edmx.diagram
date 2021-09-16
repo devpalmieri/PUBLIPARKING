@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2c8fdd1fdd614b45a63eb75cd7c77957" Name="Diagram1" ZoomLevel="62">
+        <EntityTypeShape EntityType="DbParkContext.Abbonamenti" Width="1.5" PointX="3.75" PointY="2.125" />
+        <EntityTypeShape EntityType="DbParkContext.AbbonamentiRinnovi" Width="1.5" PointX="13.5" PointY="6.875" />
+        <EntityTypeShape EntityType="DbParkContext.Bollettini" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="DbParkContext.Causali" Width="1.5" PointX="8.25" PointY="29.875" />
+        <EntityTypeShape EntityType="DbParkContext.CausaliVerbali" Width="1.5" PointX="10.5" PointY="19.25" />
+        <EntityTypeShape EntityType="DbParkContext.Cellulari" Width="1.5" PointX="6" PointY="1.875" />
+        <EntityTypeShape EntityType="DbParkContext.FasceTariffeAbbonamenti" Width="1.5" PointX="10.5" PointY="2.5" />
+        <EntityTypeShape EntityType="DbParkContext.FotoPenali" Width="1.5" PointX="7.5" PointY="6.375" />
+        <EntityTypeShape EntityType="DbParkContext.FotoVerbali" Width="1.5" PointX="10.5" PointY="22.125" />
+        <EntityTypeShape EntityType="DbParkContext.Giri" Width="1.5" PointX="6" PointY="9.125" />
+        <EntityTypeShape EntityType="DbParkContext.GiriFrequenzaFoto" Width="1.5" PointX="8.25" PointY="33.75" />
+        <EntityTypeShape EntityType="DbParkContext.GiriOperatore" Width="1.5" PointX="13.5" PointY="17.75" />
+        <EntityTypeShape EntityType="DbParkContext.Marche" Width="1.5" PointX="12.75" PointY="10.625" />
+        <EntityTypeShape EntityType="DbParkContext.Modelli" Width="1.5" PointX="15" PointY="10.5" />
+        <EntityTypeShape EntityType="DbParkContext.Operatori" Width="1.5" PointX="8.25" PointY="24.375" />
+        <EntityTypeShape EntityType="DbParkContext.OperazioniLocal" Width="1.5" PointX="10.5" PointY="13.25" />
+        <EntityTypeShape EntityType="DbParkContext.Permessi" Width="1.5" PointX="2.75" PointY="5.375" />
+        <EntityTypeShape EntityType="DbParkContext.SMSIn" Width="1.5" PointX="12.75" PointY="1.5" />
+        <EntityTypeShape EntityType="DbParkContext.SMSOut" Width="1.5" PointX="15" PointY="1.5" />
+        <EntityTypeShape EntityType="DbParkContext.StalliFrequenzaFoto" Width="1.5" PointX="5.25" PointY="31.75" />
+        <EntityTypeShape EntityType="DbParkContext.StalliGiro" Width="1.5" PointX="8.25" PointY="14.25" />
+        <EntityTypeShape EntityType="DbParkContext.StalliTarghe" Width="1.5" PointX="2.75" PointY="9.375" />
+        <EntityTypeShape EntityType="DbParkContext.sysdiagrams" Width="1.5" PointX="12.75" PointY="13.375" />
+        <EntityTypeShape EntityType="DbParkContext.Tariffe" Width="1.5" PointX="0.75" PointY="6.625" />
+        <EntityTypeShape EntityType="DbParkContext.TariffeAbbonamenti" Width="1.5" PointX="8.125" PointY="0.5" />
+        <EntityTypeShape EntityType="DbParkContext.Terminali" Width="1.5" PointX="14.75" PointY="5.375" />
+        <EntityTypeShape EntityType="DbParkContext.TipiVerbale" Width="1.5" PointX="10.5" PointY="30.375" />
+        <EntityTypeShape EntityType="DbParkContext.TitoliOperatori" Width="1.5" PointX="16.75" PointY="5.375" />
+        <EntityTypeShape EntityType="DbParkContext.TitoliSMS" Width="1.5" PointX="8.25" PointY="9.875" />
+        <EntityTypeShape EntityType="DbParkContext.translog_phonzie" Width="1.5" PointX="17.75" PointY="17.375" />
+        <EntityTypeShape EntityType="DbParkContext.VerbaliTemplate" Width="1.5" PointX="0.75" PointY="19.375" />
+        <EntityTypeShape EntityType="DbParkContext.DbLog" Width="1.5" PointX="2.75" PointY="19.375" />
+        <AssociationConnector Association="DbParkContext.FK_Cellulari_Abbonamenti" />
+        <AssociationConnector Association="DbParkContext.FK_CausaliVerbali_Causali" />
+        <AssociationConnector Association="DbParkContext.FK_TitoliSMS_Cellulari" />
+        <AssociationConnector Association="DbParkContext.FK_FasceTariffeAbbonamenti_TariffeAbbonamenti" />
+        <AssociationConnector Association="DbParkContext.FK_GiriFrequenzaFoto_Giri" />
+        <AssociationConnector Association="DbParkContext.FK_GiriOperatore_Giri1" />
+        <AssociationConnector Association="DbParkContext.FK_StalliGiro_Giri" />
+        <AssociationConnector Association="DbParkContext.FK_TariffeAbbonamenti_Giri" />
+        <AssociationConnector Association="DbParkContext.FK_GiriOperatore_Operatori" />
+        <AssociationConnector Association="DbParkContext.FK_Modelli_Marche" />
+        <AssociationConnector Association="DbParkContext.FK_Operazioni_Operatori" />
+        <AssociationConnector Association="DbParkContext.FK_SMSOut_SMSIn" />
+        <AssociationConnector Association="DbParkContext.Causali_TipiVerbale" />
+        <EntityTypeShape EntityType="DbParkContext.TitoliSMSTarga" Width="1.5" PointX="17.25" PointY="0.875" />
+        <AssociationConnector Association="DbParkContext.FK_TitoliSMSTarga_Cellulari" />
+        <EntityTypeShape EntityType="DbParkContext.Configurazione" Width="1.5" PointX="15.75" PointY="13.375" />
+        <EntityTypeShape EntityType="DbParkContext.Penali" Width="1.5" PointX="1.125" PointY="26.25" />
+        <AssociationConnector Association="DbParkContext.FK_FotoPenali_Penali" />
+        <AssociationConnector Association="DbParkContext.FK_Penali_Operatori" />
+        <AssociationConnector Association="DbParkContext.FK_OperazioniLocal_Penali" />
+        <EntityTypeShape EntityType="DbParkContext.tab_toponimi" Width="1.5" PointX="24.25" PointY="13.875" />
+        <EntityTypeShape EntityType="DbParkContext.Stalli" Width="1.5" PointX="27.25" PointY="9" />
+        <AssociationConnector Association="DbParkContext.FK_Operazioni_Stalli" />
+        <AssociationConnector Association="DbParkContext.FK_Penali_Stalli" />
+        <AssociationConnector Association="DbParkContext.FK_Stalli_tab_toponimi" />
+        <AssociationConnector Association="DbParkContext.FK_Stalli_Tariffe" />
+        <AssociationConnector Association="DbParkContext.FK_StalliFrequenzaFoto_Stalli" />
+        <AssociationConnector Association="DbParkContext.FK_StalliGiro_Stalli" />
+        <AssociationConnector Association="DbParkContext.FK_TitoliSMS_Stalli" />
+        <AssociationConnector Association="DbParkContext.FK_TitoliSMSTarga_Stalli" />
+        <EntityTypeShape EntityType="DbParkContext.Verbali" Width="1.5" PointX="3.5" PointY="22.5" />
+        <AssociationConnector Association="DbParkContext.FK_CausaliVerbali_Verbali" />
+        <AssociationConnector Association="DbParkContext.FK_FotoVerbali_Verbali" />
+        <AssociationConnector Association="DbParkContext.FK_Verbali_Operatori" />
+        <AssociationConnector Association="DbParkContext.FK_OperazioniLocal_Verbali" />
+        <AssociationConnector Association="DbParkContext.FK_Penali_Verbali" />
+        <AssociationConnector Association="DbParkContext.FK_Verbali_Stalli" />
+        <EntityTypeShape EntityType="DbParkContext.AbbonamentiPeriodici" Width="1.5" PointX="10.5" PointY="6" />
+        <AssociationConnector Association="DbParkContext.FK_AbbonamentiPeriodici_TariffeAbbonamenti" />
+        <AssociationConnector Association="DbParkContext.FK_AbbonamentiRinnovi_AbbonamentiPeriodici" />
+        <EntityTypeShape EntityType="DbParkContext.RicaricheConfermate" Width="1.5" PointX="20.5" PointY="5.375" />
+        <EntityTypeShape EntityType="DbParkContext.translog" Width="1.5" PointX="25" PointY="1" />
+        <AssociationConnector Association="DbParkContext.FK_RicaricheAbbonamento_translog" />
+        <AssociationConnector Association="DbParkContext.FK_RicaricheConfermate_SMSOut" />
+        <EntityTypeShape EntityType="DbParkContext.translog_pyng" Width="1.5" PointX="4.625" PointY="12.375" />
+        <EntityTypeShape EntityType="DbParkContext.TariffeFlat" Width="1.5" PointX="3" PointY="33.125" />
+        <AssociationConnector Association="DbParkContext.FK_TariffeFlat_Tariffe" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

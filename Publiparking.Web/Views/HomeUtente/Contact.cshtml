@@ -1,0 +1,83 @@
+﻿@model Publiparking.Web.Models.InfoMailViewModel
+
+@{
+    ViewData["Title"] = "Contatti";
+    ViewBag.Title = "Contatti";
+}
+<environment include="Development,Formazione,Produzione">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/PubliparkingSheet.css" />
+    <link rel="stylesheet" href="~/css/fontawesome/css/all.css" />
+
+</environment>
+
+<div id="main" class="container-fluid body-content" style="margin-top:-20px">
+    @*<div class="row">*@
+    <br />
+    <center>
+        <row>
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="box-header-blue">
+                    <h1 class="box-title-home"><span class="text-white">Contatti</span></h1>
+                </div>
+
+            </div>
+            <div class="col-md-1"></div>
+        </row>
+
+    </center>
+    <br />
+    <div class="divider div-transparent div-arrow-down" style="margin-top:15px !important;"></div>
+    <br /><br />
+    <div class="col-xs-12 col-md-12">
+        <div class="row">
+
+            <div class="col-md-5">
+                <div class="box-body">
+
+                    <p class="section-medium">
+                        <i class="fas fa-map-marker-alt" style="color:#f38b00; padding-right:5px"></i>Sede Legale P.zza Caparanica, 97 - 00100 Roma<br />
+                        <i class="fas fa-map-marker-alt" style="color:#f38b00; padding-right:5px"></i>Sede Operativa: C.so Giannone, 48 - 81100 Caserta<br />
+                        <i class="fas fa-phone-square-alt" style="color:#f38b00; padding-right:5px"></i>0823-319319<br />
+                        <i class="fas fa-phone-square-alt" style="color:#f38b00; padding-right:5px"></i>0823-355817<br />
+                        <i class="fas fa-envelope-square" style="color:#f38b00; padding-right:5px"></i><a href="mailto:info@publiparking.it">info@publiparking.it</a><br />
+                        <i class="fas fa-envelope-square" style="color:#f38b00; padding-right:5px"></i><a href="mailto:publiparking@pec.it">publiparking@pec</a>
+                    </p>
+                </div>
+
+
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-5">
+                <div class="box-body">
+                    <p class="section-medium">
+                        Per tutte le esigenze è attivo il numero verde a chiamata gratuita.<br />
+                        <img src="~/Images/Park/numero-verde-2.jpg" style="width:60%" />
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div style="height:350px"></div>
+</div>
+
+
+<environment include="Development,Formazione,Produzione">
+    <script src="~/js/plugins/jquery/jquery-3.3.1.js"></script>
+    <script src="~/js/plugins/bootstrap/bootstrap.js"></script>
+    <script src="~/js/plugins/fastclick/fastclick.js"></script>
+    <script src="~/js/plugins/slimscroll/jquery.slimscroll.js"></script>
+    <script src="~/js/plugins/bootstrap-select/bootstrap-select.js"></script>
+    <script src="~/js/plugins/moment/moment.js"></script>
+    <script src="~/js/plugins/datepicker/bootstrap-datepicker.js"></script>
+    <script src="~/js/plugins/icheck/icheck.js"></script>
+    <script src="~/js/plugins/validator/validator.js"></script>
+    <script src="~/js/plugins/inputmask/jquery.inputmask.bundle.js"></script>
+    <script src="~/js/adminlte.js"></script>
+    <script src="~/js/init.js"></script>
+</environment>

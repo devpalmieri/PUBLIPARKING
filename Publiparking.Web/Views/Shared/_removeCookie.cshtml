@@ -1,0 +1,59 @@
+﻿@using Publiparking.Web.Classes.Consts
+
+@{
+    string messageModal = ViewBag.messageModal;
+    string messageModalType = ViewBag.messageModalType;
+    string removeCookie = ViewBag.RemoveCookieConsenso;
+}
+
+<style>
+    .modal-content {
+        width: 799px !important;
+        margin: 30px auto !important;
+        margin-top: 60px !important
+    }
+</style>
+
+<div id="ModalRemoveCookie" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <form method="post" asp-controller="HomeUtente" asp-action="RemoveCookieConsenso">
+            <div class="modal-content">
+                <div class="modal-header alert-danger">
+
+                    <h4 class="modal-title">Rimozione consenso Cookie</h4>
+
+                    <a class="close" asp-controller="HomeUtente" asp-action="Index">
+                        &times;
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <h2>Hai precedentemente dato il consenso ai cookie.</h2>
+                    <br />
+                    <p style="text-align:left; font-size:21px">
+                        <strong>Vuoi rimuovere il consenso?</strong>
+                    </p>
+
+
+                    <br />
+                </div>
+                <div class="modal-footer">
+
+                    <a asp-controller="HomeUtente" asp-action="Index" class="btn btn-danger">
+                        Chiudi
+                    </a>
+                    <input type="submit" value="Rimuovi" class="btn btn-primary" />
+                </div>
+            </div>
+            </form>
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(removeCookie))
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            $("#ModalRemoveCookie").modal("show");
+        };
+    </script>
+    ViewBag.RemoveCookieConsenso = string.Empty;
+}

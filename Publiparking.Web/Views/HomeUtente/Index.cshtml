@@ -1,0 +1,73 @@
+﻿@model Publiparking.Web.Models.CambiaEnteWebViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_startPage.cshtml";
+}
+<environment include="Development,Formazione,Produzione">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/PubliparkingSheet.css" />
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+
+</environment>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        @{
+            var defaulHome = startMode.Value.DefaultHome;
+        }
+        <div class="box-header-blue">
+            <h1 class="box-title-home"><span class="text-white">Il partner qualificato nella gestione della sosta</span></h1>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label></label>
+                    <img src="~/Images/bg-header-publiparking.jpg" class="img_60" />
+                </div>
+                <div class="form-group">
+                    <h2>Soluzioni</h2>
+                    <p style="text-align:justify;font-size: 17px;">
+                        Le soluzioni gestionali offerte da <strong>PUBLIPARKING</strong> si basano su una piattaforma tecnologicamente evoluta e innovativa. Le risorse umane impiegate sono altamente qualificate e in grado di garantire la massima efficienza.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label></label>
+                    <img src="~/Images/parcheggio-modalita-pagamento-2.jpg" class="img_60" />
+                </div>
+                <div class="form-group">
+                    <h2>Area Riservata</h2>
+                    <p style="text-align:justify;font-size: 17px;">
+                        Sezione del sito riservata ai soggetti debitori degli <strong>ENTI</strong> gestiti da <strong>PUBLIPARKING</strong>;  i soggetti debitori sono i contribuenti, i coobbligati ed i terzi debitori destinatari di un Atto di pagamento emesso dal
+                        sistema <strong>PUBLIPARKING</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="box-header-blue" style="max-height: 52px;">
+            <a class="nav-link text-blue" asp-area="" asp-controller="HomeUtente" asp-action="ModPagamento">
+                <h1 class="box-title" style="font-size:35px;color:#FFF">Modalità di Pagamento</h1>
+            </a>
+        </div>
+        <div class="box-header-home-orange">
+            <br />
+            <img src="~/Images/Defribillatore_Publiparking.jpg" class="img_60">
+            <blockquote>
+                <h2>
+                    <span style="color:#fff">
+                        IL PARCHEGGIO CHE CERCAVI!
+
+                    </span>
+                    <span style="color:#fff">
+                        IL PARCHEGGIO CHE CERCAVI!
+
+                    </span>
+                </h2>
+            </blockquote>
+        </div>
+    </div>
+</div>
+

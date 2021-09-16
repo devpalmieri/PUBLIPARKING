@@ -1,0 +1,37 @@
+﻿@{
+
+    string message = ViewBag.message != null ? (string)ViewBag.message : string.Empty;
+    Int32 messageType = ViewBag.messageType != null ? (Int32)ViewBag.messageType : 1;
+}
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <div class="login_table">
+            <div class="box box-default" style="border:none">
+                <div class="box-header with-border" style="border-bottom:none;border-left:none;border-right:none">
+                    <h1 class="box-title">Conferma Indirizzo Email</h1>
+                </div>
+                <br />
+                <div class="box-body" style="border:none">
+                    @if (message != string.Empty)
+                    {
+                        <div id="div_message" class="row">
+                            <div class="col-md-12 col-md-offset-0">
+                                @Html.Partial("MessageBarPartial", new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "message", message }, { "messageType", messageType } })
+                            </div>
+                        </div>
+                    }
+                    <div class="row">
+                        <div class="col-md-12 col-md-offset-0 ToolBar text-center">
+                            <a href="@Url.Action("Index", "HomeUtente")"><i class="fas fa-home" style="color:#f38b00; padding-right:5px"></i>Vai alla Home Page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

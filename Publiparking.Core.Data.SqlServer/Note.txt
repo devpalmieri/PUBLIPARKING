@@ -1,0 +1,11 @@
+﻿SENZA FLAG_ON_OFF
+ser_comuni
+PAGOPA_INTERMEDIARI
+PAGOPA_STAZIONI
+ser_province
+ser_regioni
+tab_domande_segrete
+tab_tipo_ente
+ser_stati_esteri
+Operatori
+tab_ambiente

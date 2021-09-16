@@ -1,0 +1,265 @@
+﻿@using Publiparking.Web.Classes
+@{
+    Layout = "~/Views/Shared/_startPage.cshtml";
+    string controller = ViewBag.ControllerName;
+    string message = ViewBag.message != null ? (string)ViewBag.message : string.Empty;
+    Int32 messageType = ViewBag.messageType != null ? (Int32)ViewBag.messageType : 1;
+}
+<style>
+    .box.box-default {
+        border-bottom: 1px solid #219785 !important;
+        border-left: 1px solid #219785 !important;
+        border-right: 1px solid #219785 !important;
+        max-height: 500px;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#ddlSPID").click(function () {
+            if ($("#spid-idp-button-medium-post").hasClass('hideDDL')) {
+                $('#spid-idp-button-medium-post').removeClass('hideDDL');
+                $('#spid-idp-button-medium-post').addClass('showDDL');
+            }
+            else {
+                $('#spid-idp-button-medium-post').addClass('hideDDL');
+                $('#spid-idp-button-medium-post').removeClass('showDDL');
+            }
+        });
+    });
+</script>
+@using (Html.BeginForm("Accedi", controller, FormMethod.Post, new { @id = "form_accedi", @class = "form-horizontal" }))
+{
+    @*@Html.AntiForgeryToken()*@
+    <br />
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <section id="loginForm">
+                @if (message != string.Empty)
+                {
+                    <div id="div_message" class="row">
+                        <div class="col-md-12 col-md-offset-0">
+                            @Html.Partial("MessageBarPartial", new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "message", message }, { "messageType", messageType } })
+
+                        </div>
+                    </div>
+                }
+                <div class="box_simple box-default-simple">
+
+                    <div class="box-body">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label></label>
+                            </div>
+                            <div class="form-group">
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label></label>
+                                <img src="~/Content/Images/Spid/spid-logo-a-lb.png" title="SPID" alt="SPID" style="width:50%" />
+                            </div>
+                            <div class="form-group">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label></label>
+                                @*<img src="~/Content/img/default/area-riservata-fiscolocale.jpg" style="width:75%; height:300px; max-height:300px; min-height:20px" />*@
+                            </div>
+                            <div class="form-group">
+                            </div>
+                        </div>
+                    </div>
+
+                    @if (Sessione.GetUtenteSpid() == null)
+                    {
+                        <div class="row" style="padding-left: 68px;">
+                            <div class="col-md-7">
+                                <div class="LoginBoxSPID">
+                                    <p style="text-align:justify">
+                                        <strong>SPID</strong>, il Sistema Pubblico di Identità Digitale, è la soluzione che ti permette di accedere ai servizi online della
+                                        Pubblica Amministrazione e dei soggetti privati aderenti con un'unica Identità Digitale (username e password) utilizzabile da computer, tablet e smartphone.
+                                    </p>
+                                    <p style="text-align:justify">
+                                        Il tesserino della tessera sanitaria o del codice fiscale costituiscono ulteriori elementi a supporto del processo di verifica dell’identità che concorrono a
+                                        contrastare, grazie alla verifica dell’autenticità degli stessi su basi dati nazionali non pubbliche, il furto di identità.
+                                    </p>
+                                    <p style="text-align:justify">
+                                        I <strong>dati personali</strong> che comunicherai a Aruba, Infocert, Intesa, Namirial, Poste, Register, Sielte, Tim o Lepida per richiedere SPID, non verranno utilizzati a scopo commerciale.
+                                        Gli Identity Provider non possono utilizzare i dati personali dell’utente né cederli a terze parti senza autorizzazione da parte dell’utente stesso.
+                                        <br />
+                                        <strong>Con SPID la tua privacy è totalmente garantita.</strong>
+                                    </p>
+                                    <p><a href="http://www.spid.gov.it" target="_blank">Maggiori informazioni su SPID</a></p>
+                                    <p><a href="http://www.spid.gov.it/richiedi-spid" target="_blank">Non hai SPID?</a></p>
+                                    <p><a href="http://www.spid.gov.it/serve-aiuto" target="_blank">Serve aiuto?</a></p>
+                                    <p>
+                                        <a href="https://www.agid.gov.it/" title="AgID" target="_blank">
+                                            <img src="~/Content/Images/Spid/spid-agid-logo-lb.png" title="SPID" alt="SPID" style="width:89%" />
+                                        </a>
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="LoginBoxSPID">
+
+                                    <a href='@Url.Action("SpidLogin", "HomeUtente")' class="btn btn-customspid" style="margin-top: 8px;">
+                                        <i class="fa fa-user-circle"></i>
+                                        <span style="font-family:'Titillium Web','Arial','Verdana','Tahoma' !important">Accedi con SPID</span>
+                                        @*<img style="width:27%;padding-left: 5px;" title="Accedi con SPID" alt="Accedi con SPID" src='@Url.Content("~/Content/images/Spid/spid-ico-circle-bb.png")' />*@
+                                    </a>
+                                    <br />
+                                    <a href='@Url.Action("Index", "HomeUtente")' class="btn btn-danger" style="margin-top: 10px; font-size: 16px;padding-right: 70px;">
+                                        <i class="fa fa-undo"></i>
+                                        <span style="font-family:'Titillium Web','Arial','Verdana','Tahoma' !important">Annulla</span>
+                                    </a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="row" style="padding-left: 68px;">
+                            <div class="col-md-7">
+                                <div class="LoginBoxSPID">
+                                    <p style="text-align:justify">
+                                        E' già attiva una connessione. Per avviare una nuova connessione è necessario prima <strong>Diconnettersi da SPID</strong>.
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="LogoutBoxSPID">
+                                    <a class="italia-it-button italia-it-button-size-m button-spid" aria-expanded="false" id="ddlSPID"
+                                       aria-haspopup="true" style="font-size: 15px;" href='@Url.Action("LogoutRequest", "HomeUtente")'
+                                       spid-idp-button="#spid-idp-button-medium-post">
+                                        <span class="italia-it-button-icon">
+                                            <img title="" alt="" src="~/Content/images/logout-circle.png">
+                                        </span>
+                                        <span class="italia-it-button-text">Disconnetti da SPID</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    @*<div class="row" style="padding-left: 239px;">
+                            <div class="col-md-3">
+                                <div class="LoginBoxSPID">
+                                    <a class="italia-it-button italia-it-button-size-m button-spid" aria-expanded="false" id="ddlSPID"
+                                       aria-haspopup="true" style="font-size: 15px;" href="#"
+                                       spid-idp-button="#spid-idp-button-medium-post">
+                                        <span class="italia-it-button-icon">
+                                            <img title="" alt="" src="~/Content/images/Spid/spid-ico-circle-bb.png">
+                                        </span>
+                                        <span class="italia-it-button-text">Entra con SPID</span>
+                                    </a>
+
+                                    <div class="spid-idp-button spid-idp-button-tip spid-idp-button-relative hideDDL" id="spid-idp-button-medium-post" style="text-align: left;">
+                                        <ul class="spid-idp-button-menu" id="spid-idp-list-medium-root-post" aria-labelledby="spid-idp">
+
+                                            <li class="spid-idp-button-link">
+                                                <a href='@Url.Action("SpidRequest", "HomeUtente",new { IdPName = "http://localhost:8088" })'>
+                                                    <img class="idp-button-idp-logo" title="WSO2 Test ID" alt="WSO2 Test ID" src='@Url.Content("~/Content/images/Spid/spid-idp-localwso2id.png")' />
+                                                </a>
+                                            </li>
+                                            <li class="spid-idp-button-link">
+                                                <a href='@Url.Action("SpidRequest", "HomeUtente",new { IdPName = "https://idptest.spid.gov.it" })'>
+                                                    <img class="idp-button-idp-logo" title="AgID SPID" alt="AgID SPID" src='@Url.Content("~/Content/images/Spid/spid-idp-govid.png")' />
+                                                </a>
+                                            </li>
+
+                                            <li class="spid-idp-button-link">
+                                                <a href='@Url.Action("SpidRequest", "HomeUtente",new { IdPName = "https://posteid.poste.it" })'>
+                                                    <img class="idp-button-idp-logo" title="Poste ID" alt="Poste ID" src='@Url.Content("~/Content/images/Spid/spid-idp-posteid.png")' />
+                                                </a>
+                                            </li>
+                                            <li class="spid-idp-button-link">
+                                                <a href='@Url.Action("SpidRequest", "HomeUtente",new { IdPName = "https://spidposte.test.poste.it" })'>
+                                                    <img class="idp-button-idp-logo" title="Poste Test ID" alt="Poste Test ID" src='@Url.Content("~/Content/images/Spid/spid-idp-posteid.png")' />
+                                                </a>
+                                            </li>
+
+                                            <li class="spid-idp-button-link">
+                                                <a href='@Url.Action("SpidRequest", "HomeUtente",new { IdPName = "https://login.id.tim.it/affwebservices/public/saml2sso" })'>
+                                                    <img class="idp-button-idp-logo" title="Tim ID" alt="Tim ID" src='@Url.Content("~/Content/images/Spid/spid-idp-timid.png")' />
+                                                </a>
+                                            </li>
+
+                                            <li class="spid-idp-button-link">
+                                                <a href='@Url.Action("SpidRequest", "HomeUtente",new { IdPName = "https://identity.sieltecloud.it" })'>
+                                                    <img class="idp-button-idp-logo" title="Sielte ID" alt="Sielte ID" src='@Url.Content("~/Content/images/Spid/spid-idp-sielteid.png")' />
+                                                </a>
+                                            </li>
+
+                                            <li class="spid-idp-button-link">
+                                                <a href='@Url.Action("SpidRequest", "HomeUtente",new { IdPName = "https://identity.infocert.it" })'>
+                                                    <img class="idp-button-idp-logo" title="Infocert ID" alt="Infocert ID" src='@Url.Content("~/Content/images/Spid/spid-idp-infocertid.png")' />
+                                                </a>
+                                            </li>
+
+                                            <li class="spid-idp-support-link">
+                                                <a style="font-size: 15px;" href="http://www.spid.gov.it" target="_blank">Maggiori informazioni</a>
+                                            </li>
+
+                                            <li class="spid-idp-support-link">
+                                                <a style="font-size: 15px;" href="http://www.spid.gov.it/richiedi-spid" target="_blank">Non hai SPID?</a>
+                                            </li>
+                                            <li class="spid-idp-support-link">
+                                                <a style="font-size: 15px;" href="http://www.spid.gov.it/serve-aiuto" target="_blank">Serve aiuto?</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            @if (ViewBag.Logged ?? false)
+                            {
+                                <div class="col-md-3">
+                                    <div class="LogoutBoxSPID">
+                                        <a class="italia-it-button italia-it-button-size-m button-spid" aria-expanded="false" id="ddlSPID"
+                                           aria-haspopup="true" style="font-size: 15px;" href='@Url.Action("LogoutRequest", "Home")'
+                                           spid-idp-button="#spid-idp-button-medium-post">
+                                            <span class="italia-it-button-icon">
+                                                <img title="" alt="" src="~/Content/images/logout-circle.png">
+                                            </span>
+                                            <span class="italia-it-button-text">Logout</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            }
+                        </div>*@
+
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+}

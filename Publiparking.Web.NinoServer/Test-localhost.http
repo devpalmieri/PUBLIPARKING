@@ -1,0 +1,19 @@
+﻿
+POST http://localhost:57399//conto/richiedi HTTP/1.1
+ContentType: application/json
+
+{
+    "numero_telefono": "+393925391295",
+    "codice_comune":19
+}
+
+###
+
+POST https://localhost:44376//conto/richiedi HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+numero_telefono=+393925391295
+&codice_comune=40
+
+###
+

@@ -1,0 +1,184 @@
+﻿{
+   "CodeGenerationMode": 0,
+   "ContextClassName": "Db_Sviluppo_ParkContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": "ctxtest",
+   "OutputPath": "testentities",
+   "ProjectRootNamespace": "Publiparking.Core.Data.SqlServer",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[anagrafica_ente]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[anagrafica_pagopa_intermediari]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[anagrafica_pagopa_stazioni]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[anagrafica_risorse]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[anagrafica_ruolo_mansione]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[anagrafica_stato_carrello]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[anagrafica_strutture_aziendali]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[join_applicazioni_secondarie]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[join_utenti_enti]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Operatori]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ser_comuni]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ser_province]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ser_regioni]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ser_stati_esteri]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ser_stati_esteri_new]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[tab_abilitazione]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[tab_cc_riscossione]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tab_domande_segrete]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[tab_funzionalita]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[tab_idpspid]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[tab_pagine]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[tab_procedure]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[tab_registro_spid]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[tab_tassonomia_pagopa]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tab_tipo_ente]",
+         "ObjectType": 0
+      },
+      {
+         "ExcludedColumns": [
+            "flag_on_off"
+         ],
+         "Name": "[dbo].[tab_utenti]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "PH-110.db_sviluppo_park",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": true,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseNoConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false
+}

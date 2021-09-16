@@ -1,0 +1,6 @@
+﻿            using (var db = dbContext)
+            {
+                var friends = db.anagrafica_entrate.Where(f => f.id_entrata >= 10).ToList();
+                friends.ForEach(a => a.flag_iva = "0");
+                db.SaveChanges();
+            }

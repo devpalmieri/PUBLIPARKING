@@ -1,0 +1,35 @@
+﻿@using Publiparking.Web.Classes.Consts
+@{
+    string messageModal = ViewBag.messageModal;
+    string messageModalType = ViewBag.messageModalType;
+
+}
+<div id="MyPopup" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header alert-@messageModalType">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <span id="lblError"></span>
+            </div>
+            <div class="modal-footer">
+                <input type="button" id="btnClosePopup" value="Chiudi" class="btn btn-@messageModalType" data-dismiss="modal" />
+            </div>
+        </div>
+    </div>
+</div>
+@if (!string.IsNullOrEmpty(messageModal))
+{
+    <script type="text/javascript">
+                window.onload = function () {
+                    $("#lblError").html('@Html.Raw(messageModal)');
+                    $("#MyPopup").modal("show");
+                };
+    </script>
+    ViewBag.ModalMessage = string.Empty;
+    TempData["ModalMessage"] = null;
+}

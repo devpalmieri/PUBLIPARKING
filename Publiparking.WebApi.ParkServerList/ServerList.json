@@ -1,0 +1,12 @@
+{
+  "ServerList": [
+    {
+      "Name": "San Giorgio a Cremano",
+      "ServiceAddress": "http://2.118.240.78:10204/ParkingSgc/ws/"
+    },
+    {
+      "Name": "Ercolano",
+      "ServiceAddress": "http://2.118.240.78:10204/ParkingErcolano/ws/"
+    }
+  ]
+}

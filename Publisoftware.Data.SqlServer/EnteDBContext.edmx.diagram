@@ -1,0 +1,1717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ca55cdab4463479ca637e4c1f0b1597a" Name="TabContribuente" ZoomLevel="72">
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_risorse" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_contribuente" Width="1.5" PointX="5.25" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_anagrafe" Width="1.5" PointX="5.125" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_toponimi" Width="1.5" PointX="5.25" PointY="25" IsExpanded="true" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_risorse" ManuallyRouted="false" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_anagrafe_anagrafica_risorse" ManuallyRouted="false" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_toponimi_anagrafica_risorse" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_entrate" Width="1.5" PointX="7.375" PointY="3.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag_fatt_rettifica" Width="2.125" PointX="18.625" PointY="11.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_boll_pag" Width="1.5" PointX="23.875" PointY="14.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_dett_riscossione" Width="2.375" PointX="26.875" PointY="23.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_mov_pag_ici" Width="1.5" PointX="18.625" PointY="29" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_persone" Width="1.5" PointX="9.625" PointY="28.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_fatt_rettifica_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_riscossione_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_fatt_rettifica_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_fatt_rettifica_anagrafica_risorse1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_riscossione_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_mov_pag_ici_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_persone_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_funzionalita" Width="1.5" PointX="26.625" PointY="1.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_procedure" Width="1.5" PointX="24.375" PointY="1.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_funzionalita_tab_procedure" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_cod_stato_base" Width="1.5" PointX="4.375" PointY="1.25" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_servizi" Width="2.125" PointX="0.625" PointY="1" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_servizi" Width="1.5" PointX="3.375" PointY="7" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_servizi_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_servizi_anagrafica_tipo_servizi" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_contribuente" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tipo_lista_tipo_avv_pag" Width="1.75" PointX="17.5" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_lista" Width="1.5" PointX="9.625" PointY="36" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_lista_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_lista_tipo_avv_pag_tab_tipo_lista" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_spese_coattive" Width="1.5" PointX="17.5" PointY="5.5" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_spese_coattive_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_voci_contribuzione" Width="2.5" PointX="9.625" PointY="39.5" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_voci_contribuzione_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_spese_coattive_anagrafica_voci_contribuzione" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_contatore" Width="1.5" PointX="5.75" PointY="21.125" />
+        <EntityTypeShape EntityType="dbEnteModel.v_report_stato_lista" Width="1.5" PointX="31.375" PointY="1.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_consuntivo_dett_lista_carico" Width="1.5" PointX="32.375" PointY="28.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_consuntivo_lista_carico" Width="3.125" PointX="33.375" PointY="1.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_consuntivo_soglie" Width="1.5" PointX="32.375" PointY="34.125" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_consuntivo_dett_lista_carico_tab_consuntivo_lista_carico" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_sped_not" Width="1.5" PointX="2.25" PointY="32.875" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_esito_notifica" Width="1.5" PointX="2.75" PointY="30.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_agevolazione" Width="2.25" PointX="9.875" PointY="52.875" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_agevolazione_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_documenti" Width="1.5" PointX="15.375" PointY="13.375" />
+        <EntityTypeShape EntityType="dbEnteModel.join_file" Width="1.5" PointX="15.625" PointY="17.5" />
+        <AssociationConnector Association="dbEnteModel.FK_join_file_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_join_file_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_input_consuntivi_rendiconti" Width="1.5" PointX="15.375" PointY="24.5" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_record" Width="2.375" PointX="27.375" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="dbEnteModel.FK_join_file_anagrafica_tipo_record" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_documento" Width="1.5" PointX="13.125" PointY="29.625" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_documenti_anagrafica_tipo_documento" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_ciclo" Width="1.5" PointX="23.375" PointY="27.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_diritto" Width="1.5" PointX="9.625" PointY="59.5" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_tipo_diritto_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_oggetto" Width="1.5" PointX="23.625" PointY="31.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_oggetto_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_nota" Width="1.5" PointX="29.375" PointY="14.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipi_diritti" Width="1.5" PointX="11.875" PointY="60.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_titolarita" Width="1.5" PointX="18.125" PointY="38.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipi_diritti_anagrafica_tipo_diritto" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_titolarita_tab_persone" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_titolarita_tab_tipi_diritti" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_qualita_terreno" Width="1.5" PointX="30.375" PointY="24" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_codici_tributi_ministeriali" Width="1.5" PointX="32.375" PointY="23.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_categorie_fabbricati" Width="1.5" PointX="12.625" PointY="47.125" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_piani_edificio" Width="1.5" PointX="3.625" PointY="34.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_udienza" Width="2.75" PointX="6.375" PointY="35.25" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_veicoli_marche" Width="1.5" PointX="34.375" PointY="34" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_veicoli_tipo_serie" Width="4.125" PointX="36.625" PointY="33.75" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_veicoli_tipo_serie_anagrafica_veicoli_marche" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_marca_veicolo" Width="1.5" PointX="35.375" PointY="9.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_modello_veicolo" Width="2.875" PointX="23.375" PointY="35.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_modello_veicolo_tab_marca_veicolo" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_causali_estr_conto" Width="1.5" PointX="34.375" PointY="36.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_cc_riversamento" Width="1.5" PointX="36.375" PointY="36.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_cc_tesoreria" Width="1.5" PointX="37.375" PointY="0.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_autorita_giudiziaria" Width="2" PointX="37.375" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tipo_avv_pag_servizi" Width="1.5" PointX="12" PointY="63.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_avv_pag_servizi_anagrafica_servizi" />
+        <EntityTypeShape EntityType="dbEnteModel.join_report_link" Width="1.5" PointX="39.625" PointY="10" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_report" Width="1.5" PointX="37.625" PointY="10" />
+        <AssociationConnector Association="dbEnteModel.FK_join_report_link_tab_report" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_doc" Width="2.5" PointX="5.375" PointY="39.375" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_flag_esito_avvisi" Width="2.375" PointX="37.5" PointY="13.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_oggetto" Width="2.375" PointX="37.5" PointY="18" />
+        <EntityTypeShape EntityType="dbEnteModel.join_oggetto_agevolazioni" Width="1.5" PointX="38.375" PointY="21" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_agevolazione" Width="2.375" PointX="37.5" PointY="26.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_unita_contribuzione" Width="2.875" PointX="37" PointY="29.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_giorni_occupazione" Width="2.125" PointX="18.625" PointY="45.25" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_giorni_occupazione_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_categoria_tariffaria_cosap" Width="2.125" PointX="21.625" PointY="47.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_categoria_tariffaria_icp" Width="1.5" PointX="23.625" PointY="40.375" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categoria_tariffaria_cosap_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categoria_tariffaria_icp_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_categoria_tariffaria_immobili" Width="3.625" PointX="24.625" PointY="46.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categoria_tariffaria_immobili_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_macroentrate" Width="1.5" PointX="9.375" PointY="11" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_categoria" Width="1.5" PointX="33.625" PointY="40.125" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_utilizzo" Width="1.5" PointX="15.625" PointY="47.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_categoria_tariffaria_acs" Width="4.25" PointX="40.875" PointY="18.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_oggetti_contribuzione" Width="1.5" PointX="41.625" PointY="24.125" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_categoria_tab_macroentrate" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_giorni_occupazione_anagrafica_categoria" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categoria_tariffaria_acs_anagrafica_categoria" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categoria_tariffaria_cosap_anagrafica_categoria" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categoria_tariffaria_icp_anagrafica_categoria" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categoria_tariffaria_immobili_anagrafica_categoria" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categorie_fabbricati_anagrafica_categoria" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categorie_fabbricati_anagrafica_categoria1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_contribuzione_anagrafica_categoria" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categoria_tariffaria_acs_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_contribuzione_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_contribuzione_anagrafica_stato_oggetto" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_contribuzione_anagrafica_tipo_diritto" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_utilizzo_tab_macroentrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categoria_tariffaria_immobili_anagrafica_utilizzo" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categorie_fabbricati_anagrafica_utilizzo" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categorie_fabbricati_anagrafica_utilizzo1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_contribuzione_anagrafica_utilizzo" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_qualita_terreno_anagrafica_utilizzo_ici" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_qualita_terreno_anagrafica_utilizzo_imu" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_contribuzione_tab_macroentrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_contribuzione_tab_oggetti_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_titolarita_tab_oggetti_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_titolarita_tab_oggetti_contribuzione1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_allegati_digitali" Width="1.5" PointX="29.125" PointY="17.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_documenti" Width="1.5" PointX="1.625" PointY="51" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_documenti_anagrafica_documenti" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_documenti_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_doc_anagrafici_allegati_tab_doc_anagrafici" />
+        <EntityTypeShape EntityType="dbEnteModel.join_ingfis_supervisione" Width="1.5" PointX="3" PointY="58.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_ingiunzioni_ispezione" Width="1.5" PointX="47.875" PointY="15.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_ingiunzioni_ispezione_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_ingfis_supervisione_tab_ingiunzioni_ispezione" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_contrib_ref" Width="1.5" PointX="49" PointY="31.625" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_presentati_contrib_ref_tab_doc_anagrafici" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_contribuenti" Width="1.5" PointX="42.125" PointY="49.625" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_domiciliazioni" Width="1.5" PointX="27" PointY="14.875" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_referenti" Width="1.5" PointX="47.5" PointY="49.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_presentati_contribuenti_tab_doc_anagrafici" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_presentati_domiciliazioni_tab_doc_anagrafici" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_presentati_referenti_tab_doc_anagrafici" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_storico_anagrafe" Width="1.5" PointX="29.5" PointY="47.375" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_storico_anagrafe_tab_anagrafe" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_storico_anagrafe_tab_toponimi" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_cuas" Width="1.5" PointX="42.5" PointY="41.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_ente_riversamento" Width="1.5" PointX="3.375" PointY="62.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_riversamenti_contrattuali" Width="1.5" PointX="47" PointY="21.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_riversamenti_contrattuali_anagrafica_ente_riversamento" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_riversamenti_contrattuali_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_riversamenti_contrattuali_tab_cc_tesoreria" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_voce_contribuzione" Width="1.5" PointX="12.625" PointY="10.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_voce_contribuzione_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_spese_coattive_tab_tipo_voce_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_voci_contribuzione_tab_tipo_voce_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_voce_contribuzione_anagrafica_entrate1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_piano_conti_economici" Width="2" PointX="0.75" PointY="5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_voce_contribuzione_tab_piano_conti_economici" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tipo_voci_contribuzione_priorita_riscossione" Width="1.5" PointX="21.125" PointY="29.875" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_voci_contribuzione_priorita_riscossione_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_voci_contribuzione_priorita_riscossione_tab_tipo_voce_contribuzione" />
+        <EntityTypeShape EntityType="dbEnteModel.join_conto_economico_tipo_voce_contribuzione" Width="1.75" PointX="14.875" PointY="9.5" />
+        <AssociationConnector Association="dbEnteModel.FK_join_conto_economico_tipo_voce_contribuzione_anagrafica_tipo_servizi" />
+        <AssociationConnector Association="dbEnteModel.FK_join_conto_economico_tipo_voce_contribuzione_tab_piano_conti_economici" />
+        <AssociationConnector Association="dbEnteModel.FK_join_conto_economico_tipo_voce_contribuzione_tab_tipo_voce_contribuzione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_det_riscosso_periodo_lista" Width="1.5" PointX="21.125" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_riscosso_periodo_lista" Width="1.5" PointX="21.75" PointY="7.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_denunce_contratti" Width="1.5" PointX="49.875" PointY="34.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_denunce_contratti_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_denunce_contratti_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.TAB_SUPERVISIONE_FINALE_V2" Width="1.875" PointX="44.875" PointY="47.5" />
+        <AssociationConnector Association="dbEnteModel.FK_join_ingfis_supervisione_TAB_SUPERVISIONE_FINALE_V2" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tipo_avvpag_voci_contrib_new" Width="1.5" PointX="21.875" PointY="20" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_avvpag_voci_contrib_new_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_avvpag_voci_contrib_new_anagrafica_voci_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_avvpag_voci_contrib_new_tab_tipo_voce_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_avvpag_voci_contrib_new_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_avvpag_voci_contrib_new_anagrafica_tipo_servizi" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_procedure_concorsuali" Width="1.5" PointX="50.625" PointY="42.75" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_procedure_concorsuali_anagrafica_stato_contribuente_apertura" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_procedure_concorsuali_anagrafica_stato_contribuente_chiusura" />
+        <EntityTypeShape EntityType="dbEnteModel.join_oggetti_immobili" Width="2.25" PointX="12.5" PointY="0.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_validazione_approvazione_liste" Width="2.75" PointX="5.25" PointY="68.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_risorse1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_risorse2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_risorse3" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_risorse4" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_avv_pag" Width="1.5" PointX="9.625" PointY="64.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_udienze" Width="2.125" PointX="57.125" PointY="26.875" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_tipo_avv_pag_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_udienze_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_avv_pag_servizi_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_avvpag_voci_contrib_new_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_lista_tipo_avv_pag_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_fatt_rettifica_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_riscossione_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_riscossione_anagrafica_tipo_avv_pag1" />
+        <AssociationConnector Association="dbEnteModel.FK_TAB_SUPERVISIONE_FINALE_V2_anagrafica_tipo_avv_pag_da_emettere" />
+        <AssociationConnector Association="dbEnteModel.FK_TAB_SUPERVISIONE_FINALE_V2_anagrafica_tipo_avv_pag_emesso" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_spedizione_notifica" Width="1.5" PointX="12.625" PointY="18" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_tipo_spedizione_notifica_nel_PF" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_tipo_spedizione_notifica_nel_PG" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_tipo_spedizione_notifica_PF" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_tipo_spedizione_notifica_PG" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_risorse_emissione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_risorse_notifica" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_tipo_spedizione_notifica" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_lista_sped_notifiche" Width="1.5" PointX="16.375" PointY="27.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_lista_sped_notifiche_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_lista_sped_notifiche_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_lista_sped_notifiche_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_lista_sped_notifiche_anagrafica_tipo_spedizione_notifica" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_lista_sped_notifiche_tab_tipo_lista" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_avvisi_anomali_liste_carico" Width="2.75" PointX="57.25" PointY="19.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_controlli_qualita_liste_carico" Width="1.5" PointX="8.625" PointY="18.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avvisi_anomali_liste_carico_anagrafica_cod_stato_base" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_controlli_qualita_liste_carico_anagrafica_cod_stato_base" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avvisi_anomali_liste_carico_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_controlli_qualita_liste_carico_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.join_controlli_avvpag_fatt_emissione" Width="1.5" PointX="6.625" PointY="53.5" />
+        <AssociationConnector Association="dbEnteModel.FK_join_controlli_avvpag_fatt_emissione_anagrafica_cod_stato_base" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_pagamento" Width="1.5" PointX="7.375" PointY="24" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_mov_pag_ici_tab_tipo_pagamento" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_ruolo_mansione" Width="2.5" PointX="9.375" PointY="24" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_ruolo_mansione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_veicoli_vincoli" Width="1.5" PointX="45.375" PointY="10.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_ispezione" Width="1.5" PointX="12.375" PointY="23.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_immobili_coattivo" Width="1.5" PointX="34.625" PointY="26" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_immobili_coattivo_tab_categorie_fabbricati" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_immobili_coattivo_tab_qualita_terreno" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_ente_servizi" Width="1.5" PointX="21.625" PointY="15.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_ente_servizi_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_ente_servizi_anagrafica_tipo_servizi" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_tipo_avv_pag_anagrafica_entrate1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_terzo_debitore" Width="1.5" PointX="14.125" PointY="5" />
+        <EntityTypeShape EntityType="dbEnteModel.join_lista_voci_contribuzione" Width="1.5" PointX="14.875" PointY="54.5" />
+        <AssociationConnector Association="dbEnteModel.FK_join_lista_voci_contribuzione_tab_tipo_voce_contribuzione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_sped_not_fatt_emissione" Width="1.5" PointX="55.875" PointY="43.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_anagrafica_risorse_emissione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_anagrafica_risorse_notifica" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_anagrafica_stato_sped_not" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_anagrafica_stato_sped_not1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_anagrafica_stato_sped_not2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_anagrafica_tipo_esito_notifica" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_anagrafica_tipo_esito_notifica1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_anagrafica_tipo_spedizione_notifica" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_tab_lista_sped_notifiche" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_tab_lista_sped_notifiche1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_tab_lista_sped_notifiche2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_tab_terzo_debitore" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_tab_toponimi" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_fascicolo_avvpag_allegati" Width="1.5" PointX="12.5" PointY="69.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fascicolo_avvpag_allegati" Width="1.5" PointX="5.25" PointY="86" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fascicolo_avvpag_allegati_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_fascicolo_avvpag_allegati_tab_documenti" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_fascicolo_avvpag_allegati_tab_fascicolo_avvpag_allegati" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_registro_ufficiali_riscossione" Width="1.5" PointX="5.25" PointY="91.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_registro_ufficiali_riscossione_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_registro_ufficiali_riscossione_anagrafica_risorse1" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tab_supervisione_profili" Width="1.5" PointX="48.5" PointY="25" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_supervisione_profili_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_supervisione_profili_TAB_SUPERVISIONE_FINALE_V2" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_progressivi_formalita_aci" Width="1.5" PointX="24.625" PointY="6.5" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_supervisione_profili_tab_progressivi_formalita_aci" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_causale" Width="1.75" PointX="13.625" PointY="34.125" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_causale_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_causale_anagrafica_servizi" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_denunce_contratti_anagrafica_causale" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_contribuzione_anagrafica_causale" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_causale_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_causale_anagrafica_servizi1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_quantita_spedizione" Width="1.5" PointX="26.375" PointY="10.75" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_tipo_avv_pag_anagrafica_servizi" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_tipo_avv_pag_anagrafica_tipo_servizi" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_tipo_avv_pag_anagrafica_tipo_servizi1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_voce_contribuzione_tab_tipo_voce_contribuzioneRferimento" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_liste" Width="1.5" PointX="24.875" PointY="51.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_liste_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_liste_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_liste_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_join_controlli_avvpag_fatt_emissione_tab_liste" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_fatt_rettifica_tab_liste" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avvisi_anomali_liste_carico_tab_liste" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_controlli_qualita_liste_carico_tab_liste" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_liste_tab_tipo_lista" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_tab_liste" />
+        <AssociationConnector Association="dbEnteModel.FK_join_lista_voci_contribuzione_tab_liste" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_liste_anagrafica_risorse1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_liste_anagrafica_risorse2" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_sezioni_stampa" Width="1.5" PointX="26.375" PointY="17.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_liste_tab_liste_carico" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_ente_rilascio_documento" Width="1.5" PointX="51.875" PointY="16.25" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_esito_sentenze" Width="1.5" PointX="12.375" PointY="26.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_motivazioni_richiesta_info" Width="1.5" PointX="28.625" PointY="8.875" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_anagrafe" Width="1.5" PointX="30.375" PointY="4.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_denunce" Width="1.5" PointX="39.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_lista" Width="1.5" PointX="40.375" PointY="3.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_riga_avv_pag" Width="1.5" PointX="40.375" PointY="6.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_corrispettivo" Width="1.5" PointX="41.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_difformita_notifica" Width="1.5" PointX="42.375" PointY="3.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_sesso" Width="1.5" PointX="42.375" PointY="6.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_avvcoa_ing" Width="1.5" PointX="43.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_contenitori_join_file" Width="1.5" PointX="20.875" PointY="35.125" />
+        <EntityTypeShape EntityType="dbEnteModel.join_denunce_motivazioni_richiesta_info" Width="1.5" PointX="63.125" PointY="28.5" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_pratiche_presentati" Width="1.5" PointX="54.125" PointY="19.25" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_pratiche_richiesti" Width="1.5" PointX="41.875" PointY="11.375" />
+        <EntityTypeShape EntityType="dbEnteModel.join_notificatore_spese_notifica" Width="1.5" PointX="44.375" PointY="3.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tipo_avvpag_voci_contrib" Width="1.5" PointX="12.875" PointY="42.125" />
+        <EntityTypeShape EntityType="dbEnteModel.join_udienza_tipo_udienza" Width="1.5" PointX="5.25" PointY="107.125" />
+        <EntityTypeShape EntityType="dbEnteModel.ser_stati_esteri" Width="1.5" PointX="44.375" PointY="6.75" />
+        <EntityTypeShape EntityType="dbEnteModel.sysdiagrams" Width="1.5" PointX="44.375" PointY="14.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_aree_senza_cosap" Width="1.5" PointX="7.5" PointY="90" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_assegnazione_istanze" Width="1.5" PointX="5.25" PointY="98" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_competenze" Width="1.5" PointX="31.875" PointY="49.625" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_comunicazione_smarriti" Width="1.5" PointX="27.25" PointY="51.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_consuntivo_soglie_tipo" Width="1.5" PointX="30.125" PointY="39.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_contenitori" Width="1.5" PointX="10.25" PointY="46.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_contribuente_sto" Width="1.5" PointX="60.875" PointY="20.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_controdeduzioni" Width="1.5" PointX="41.375" PointY="44.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_corrispettivi" Width="1.5" PointX="14.875" PointY="58.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_dett_lista" Width="1.5" PointX="36.125" PointY="44.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_dett_lista_sped_not" Width="1.5" PointX="18.625" PointY="64" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_dett_mov_pag_ici" Width="1.5" PointX="34.875" PointY="19.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_estratto_conto" Width="1.5" PointX="5.25" PointY="101.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_funzioni" Width="1.5" PointX="20.625" PointY="38.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_ispezione_coattivo" Width="1.5" PointX="40.875" PointY="52.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_lista_ente_gestito" Width="1.5" PointX="34.125" PointY="51.625" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_lista_riscossione" Width="1.5" PointX="31.875" PointY="9.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_prog_lista_post_notifiche" Width="1.5" PointX="30.875" PointY="42.625" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_rendiconto" Width="1.5" PointX="24.625" PointY="70.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_stru_ris" Width="1.5" PointX="34.875" PointY="14.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_toponimi_categoria_speciale" Width="1.5" PointX="7.5" PointY="87" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_toponimi_normalizzati_2" Width="1.5" PointX="59.625" PointY="2.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_veicoli_icp" Width="1.5" PointX="48.375" PointY="8.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_cc_pagamento" Width="1.5" PointX="3" PointY="68.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_crediti_debiti" Width="1.5" PointX="21.25" PointY="53.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_richiesti_anagrafica_categoria" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_richiesti_anagrafica_causale" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_presentati_anagrafica_documenti" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_richiesti_anagrafica_documenti" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_presentati_anagrafica_ente_rilascio_documento" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_motivazioni_richiesta_info_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_richiesti_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_competenze_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_competenze_anagrafica_entrate1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_corrispettivi_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_lista_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_funzioni_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_lista_ente_gestito_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_prog_lista_post_notifiche_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_stru_ris_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_motivazioni_richiesta_info_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_denunce_motivazioni_richiesta_info_anagrafica_motivazioni_richiesta_info" />
+        <AssociationConnector Association="dbEnteModel.FK_join_contenitori_join_file_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_denunce_motivazioni_richiesta_info_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_presentati_anagrafica_risorse_acquisizione" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_presentati_anagrafica_risorse_stato" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_richiesti_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_udienza_tipo_udienza_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_assegnazione_istanze_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_competenze_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_comunicazione_smarriti_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contenitori_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_corrispettivi_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_crediti_debiti_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_lista_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_mov_pag_ici_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_estratto_conto_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_funzioni_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_ispezione_coattivo_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_lista_ente_gestito_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_lista_riscossione_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_stru_ris_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_avvpag_voci_contrib_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_competenze_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_competenze_anagrafica_tipo_avv_pag1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_competenze_anagrafica_tipo_avv_pag2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_competenze_anagrafica_tipo_avv_pag3" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_corrispettivi_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_ispezione_coattivo_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_avvpag_voci_contrib_anagrafica_voci_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_lista_anagrafica_voci_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_join_contenitori_join_file_join_file" />
+        <AssociationConnector Association="dbEnteModel.FK_join_contenitori_join_file_tab_contenitori" />
+        <AssociationConnector Association="dbEnteModel.FK_join_denunce_motivazioni_richiesta_info_tab_denunce_contratti" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_presentati_tab_denunce_contratti" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_presentati_tab_oggetti_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_aree_senza_cosap_tab_toponimi" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_competenze_tab_rendiconto" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_consuntivo_soglie_tab_consuntivo_soglie_tipo" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_corrispettivi_tab_rendiconto" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_lista_tab_liste" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_lista_sped_not_tab_lista_sped_notifiche" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_mov_pag_ici_tab_mov_pag_ici" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_riscossione_tab_lista_riscossione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_riscossione_tab_lista_riscossione1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_riscossione_tab_rendiconto" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_mov_pag_ici_tab_estratto_conto" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_stru_ris_tab_funzioni" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_ispezione_coattivo_tab_lista_sped_notifiche" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_lista_ente_gestito_tab_liste" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_lista_riscossione_tab_tipo_lista" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_prog_lista_post_notifiche_tab_tipo_lista" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_crediti_debiti_tab_rendiconto" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_toponimi_categoria_speciale_tab_toponimi" />
+        <EntityTypeShape EntityType="dbEnteModel.ser_codici_catastali" Width="1.5" PointX="44.125" PointY="44.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_riscossione_tab_tipo_voce_contribuzione" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tab_doc_input_tab_doc_output" Width="1.5" PointX="41.375" PointY="62.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_cc_riscossione" Width="1.5" PointX="38.625" PointY="37.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_cc_riscossione_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_cc_riscossione_anagrafica_tipo_servizi" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_tab_cc_riscossione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_tab_cc_riscossione" />
+        <EntityTypeShape EntityType="dbEnteModel.join_postel_sped_not" Width="1.5" PointX="5.375" PointY="42.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_procure" Width="1.5" PointX="5.25" PointY="46.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_procure_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_fascicolo" Width="1.5" PointX="3.875" PointY="53.375" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_fascicolo_tab_documenti" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_parametri_portale" Width="2.125" PointX="5.25" PointY="112.125" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_parametri_portale_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.join_ente_strutture_tipoavvpag" Width="1.5" PointX="27.875" PointY="60.625" />
+        <AssociationConnector Association="dbEnteModel.FK_join_ente_strutture_tipoavvpag_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_join_ente_strutture_tipoavvpag_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_join_ente_strutture_tipoavvpag_anagrafica_tipo_servizi" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_firma_digitale" Width="1.5" PointX="5.5" PointY="119.375" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_firma_digitale_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_registro_ufficiali_riscossione_anagrafica_tipo_avv_pag" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_poste_arcostradale" Width="1.5" PointX="53.125" PointY="2.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_poste_comune" Width="1.5" PointX="48.625" PointY="2" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_poste_strada" Width="1.5" PointX="50.875" PointY="1.125" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_poste_arcostradale_tab_poste_strada" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_poste_strada_tab_poste_comune" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_toponimi_tab_poste_strada" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_poste_provincia" Width="1.5" PointX="46.75" PointY="56" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_poste_comune_tab_poste_provincia" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_prog_doc" Width="1.5" PointX="9.875" PointY="15.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_prog_doc_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_codice_tributo_f24" Width="1.5" PointX="9.875" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_rate_avvpag_movpag" Width="1.5" PointX="5.25" PointY="123.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_rate_avvpag_movpag_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_rate_avvpag_movpag_anagrafica_risorse1" />
+        <EntityTypeShape EntityType="dbEnteModel.ser_comuni_aci" Width="1.5" PointX="10.25" PointY="5.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_modelli_fiscali" Width="1.5" PointX="31.625" PointY="17.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_spese_giudizio" Width="1.5" PointX="40.5" PointY="74.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_spese_giudizio_tab_autorita_giudiziaria" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_pec_configurazioni" Width="1.5" PointX="24.625" PointY="21" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_pec_configurazioni_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_pec_configurazioni_anagrafica_tipo_servizi" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_sentenze" Width="2.5" PointX="43.75" PointY="56.125" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sentenze_anagrafica_esito_sentenze" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sentenze_tab_spese_giudizio" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_selezione_report_view" Width="1.5" PointX="18.375" PointY="49.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fasce_pignorabilita_beni" Width="1.5" PointX="7.375" PointY="47.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_cod_identificativi_secondo_cf" Width="1.5" PointX="45.875" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_sezioni_contenuti" Width="1.5" PointX="50.875" PointY="12.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_rssfeed_fisco" Width="1.5" PointX="52.375" PointY="7.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_help_pagine" Width="1.5" PointX="36.375" PointY="51.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fascicolo_doc_output_allegati" Width="1.5" PointX="5.25" PointY="129.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fascicolo_doc_output_allegati_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_ente_escluso_emissione" Width="1.5" PointX="53.375" PointY="10.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_denunce_oggetti" Width="1.5" PointX="63.375" PointY="34.25" />
+        <AssociationConnector Association="dbEnteModel.FK_join_denunce_oggetti_anagrafica_causale" />
+        <AssociationConnector Association="dbEnteModel.FK_join_denunce_oggetti_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_denunce_oggetti_tab_denunce_contratti" />
+        <AssociationConnector Association="dbEnteModel.FK_join_denunce_oggetti_tab_oggetti_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_documenti_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_documenti_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_documenti_anagrafica_tipo_servizi" />
+        <EntityTypeShape EntityType="dbEnteModel.appo_sysdiagrams" Width="1.5" PointX="50" PointY="53.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_menu_orizzontale" Width="1.5" PointX="55" PointY="6.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_modalita_spednot_doc_output" Width="1.5" PointX="18.25" PointY="53.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_modalita_spednot_doc_output_anagrafica_tipo_spedizione_notifica" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_rata_avv_pag" Width="1.875" PointX="53.125" PointY="42.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_rata_avv_pag_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_rate_avvpag_movpag_tab_rata_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_boll_pag_tab_rata_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_rata_avv_pag_tab_cc_riscossione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_idpspid" Width="1.5" PointX="54.75" PointY="14.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_prog_iuv" Width="1.5" PointX="52.625" PointY="53.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_prog_carrello" Width="1.5" PointX="3" PointY="72.625" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_errori_pagopa" Width="1.5" PointX="49.375" PointY="20.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_pagopa_intermediari" Width="1.5" PointX="3" PointY="135.125" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_pagopa_stazioni" Width="1.5" PointX="5.25" PointY="135.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_pagopa_eventi" Width="1.5" PointX="51.375" PointY="19.75" />
+        <AssociationConnector Association="dbEnteModel.fk_intermediario" />
+        <AssociationConnector Association="dbEnteModel.FK_join_denunce_oggetti_anagrafica_stato_oggetto" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_carrello" Width="1.5" PointX="5.5" PointY="138.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_carrello_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.fk_carrello" />
+        <EntityTypeShape EntityType="dbEnteModel.TAB_JOIN_AVVCOA_INGFIS_V2" Width="1.5" PointX="3" PointY="76" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tassonomia_pagopa" Width="1.5" PointX="15.375" PointY="42.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_carrello" Width="1.5" PointX="50.75" PointY="47.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_carrello_anagrafica_stato_carrello" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_unita_contribuzione_fatt_emissione" Width="1.5" PointX="59.125" PointY="45.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_anagrafica_tipo_avv_pag1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_anagrafica_voci_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_oggetti_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_tipo_voce_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_tipo_voce_contribuzione1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_unita_contribuzione_fatt_emissione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_sub_menu" Width="1.5" PointX="57.25" PointY="7.125" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sub_menu_tab_menu_orizzontale" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_registro_spid" Width="1.5" PointX="44.375" PointY="36" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_utenti" Width="1.5" PointX="6.625" PointY="57.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_login_utente_anagrafica_cod_stato_base1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_autorizzazioni" Width="1.75" PointX="20.875" PointY="61.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_autorizzazioni_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_autorizzazioni_tab_utenti" />
+        <EntityTypeShape EntityType="dbEnteModel.join_terzo_referente" Width="2.375" PointX="45.625" PointY="39.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fermi_azioni_manuali" Width="1.5" PointX="52.625" PointY="26.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_autorizzazione" Width="1.5" PointX="27.875" PointY="65.125" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_autorizzazione_tab_autorizzazioni" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_autorizzazione_tab_documenti" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_autorizzazioni_tab_utenti1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_dett_estratto_conto_mensile" Width="2.375" PointX="52.5" PointY="34.125" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_comunicazione_smarriti_tab_dett_estratto_conto_mensile" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_registro_cds" Width="1.5" PointX="47.375" PointY="44.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_mov_pag" Width="1.5" PointX="61.875" PointY="3.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_mov_pag_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_mov_pag_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_rate_avvpag_movpag_tab_mov_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_mov_pag_tab_cc_riscossione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_riscossione_tab_mov_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_riscossione_tab_mov_pag1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_mov_pag_tab_tipo_pagamento" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_pagopa_flusso_rendicontazione" Width="2.5" PointX="44.375" PointY="29.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tab_carrello_tab_rate" Width="1.5" PointX="55.75" PointY="75.625" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_carrello_tab_rate_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_carrello_tab_rate_anagrafica_stato_carrello" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_carrello_tab_rate_tab_carrello" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_carrello_tab_rate_tab_rata_avv_pag" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_unita_contribuzione" Width="1.5" PointX="62" PointY="46.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_anagrafica_tipo_avv_pag1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_anagrafica_voci_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_riscossione_tab_unita_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_oggetti_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_tipo_voce_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_tipo_voce_contribuzione1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_unita_contribuzione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_registro_pag_spontanei" Width="1.5" PointX="55.375" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_modalita_spednot_doc_output_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_registro_pag_senza_avviso" Width="1.5" PointX="55.375" PointY="33.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_cimiteri" Width="1.5" PointX="36.5" PointY="55.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_registro_cookie" Width="1.5" PointX="49.625" PointY="56.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_ricerca_infocamere" Width="1.5" PointX="52.375" PointY="56.75" />
+        </Diagram>
+      <Diagram DiagramId="e8955c1c4d854a59b3060eb7038dabee" Name="Login" ZoomLevel="91" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_cod_stato_base" Width="2.625" PointX="0.875" PointY="1.875" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_documenti" Width="1.5" PointX="4.75" PointY="6.375" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_documento" Width="1.5" PointX="1.625" PointY="6.625" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_documenti_anagrafica_tipo_documento" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_log_operatori" Width="1.5" PointX="8.75" PointY="9.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_log_utenti" Width="2.375" PointX="11.75" PointY="1.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_log_utenti_tab_log_operatori" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_domande_segrete" Width="1.5" PointX="11.125" PointY="7.5" />
+        </Diagram>
+      <Diagram DiagramId="8ac83a24b8e54ffa866a0011e358f76a" Name="AvvPag" ZoomLevel="93" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_avv_pag" Width="2.5" PointX="4.25" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_strutture_aziendali" Width="1.5" PointX="2.125" PointY="22.125" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_entrate" Width="1.5" PointX="4" PointY="15.875" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_risorse" Width="1.5" PointX="4.25" PointY="28.375" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_strutture_aziendali_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tipo_lista_tipo_avv_pag" Width="2.25" PointX="11.125" PointY="5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_lista" Width="1.5" PointX="6.25" PointY="46.125" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_lista_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_lista_tipo_avv_pag_tab_tipo_lista" />
+        <EntityTypeShape EntityType="dbEnteModel.join_movpag_rata_avv_pag" Width="2.75" PointX="11.5" PointY="24" />
+        <AssociationConnector Association="dbEnteModel.FK_join_movpag_rata_avv_pag_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_movpag_rata_avv_pag_anagrafica_strutture_aziendali" />
+        <EntityTypeShape EntityType="dbEnteModel.join_avv_pag_referente" Width="2.625" PointX="11.125" PointY="18.625" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_prog_lista" Width="1.875" PointX="15.875" PointY="11.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_prog_lista_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_prog_lista_tab_tipo_lista" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_voce_contribuzione" Width="2.75" PointX="34" PointY="2.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_voce_contribuzione_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag" Width="3" PointX="26" PointY="14.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_anagrafica_stato" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_anagrafica_stato_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_join_avv_pag_referente_tab_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_join_movpag_rata_avv_pag_tab_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_tab_avv_pag_riemesso" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_voce_contribuzione_anagrafica_entrate1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_prog_avvpag" Width="2" PointX="8.25" PointY="13.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_prog_avvpag_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.TAB_SUPERVISIONE_FINALE_V2" Width="2.5" PointX="31.75" PointY="14.5" />
+        <AssociationConnector Association="dbEnteModel.FK_TAB_SUPERVISIONE_FINALE_V2_tab_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_TAB_SUPERVISIONE_FINALE_V2" />
+        <AssociationConnector Association="dbEnteModel.FK_TAB_SUPERVISIONE_FINALE_V2_tab_avv_pag1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_voce_contribuzione_tab_tipo_voce_contribuzioneRferimento" />
+        <EntityTypeShape EntityType="dbEnteModel.join_avv_pag_soggetto_debitore" Width="2.5" PointX="29.75" PointY="39.125" />
+        <AssociationConnector Association="dbEnteModel.FK_join_avv_pag_soggetto_debitore_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_avv_pag_soggetto_debitore_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_join_avv_pag_soggetto_debitore_tab_avv_pag" />
+        <EntityTypeShape EntityType="dbEnteModel.join_avv_pag_fatt_emissione_soggetto_debitore" Width="3.625" PointX="6.5" PointY="41" />
+        <AssociationConnector Association="dbEnteModel.FK_join_avv_pag_fatt_emissione_soggetto_debitore_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_avv_pag_fatt_emissione_soggetto_debitore_anagrafica_strutture_aziendali" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_unita_contribuzione" Width="4.5" PointX="14.125" PointY="2.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_avv_pag1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_avv_pag2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_avv_pag3" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_avv_pag4" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_tipo_voce_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_tipo_voce_contribuzione1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_unita_contribuzione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_contribuzione" Width="1.5" PointX="20.375" PointY="6.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_tab_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_tab_avv_pag1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_tab_avv_pag2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_tab_avv_pag3" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_tab_avv_pag4" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_tab_avv_pag5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_tab_avv_pag6" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_tab_avv_pag7" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_tab_avv_pag8" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_tab_avv_pag9" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_tab_tipo_voce_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuzione_tab_unita_riferimento" />
+        </Diagram>
+      <Diagram DiagramId="f3c9b68660d04a6caa2303114db54dc2" Name="BollPag" ZoomLevel="16" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_risorse" Width="1.5" PointX="1.125" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_strutture_aziendali" Width="1.5" PointX="6.75" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_strutture_aziendali_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_boll_pag" Width="1.5" PointX="4.375" PointY="9.875" />
+        </Diagram>
+      <Diagram DiagramId="417a37cd57aa4efaad8ddbaa679f1926" Name="TipoAvvPag" ZoomLevel="52" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_servizi" Width="1.5" PointX="5.875" PointY="1.375" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_entrate" Width="3.25" PointX="9.5" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_servizi_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tab_cc_riscoss_tipo_avvpag" Width="3.25" PointX="4.25" PointY="5.5" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_avv_pag" Width="3.625" PointX="14.875" PointY="4.75" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_tipo_avv_pag_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_cc_riscoss_tipo_avvpag_anagrafica_tipo_avv_pag" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag" Width="3" PointX="19.75" PointY="2.375" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_tab_avv_pag_riemesso" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_anagrafica_tipo_avv_pag" />
+        <EntityTypeShape EntityType="dbEnteModel.TAB_SUPERVISIONE_FINALE_V2" Width="3.625" PointX="23.875" PointY="1.375" />
+        <AssociationConnector Association="dbEnteModel.FK_TAB_SUPERVISIONE_FINALE_V2_tab_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_TAB_SUPERVISIONE_FINALE_V2_anagrafica_tipo_avv_pag_da_emettere" />
+        <AssociationConnector Association="dbEnteModel.FK_TAB_SUPERVISIONE_FINALE_V2_anagrafica_tipo_avv_pag_emesso" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_TAB_SUPERVISIONE_FINALE_V2" />
+        <AssociationConnector Association="dbEnteModel.FK_TAB_SUPERVISIONE_FINALE_V2_tab_avv_pag1" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_tipo_avv_pag_anagrafica_entrate1" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_tipo_avv_pag_anagrafica_servizi" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tipo_avvpag_voci_contrib_trasmesse" Width="2.75" PointX="24.25" PointY="8.875" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_avvpag_voci_contrib_trasmesse_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_avvpag_voci_contrib_trasmesse_anagrafica_tipo_avv_pag" />
+      </Diagram>
+      <Diagram DiagramId="6e0a7d61a89a461ca29739fa3cd8a163" Name="UnitaContribuzione" ZoomLevel="16" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_entrate" Width="1.5" PointX="1" PointY="16.375" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_strutture_aziendali" Width="1.5" PointX="7.375" PointY="18.25" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_risorse" Width="1.5" PointX="8.375" PointY="28.625" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_strutture_aziendali_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_unita_contribuzione_fatt_rettifica" Width="2.5" PointX="27.875" PointY="16.375" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_rettifica_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_rettifica_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_rettifica_anagrafica_strutture_aziendali" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_voce_contribuzione" Width="1.5" PointX="3.875" PointY="17.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_voce_contribuzione_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_voce_contribuzione_anagrafica_entrate1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag" Width="2.875" PointX="10.875" PointY="4.125" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_tab_avv_pag_riemesso" />
+        <EntityTypeShape EntityType="dbEnteModel.join_lista_voci_contribuzione" Width="2.25" PointX="32.125" PointY="11.625" />
+        <AssociationConnector Association="dbEnteModel.FK_join_lista_voci_contribuzione_tab_tipo_voce_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_voce_contribuzione_tab_tipo_voce_contribuzioneRferimento" />
+        </Diagram>
+      <Diagram DiagramId="cab3d27f6f50458da7a3f43f9f985b68" Name="Servizio" >
+        <EntityTypeShape EntityType="dbEnteModel.ser_regioni" Width="1.5" PointX="0.75" PointY="3.625" />
+      </Diagram>
+      <Diagram DiagramId="b347c24a1d3c4c2799fbcef8172a308b" Name="TabReferente" ZoomLevel="78" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_relazione" Width="1.5" PointX="7.25" PointY="4.625" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_contribuente" Width="2.25" PointX="1" PointY="9.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_referente_sto" Width="2.5" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_parentela" Width="2.75" PointX="15.875" PointY="12" />
+        <EntityTypeShape EntityType="dbEnteModel.join_referente_contribuente" Width="2.875" PointX="18.375" PointY="19.125" />
+        <EntityTypeShape EntityType="dbEnteModel.join_referente_contribuente_avv_pag" Width="3" PointX="22" PointY="21" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tipo_stato_referenza" Width="2.125" PointX="9.875" PointY="7.625" />
+        <AssociationConnector Association="dbEnteModel.FK_join_referente_contribuente_anagrafica_parentela" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_stato_referenza_anagrafica_stato_contribuente" />
+        <AssociationConnector Association="dbEnteModel.FK_join_referente_contribuente_anagrafica_tipo_relazione" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_stato_referenza_anagrafica_tipo_relazione" />
+        <AssociationConnector Association="dbEnteModel.FK_join_referente_contribuente_avv_pag_join_referente_contribuente" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_terzo_sto" Width="1.5" PointX="4.375" PointY="0.75" />
+        </Diagram>
+      <Diagram DiagramId="9237d6334066483097f12119087ddca8" Name="TabProcedure" ZoomLevel="84" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_funzionalita" Width="1.5" PointX="5.5" PointY="3.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_procedure" Width="1.5" PointX="1.625" PointY="2.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_funzionalita_tab_procedure" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_pagine" Width="1.5" PointX="3.375" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.join_applicazioni_link" Width="2" PointX="13.25" PointY="1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_applicazioni" Width="2.875" PointX="11.75" PointY="4.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_applicazioni_link_tab_applicazioni" />
+        <AssociationConnector Association="dbEnteModel.FK_join_applicazioni_link_tab_applicazioni_link" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_applicazioni_tab_funzionalita" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_applicazioni_tab_pagine" />
+        <EntityTypeShape EntityType="dbEnteModel.join_applicazioni_secondarie" Width="1.5" PointX="15.375" PointY="7.875" />
+        <AssociationConnector Association="dbEnteModel.FK_join_applicazioni_secondarie_tab_applicazioni" />
+        <AssociationConnector Association="dbEnteModel.FK_join_applicazioni_secondarie_tab_applicazioni1" />
+        </Diagram>
+		<Diagram DiagramId="984bddb45ebf497e997e976c6b0f70ef" Name="Ente" ZoomLevel="62" >        <EntityTypeShape EntityType="dbEnteModel.anagrafica_strutture_aziendali" Width="2.375" PointX="0.5" PointY="3.375" />
+        <EntityTypeShape EntityType="dbEnteModel.join_ente_strutture" Width="1.5" PointX="3.5" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_join_ente_strutture_anagrafica_strutture_aziendali" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_ente" Width="1.5" PointX="8.25" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_risorse" Width="1.5" PointX="13.625" PointY="4.25" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_strutture_aziendali_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.join_risorse_strutture" Width="3" PointX="13" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_join_risorse_strutture_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_risorse_strutture_anagrafica_strutture_aziendali" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_ente_codici" Width="2" PointX="9.125" PointY="4.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_pianificazione_cicli_enti_gestiti" Width="1.5" PointX="16.5" PointY="10.5" />
+        <EntityTypeShape EntityType="dbEnteModel.join_ente_ente_gestito" Width="2.125" PointX="9.375" PointY="7.375" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_ente_gestito" Width="2.625" PointX="23.625" PointY="0.875" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_ente_gestito_tab_tipo_ente" />
+        <AssociationConnector Association="dbEnteModel.FK_join_ente_ente_gestito_anagrafica_ente_gestito" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_pianificazione_cicli_enti_gestiti_anagrafica_ente_gestito" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_ente" Width="1.5" PointX="5.375" PointY="4" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_ente_codici_anagrafica_ente" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_ente_tab_tipo_ente" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_ente" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_strutture_aziendali_anagrafica_ente" />
+        <AssociationConnector Association="dbEnteModel.FK_join_ente_ente_gestito_anagrafica_ente" />
+        <AssociationConnector Association="dbEnteModel.FK_join_ente_strutture_anagrafica_ente" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_pianificazione_cicli_enti_gestiti_anagrafica_ente" />
+        <EntityTypeShape EntityType="dbEnteModel.join_utenti_enti" Width="1.5" PointX="9.625" PointY="21.25" />
+        <AssociationConnector Association="dbEnteModel.FK_join_utenti_enti_anagrafica_ente" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_ente_anagrafica_risorse" />
+      </Diagram>
+      <Diagram DiagramId="d6a35a061a3b4cfa834b4f03be3bb5ed" Name="Abilitazione" ZoomLevel="19" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_risorse" Width="1.5" PointX="0.5" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_strutture_aziendali" Width="1.5" PointX="3.125" PointY="4.125" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_strutture_aziendali_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_abilitazione" Width="1.5" PointX="5.875" PointY="0.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_abilitazione_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_abilitazione_anagrafica_strutture_aziendali" />
+        </Diagram>
+      <Diagram DiagramId="b861623305de4ed4b488620fc6db2b52" Name="Configurazione" ZoomLevel="35" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_strutture_aziendali" Width="1.5" PointX="3.125" PointY="3.375" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_risorse" Width="1.5" PointX="9.625" PointY="3.5" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_strutture_aziendali_anagrafica_risorse" />
+        </Diagram>
+      <Diagram DiagramId="4469f14e56ac44e7b1a0528512aad9bd" Name="Log" ZoomLevel="52" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_risorse" Width="2.5" PointX="8.75" PointY="6.875" IsExpanded="false" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_strutture_aziendali" Width="3.125" PointX="2.5" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_strutture_aziendali_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_log_operatori" Width="1.5" PointX="13.875" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_log_operatori_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_log_operatori_anagrafica_strutture_aziendali" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_log_utenti" Width="1.5" PointX="9.25" PointY="2.25" IsExpanded="true" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_log_utenti_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_log_utenti_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_log_utenti_tab_log_operatori" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_log_operazioni_operatore" Width="1.5" PointX="17.875" PointY="2.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_log_operazioni_utente" Width="2.375" PointX="6.25" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_log_operazioni_operatore_tab_log_operatori" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_log_operazioni_utente_tab_log_utenti" />
+        </Diagram>
+      <Diagram DiagramId="b46ae08eea714c6c97a612eebcd644cb" Name="Cicli" ZoomLevel="64" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_cicli" Width="2.125" PointX="3" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_cicli_dettaglio" Width="1.875" PointX="3.125" PointY="4.5" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_ciclo" Width="1.5" PointX="5.5" PointY="3.75" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_cicli_anagrafica_tipo_ciclo" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_cicli_dettaglio_anagrafica_cicli" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_cicli_ente" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_cicli_ente_dettaglio" Width="1.5" PointX="0.5" PointY="3.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_cicli_ente_anagrafica_cicli" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_cicli_ente_dettaglio_tab_cicli_ente" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_pianificazione_cicli" Width="2" PointX="9.5" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_pianificazione_cicli_tab_cicli_ente" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_pianificazione_cicli_dettaglio" Width="2.75" PointX="13.25" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_pianificazione_cicli_dettaglio_tab_pianificazione_cicli" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_cicli_ente_dettaglio_anagrafica_cicli_dettaglio" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_pianificazione_cicli_anagrafica_tipo_ciclo" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_pianificazione_cicli_dettaglio_tab_cicli_ente_dettaglio" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_esecuzione_applicazioni" Width="2.375" PointX="13.875" PointY="10.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_esecuzione_applicazioni_tab_pianificazione_cicli" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_esecuzione_applicazioni_tab_pianificazione_cicli_dettaglio" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_pianificazione_cicli_input_rendicontazione" Width="1.5" PointX="16.25" PointY="7.125" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_pianificazione_cicli_input_rendicontazione_tab_pianificazione_cicli" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_segnalazione_anomalie_elaborazione" Width="2.875" PointX="1.125" PointY="9" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_pianificazione_cicli_input_importazione_file" Width="2" PointX="17.125" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_pianificazione_cicli_input_importazione_file_tab_pianificazione_cicli" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_pianificazione_cicli_input_emissione" Width="2.5" PointX="20.625" PointY="0.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_pianificazione_cicli_input_emissione_anagrafica_tipo_ciclo" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_pianificazione_cicli_input_emissione_tab_pianificazione_cicli" />
+        </Diagram>
+      <Diagram DiagramId="d71b95a527c64f459d37f22dad4d4cc8" Name="ABI_CAB" >
+        <EntityTypeShape EntityType="dbEnteModel.ANAGRAFICA_ABI_CAB" Width="2.125" PointX="4.75" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_ANAGRAFICA_ABI_CAB_ANAGRAFICA_ABI_CAB" />
+      </Diagram>
+      <Diagram DiagramId="5dfdf397da3640b994945db1688b1bd8" Name="Multilanguage" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_multilanguage" Width="1.75" PointX="0.75" PointY="0.75" />
+      </Diagram>
+      <Diagram DiagramId="83aa4b94728d4e94b80810a2ab2bd0c0" Name="Coattivo" ZoomLevel="59" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_spese_coattive" Width="2.375" PointX="4.75" PointY="0.875" />
+        <EntityTypeShape EntityType="dbEnteModel.join_ispezioni_ingiunzioni" Width="1.5" PointX="13.25" PointY="23.125" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tab_ispezioni_coattivo_tipo_ispezione" Width="2.25" PointX="3.5" PointY="18.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_ingiunzioni_ispezione" Width="2.25" PointX="5.875" PointY="24.625" />
+        <AssociationConnector Association="dbEnteModel.FK_join_ispezioni_ingiunzioni_tab_ingiunzioni_ispezione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_ispezioni_coattivo_v2" Width="2.5" PointX="1" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_profilo_contribuente_new" Width="2.5" PointX="12.125" PointY="16.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_ispezioni_coattivo_new" Width="2.5" PointX="1.625" PointY="24" />
+        <AssociationConnector Association="dbEnteModel.FK_join_ispezioni_ingiunzioni_tab_ispezioni_coattivo_new" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_ispezioni_coattivo_tipo_ispezione_tab_ispezioni_coattivo_new" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_profilo_contribuente_new_tab_ispezioni_coattivo_new" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_bene" Width="1.5" PointX="0.75" PointY="18.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_profilo_contribuente_new_tab_tipo_bene" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_profilo_contribuente_new_join_tab_ispezioni_coattivo_tipo_ispezione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag" Width="1.5" PointX="9.75" PointY="11.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_tab_avv_pag_riemesso" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_ingiunzioni_ispezione_tab_avv_pag" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tab_supervisione_profili" Width="3.375" PointX="16" PointY="19.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_supervisione_profili_tab_profilo_contribuente_new" />
+        <EntityTypeShape EntityType="dbEnteModel.join_proprietari_immobili_coattivo" Width="2.375" PointX="19.625" PointY="1.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_immobili_coattivo" Width="1.5" PointX="17.375" PointY="1.125" />
+        <AssociationConnector Association="dbEnteModel.FK_join_proprietari_immobili_coattivo_tab_immobili_coattivo" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_profilo_contribuente_new_tab_immobili_coattivo" />
+        </Diagram>
+      <Diagram DiagramId="ebabc28d0a9847d88851a9c27c7863da" Name="Idrico" ZoomLevel="50" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_intervento" Width="2.25" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_letture" Width="2.125" PointX="4" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_lettura" Width="2.125" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_risorse" Width="1.5" PointX="20.875" PointY="6" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_strutture_aziendali" Width="2.5" PointX="4.5" PointY="3.875" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_strutture_aziendali_anagrafica_risorse" />
+        </Diagram>
+      <Diagram DiagramId="79b12600820c493d91aa9c17461af908" Name="Catasto" ZoomLevel="54" >
+        <EntityTypeShape EntityType="dbEnteModel.join_oggetti_immobili" Width="2.125" PointX="8.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fabbricati" Width="2.25" PointX="10.875" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fabbricati_identificativi" Width="2.375" PointX="14.375" PointY="9.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fabbricati_indirizzi" Width="2.375" PointX="14.375" PointY="6.625" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fabbricati_riserve" Width="2" PointX="14.375" PointY="10.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fabbricati_utilita_comuni" Width="2.625" PointX="14.375" PointY="9.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_immobili" Width="2.125" PointX="7.375" PointY="3.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_note" Width="2.125" PointX="8.875" PointY="11.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_terreni" Width="2.375" PointX="5.75" PointY="6.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_terreni_deduzioni" Width="2.25" PointX="5.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_terreni_porzioni" Width="1.875" PointX="0.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_terreni_riserve" Width="2.125" PointX="2.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipi_toponimo_catasto" Width="2.375" PointX="14.5" PointY="1.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_toponimi_catasto" Width="2.375" PointX="14.375" PointY="3.625" />
+        <AssociationConnector Association="dbEnteModel.FK_join_oggetti_immobili_tab_immobili" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_fabbricati_identificativi_tab_fabbricati" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_fabbricati_indirizzi_tab_fabbricati" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_fabbricati_riserve_tab_fabbricati" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_fabbricati_tab_immobili" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_fabbricati_tab_note_finale" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_fabbricati_tab_note_iniziale" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_fabbricati_utilita_comuni_tab_fabbricati" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_fabbricati_indirizzi_tab_toponimi_catasto" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_terreni_tab_immobili" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_terreni_tab_note_finale" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_terreni_tab_note_iniziale" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_terreni_deduzioni_tab_terreni" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="dbEnteModel.fk_tab_terreni_porzioni_tab_terreni" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_terreni_riserve_tab_terreni" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_toponimi_catasto_tab_tipi_toponimo_catasto" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_qualita_terreno" Width="1.875" PointX="0.5" PointY="11.125" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_terreni_tab_qualita_terreno" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_categorie_fabbricati" Width="2.5" PointX="13.25" PointY="11.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fabbricati_tab_categorie_fabbricati" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_dati_metrici_catastali" Width="2.125" PointX="3.5" PointY="31.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_dati_metrici_dichiarati" Width="2.125" PointX="3.5" PointY="21" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_oggetti" Width="2.125" PointX="0.5" PointY="4.375" />
+        <AssociationConnector Association="dbEnteModel.FK_join_oggetti_immobili_tab_oggetti" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dati_metrici_catastali_tab_categorie_fabbricati" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fabbricati_tab_oggetti" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_terreni_tab_oggetti" />
+      </Diagram>
+      <Diagram DiagramId="53fa8d756642414582ee046691d8b212" Name="OggettiContribuzione" ZoomLevel="56" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_entrate" Width="2.75" PointX="11" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_oggetto" Width="2" PointX="0.5" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_oggetto_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_diritto" Width="3.375" PointX="14.5" PointY="1.375" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_tipo_diritto_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_oggetti_contribuzione" Width="3.5" PointX="5.25" PointY="4.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_contribuzione_anagrafica_tipo_diritto" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_contribuzione_tab_oggetti_contribuzione" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_utilizzo" Width="2.125" PointX="0.875" PointY="13.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_contribuzione_anagrafica_utilizzo" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fabbricati" Width="1.5" PointX="3.125" PointY="3.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_terreni" Width="1.5" PointX="0.75" PointY="4.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_titolarita" Width="1.5" PointX="9" PointY="5.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_titolarita_tab_oggetti_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_titolarita_tab_oggetti_contribuzione1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_persone" Width="1.5" PointX="14.75" PointY="12.25" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_titolarita_tab_persone" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipi_diritti" Width="1.5" PointX="11.875" PointY="14.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipi_diritti_anagrafica_tipo_diritto" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_titolarita_tab_tipi_diritti" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_note" Width="1.5" PointX="17.375" PointY="13.375" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_fabbricati_tab_note_finale" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_fabbricati_tab_note_iniziale" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_terreni_tab_note_finale" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_terreni_tab_note_iniziale" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_titolarita_tab_note_finale" />
+        <AssociationConnector Association="dbEnteModel.fk_tab_titolarita_tab_note_iniziale" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_oggetti" Width="1.5" PointX="19.5" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fabbricati_tab_oggetti" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_contribuzione_tab_oggetti" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_tab_tipo_oggetto" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_terreni_tab_oggetti" />
+        <EntityTypeShape EntityType="dbEnteModel.join_denunce_oggetti" Width="3.5" PointX="24.25" PointY="5" />
+        <AssociationConnector Association="dbEnteModel.FK_join_denunce_oggetti_tab_oggetti_contribuzione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_agevolazioni_verifica" Width="4" PointX="28.5" PointY="6.375" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_agevolazioni_verifica_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_agevolazioni_verifica_tab_oggetti" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_agevolazioni_verifica_tab_oggetti_contribuzione" />
+        </Diagram>
+      <Diagram DiagramId="5f074685c1364faca3872286317b6119" Name="ContiCorrenti" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_cc" Width="2.125" PointX="2.125" PointY="1" />
+      </Diagram>
+      <Diagram DiagramId="e44f4fc4f4a54a9d8e38340adb2cc379" Name="Immobili" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_nucleo_immobiliare" Width="3.125" PointX="0.75" PointY="0.75" />
+      </Diagram>
+      <Diagram DiagramId="a676c4dd2848404a92a0afe4867e5a63" Name="Anagrafe" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_parentela" Width="2.375" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_modalita_rate_avvpag_view" Width="1.5" PointX="3.375" PointY="0.625" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_anagrafe" Width="1.5" PointX="10.375" PointY="0.875" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_rel_par_lac" Width="1.5" PointX="7" PointY="1.125" />
+        <AssociationConnector Association="dbEnteModel.tab_anagrafe_anagrafica_rel_par_lac_id_rel_par_lac_fk" />
+      </Diagram>
+      <Diagram DiagramId="502495150a1440a88dab757f90af580a" Name="Notifiche" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_spedizione_notifica" Width="3.125" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_notificatore" Width="2.375" PointX="5.75" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_tipo_spedizione_notifica_tab_notificatore" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_file_esiti_notifiche" Width="2.25" PointX="4.375" PointY="6.75" />
+      </Diagram>
+      <Diagram DiagramId="23e41f2ad5184038b962e0c88a754581" Name="InputOutputFunzioni" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_input_output_funzione" Width="2.75" PointX="0.75" PointY="0.75" />
+      </Diagram>
+      <Diagram DiagramId="3bf9cf26b91f44a28873ca291c5f26f6" Name="Pagamenti" ZoomLevel="54" >
+        <EntityTypeShape EntityType="dbEnteModel.ANAGRAFICA_ABI_CAB" Width="2.375" PointX="6.875" PointY="10.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_mov_pag_ici" Width="2" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_pagamento" Width="2.75" PointX="1.375" PointY="21" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_pagamento" Width="1.5" PointX="4.875" PointY="21.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tipo_pagamento_anagrafica_tipo_pagamento" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_mov_pag_ici_tab_tipo_pagamento" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_servizio_entrata_cc" Width="2.75" PointX="13.5" PointY="14.375" />
+        <AssociationConnector Association="dbEnteModel.FK_ANAGRAFICA_ABI_CAB_ANAGRAFICA_ABI_CAB" />
+        <EntityTypeShape EntityType="dbEnteModel.join_avv_pag_mov_pag" Width="2.75" PointX="19.5" PointY="11.625" />
+        <EntityTypeShape EntityType="dbEnteModel.join_rate_avvpag_movpag" Width="1.5" PointX="7.625" PointY="2.5" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_mov_pag" Width="3.25" PointX="2.5" PointY="27.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_dett_mov_pag" Width="5.25" PointX="11.125" PointY="21.625" />
+        </Diagram>
+      <Diagram DiagramId="daa9cfd422f6442383b862dea03e1611" Name="Riscossione" ZoomLevel="85" >
+        <EntityTypeShape EntityType="dbEnteModel.join_tab_cc_riscoss_tipo_avvpag" Width="2.625" PointX="6.75" PointY="1.625" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_dett_riscossione" Width="3.75" PointX="14" PointY="7.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_registro_giornaliero_riscossioni" Width="2.5" PointX="5.125" PointY="5.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_rendiconto_NEW" Width="1.5" PointX="11.75" PointY="3.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_dett_riscossione_tab_rendiconto_NEW" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_cc_riscossione" Width="1.5" PointX="20.125" PointY="4.25" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_cc_riscoss_tipo_avvpag_tab_cc_riscossione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_registro_giornaliero_riscossioni_tab_cc_riscossione" />
+        </Diagram>
+      <Diagram DiagramId="b6a07a6ac80a4d9d9a769be63c8eb996" Name="ContribuenteSto" ZoomLevel="83" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_contribuente" Width="2.75" PointX="16.375" PointY="8" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_contribuente" Width="2.625" PointX="31.125" PointY="10.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_contribuente_sto_new" Width="3.125" PointX="38.125" PointY="4.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuente_sto_new_anagrafica_stato_contribuente" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuente_sto_new_anagrafica_tipo_contribuente" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_contribuente" Width="1.5" PointX="34.5" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_referente" Width="2.875" PointX="42.75" PointY="5.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuente_anagrafica_stato_contribuente" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_referente_anagrafica_stato_contribuente" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuente_anagrafica_tipo_contribuente" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_referente_anagrafica_tipo_relazione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contribuente_sto_new_tab_contribuente" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_referente_tab_contribuente" />
+        </Diagram>
+      <Diagram DiagramId="0a082efba2f44560985f85e2505a8f42" Name="ZTL" ZoomLevel="74" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_categoria_ZTL" Width="2.875" PointX="9.125" PointY="1.5" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_voci_contribuzione" Width="2.75" PointX="15.625" PointY="0.625" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_categoria_ZTL_anagrafica_voci_contribuzione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_categoria_tariffaria_ZTL" Width="2.625" PointX="9.125" PointY="5.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_Veicoli_ZTL" Width="2.125" PointX="13.5" PointY="5.625" />
+      </Diagram>
+      <Diagram DiagramId="46b11daf9faf4591a989b4b4c77af9f5" Name="AnagraficaCategorie" ZoomLevel="58" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_categoria_tariffaria_ici" Width="3.25" PointX="10.75" PointY="9" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_categoria_tariffaria_imu" Width="2.625" PointX="0.875" PointY="8.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_categoria_tariffaria_tasi" Width="2.5" PointX="12.5" PointY="1.125" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_categoria" Width="2.625" PointX="6.625" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categoria_tariffaria_ici_anagrafica_categoria" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categoria_tariffaria_imu_anagrafica_categoria" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categoria_tariffaria_tasi_anagrafica_categoria" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_categoria_tariffaria" Width="3.75" PointX="10" PointY="14" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_categoria_tariffaria_anagrafica_categoria" />
+      </Diagram>
+      <Diagram DiagramId="06554507c14740ecb8bbd26222068047" Name="Veicoli" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_veicolo" Width="2.375" PointX="8" PointY="3.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_modello_veicolo" Width="1.875" PointX="4.875" PointY="4.375" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_modello_veicolo_anagrafica_tipo_veicolo" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_veicoli" Width="1.5" PointX="11.125" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_veicoli_anagrafica_tipo_veicolo" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_veicoli_tab_modello_veicolo" />
+        </Diagram>
+      <Diagram DiagramId="271588a6a88d44928a584a06e83a4093" Name="TerzoDebitore" ZoomLevel="82" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_toponimo" Width="2.625" PointX="7.625" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_bene" Width="2.125" PointX="5.25" PointY="2.5" />
+        <EntityTypeShape EntityType="dbEnteModel.ANAGRAFICA_ABI_CAB" Width="2" PointX="5.125" PointY="9" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_terzo" Width="1.5" PointX="8.875" PointY="6.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_terzo_debitore" Width="2.125" PointX="11.125" PointY="4.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_terzo_debitore_ANAGRAFICA_ABI_CAB" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_terzo_debitore_tab_terzo" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_terzo_debitore_tab_tipo_bene" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_vincoli_beni_pignorati" Width="1.5" PointX="11.375" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_ANAGRAFICA_ABI_CAB_ANAGRAFICA_ABI_CAB" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_terzo_ANAGRAFICA_ABI_CAB" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_terzo_tab_tipo_bene" />
+        </Diagram>
+      <Diagram DiagramId="343b0f2bb73843ccb7bb3804f3cc5b0a" Name="ListeDiCarico" ZoomLevel="85" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_validazione_approvazione_liste_spedizione" Width="2.625" PointX="7.875" PointY="4.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_liste" Width="2.875" PointX="5.625" PointY="22.375" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_spedizione_tab_liste" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_liste_tab_liste_carico" />
+        <EntityTypeShape EntityType="dbEnteModel.join_lst_emissione_lst_sped_not" Width="1.5" PointX="10.625" PointY="31" />
+        <AssociationConnector Association="dbEnteModel.FK_join_lst_emissione_lst_sped_not_tab_liste1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_lista_sped_notifiche" Width="1.5" PointX="14.5" PointY="30.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_lst_emissione_lst_sped_not_tab_lista_sped_notifiche1" />
+        </Diagram>
+      <Diagram DiagramId="47de37116ed444f8bd633926d167db6d" Name="Reports" ZoomLevel="112" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_consuntivo_dett_lista_carico" Width="1.5" PointX="8.5" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_consuntivo_lista_carico" Width="1.5" PointX="5.625" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_consuntivo_soglie" Width="2" PointX="11" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_consuntivo_dett_lista_carico_tab_consuntivo_lista_carico" />
+      </Diagram>
+      <Diagram DiagramId="e4ff884144dd475fbe1749f588e8381b" Name="AvvPagEmissione" ZoomLevel="73" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag_fatt_rettifica" Width="3" PointX="3.5" PointY="0.875" />
+        <EntityTypeShape EntityType="dbEnteModel.join_controlli_avvpag_fatt_emissione" Width="1.5" PointX="13.875" PointY="7" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag_fatt_emissione" Width="2.75" PointX="8.625" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_controlli_avvpag_fatt_emissione_tab_avv_pag_fatt_emissione" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tab_supervisione_profili" Width="4" PointX="23.375" PointY="2" />
+        </Diagram>
+      <Diagram DiagramId="b8067de6ff0b4ee5a25a7dd991bc14af" Name="Documenti" ZoomLevel="72" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_entrate" Width="2.25" PointX="1.25" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_contrib_ref" Width="2.125" PointX="17.25" PointY="0.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_documenti" Width="1.5" PointX="18.875" PointY="5.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_presentati_contrib_ref_tab_doc_anagrafici" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_allegati_digitali" Width="2.625" PointX="19.875" PointY="1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_doc_anagrafici_allegati_tab_doc_anagrafici" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_contribuenti" Width="1.5" PointX="16.75" PointY="6.125" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_presentati_contribuenti_tab_doc_anagrafici" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_domiciliazioni" Width="1.5" PointX="16" PointY="4.125" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_presentati_domiciliazioni_tab_doc_anagrafici" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_referenti" Width="1.5" PointX="15.125" PointY="1.25" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_presentati_referenti_tab_doc_anagrafici" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_tab_terzo_debitore" Width="1.5" PointX="22" PointY="7.875" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_tab_terzo_debitore_tab_documenti" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_terzo_debitore" Width="1.5" PointX="28.25" PointY="6.625" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_tab_terzo_debitore_tab_terzo_debitore" />
+      </Diagram>
+      <Diagram DiagramId="0e9fc3a7db544f60a6c5033e4474bdf8" Name="Causale" ZoomLevel="62" >
+        <EntityTypeShape EntityType="dbEnteModel.join_causale_doc_new" Width="1.5" PointX="3.5" PointY="3" />
+      </Diagram>
+      <Diagram DiagramId="87df3cae7b5f41ec9b5a72087ddc69ee" Name="Istanze" ZoomLevel="13" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_servizi" Width="2" PointX="11.5" PointY="13" />
+        <EntityTypeShape EntityType="dbEnteModel.join_entrate_macroentrate" Width="2.375" PointX="5.625" PointY="22.5" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_entrate" Width="2.5" PointX="9.125" PointY="22.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_entrate_macroentrate_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.join_doc_input_not_avvpag" Width="2.375" PointX="15.25" PointY="45.625" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_oggetti_contribuzione_verifica" Width="2.375" PointX="16.25" PointY="50.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag" Width="1.5" PointX="31.125" PointY="27.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_tab_avv_pag_riemesso" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_causale" Width="2.5" PointX="12.375" PointY="26.75" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_causale_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_input_not_avvpag_anagrafica_causale" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_risorse" Width="2.5" PointX="3.125" PointY="4.125" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_input_not_avvpag_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.join_doc_input_beni_avvpag" Width="2.875" PointX="26.5" PointY="16.25" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_input_beni_avvpag_anagrafica_causale" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_input_beni_avvpag_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_causale_anagrafica_servizi1" />
+        <EntityTypeShape EntityType="dbEnteModel.join_doc_input_riga_avvpag" Width="2.625" PointX="26.5" PointY="21.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_input_riga_avvpag_anagrafica_causale" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_input_riga_avvpag_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_doc_input" Width="1.5" PointX="15.625" PointY="15" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_doc_input_anagrafica_causale" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_doc_input_anagrafica_causale1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_doc_input_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_doc_input_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_doc_input_anagrafica_risorse1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_doc_input_anagrafica_risorse2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_doc_input_anagrafica_risorse3" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_doc_input_anagrafica_risorse4" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_pratiche" Width="3.125" PointX="39.625" PointY="31.5" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_join_doc_input_beni_avvpag" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_join_doc_input_not_avvpag" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_join_doc_input_riga_avvpag" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_tab_doc_input" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_tab_oggetti_contribuzione_verifica" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tab_avv_pag_tab_doc_input" Width="3.875" PointX="33.375" PointY="22.375" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_avv_pag_tab_doc_input_anagrafica_causale" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_avv_pag_tab_doc_input_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_avv_pag_tab_doc_input_anagrafica_risorse1" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_avv_pag_tab_doc_input_anagrafica_risorse2" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_input_beni_avvpag_join_tab_avv_pag_tab_doc_input" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_input_not_avvpag_join_tab_avv_pag_tab_doc_input" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_input_riga_avvpag_join_tab_avv_pag_tab_doc_input" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_join_tab_avv_pag_tab_doc_input" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_avv_pag_tab_doc_input_join_tab_avv_pag_tab_doc_input1" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_avv_pag_tab_doc_input_tab_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_avv_pag_tab_doc_input_tab_avv_pag1" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_avv_pag_tab_doc_input_tab_doc_input" />
+        <EntityTypeShape EntityType="dbEnteModel.join_doc_input_pag_avvpag" Width="3.25" PointX="38" PointY="16.625" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_input_pag_avvpag_anagrafica_causale" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_input_pag_avvpag_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_doc_input_pag_avvpag_join_tab_avv_pag_tab_doc_input" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_pratiche_join_doc_input_pag_avvpag" />
+        </Diagram>
+      <Diagram DiagramId="96e62bb777ef45ee956c451c5f7e4af8" Name="Tariffe" ZoomLevel="82" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_categoria_tariffaria_ici" Width="2.25" PointX="5.5" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_categoria_tariffaria_imu" Width="2.5" PointX="8.75" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_categoria_tariffaria_tasi" Width="2.375" PointX="12.5" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_categoria_tariffaria_icp" Width="2.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_categoria_tariffaria_tosap" Width="1.5" PointX="20.5" PointY="2.75" />
+        </Diagram>
+      <Diagram DiagramId="2e392069dbb6476c919d78ce80e2fcfa" Name="Agevolazioni" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_agevolazione" Width="2.25" PointX="5.25" PointY="1.5" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_agevolazione" Width="2.5" PointX="1.25" PointY="3.25" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_agevolazione_anagrafica_tipo_agevolazione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_agevolazioni" Width="1.5" PointX="9.875" PointY="1.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_agevolazioni_anagrafica_agevolazione" />
+      </Diagram>
+      <Diagram DiagramId="fa904ed21add474984f89e73cbf7518b" Name="Locazioni" ZoomLevel="100" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_locazione_contratto" Width="2.25" PointX="0.75" PointY="5.625" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_locazione_immobili" Width="2.125" PointX="4.875" PointY="9.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_locazione_immobili_tab_locazione_contratto" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_locazione_soggetto" Width="2.375" PointX="3.75" PointY="1.125" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_locazione_propr_inquilino_tab_locazione_contratto" />
+      </Diagram>
+      <Diagram DiagramId="44ec40f2bc554cd99c6b1c9df689c9df" Name="Zone" ZoomLevel="58" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_zone" Width="1.5" PointX="6.75" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_entrate" Width="2.875" PointX="1.625" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_zone_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_aree" Width="1.5" PointX="5" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_aree_tab_zone" />
+      </Diagram>
+      <Diagram DiagramId="687091ec2f5d4df28b6bbc9e97d18cc8" Name="Rilevatori" ZoomLevel="90" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_rilevatore" Width="2.125" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_lista_letture" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_rilevazione_acquedotto" Width="2.375" PointX="5.625" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_rilevazione_acquedotto_tab_lista_letture" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_rilevazione_acquedotto_tab_rilevatore" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_lista" Width="1.5" PointX="13.875" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_lista_letture_tab_tipo_lista" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_assegnazione_rilevazioni" Width="2.375" PointX="9.625" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_assegnazione_rilevazioni_tab_lista_letture" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_assegnazione_rilevazioni_tab_rilevatore" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_rilevazione_acquedotto_dettaglio" Width="2.875" PointX="8.75" PointY="7.125" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_rilevazione_acquedotto_dettaglio_tab_rilevazione_acquedotto" />
+        </Diagram>
+      <Diagram DiagramId="5fc60d6869234c549c8375bafaa2f84a" Name="Macroentrate" >
+        <EntityTypeShape EntityType="dbEnteModel.join_entrate_macroentrate" Width="1.5" PointX="3.5" PointY="1" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_entrate" Width="1.5" PointX="6.375" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_entrate_macroentrate_anagrafica_entrate" />
+      </Diagram>
+      <Diagram DiagramId="c0fc91909fbf4e60b3e90c26c3992dfe" Name="Contatori" ZoomLevel="85" >
+        <EntityTypeShape EntityType="dbEnteModel.join_ogg_contatore" Width="2.25" PointX="3.625" PointY="2.125" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_contatore" Width="2.125" PointX="12.875" PointY="3.25" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_letture" Width="2.25" PointX="10.125" PointY="3" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_rilevatore" Width="1.5" PointX="15.5" PointY="2.25" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_lettura" Width="2" PointX="6.625" PointY="9.375" />
+      </Diagram>
+      <Diagram DiagramId="f48f394f09e94243a0af64e7e566de82" Name="Contratti" ZoomLevel="54" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_contratti_NEW" Width="1.5" PointX="0.75" PointY="2.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_voci_contrattuali_NEW" Width="1.5" PointX="3" PointY="1.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_voci_contrattuali_NEW_tab_voci_contrattuali_NEW" />
+      </Diagram>
+      <Diagram DiagramId="82530e1d330248a0a959b2de9f41347c" Name="CalcoloVociContribuzione" ZoomLevel="108" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_entrate" Width="2.125" PointX="16.125" PointY="2.75" />
+        <EntityTypeShape EntityType="dbEnteModel.calcolo_voci_contribuzione" Width="2.375" PointX="19" PointY="8.125" />
+        <AssociationConnector Association="dbEnteModel.FK_calcolo_voci_contribuzione_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_voci_contribuzione" Width="1.5" PointX="22.75" PointY="6.375" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_voci_contribuzione_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_calcolo_voci_contribuzione_anagrafica_voci_contribuzione" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tipo_avvpag_voci_contrib_new" Width="3.125" PointX="27.25" PointY="5.125" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_avvpag_voci_contrib_new_anagrafica_voci_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tipo_avvpag_voci_contrib_new_anagrafica_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_calcolo_tipo_voci_contribuzione" Width="1.5" PointX="24.875" PointY="10.375" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_calcolo_tipo_voci_contribuzione_anagrafica_entrate" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_calcolo_tipo_voci_contribuzione_anagrafica_voci_contribuzione" />
+        </Diagram>
+      <Diagram DiagramId="b355ad2dcce8440dbac66bf9cb69939e" Name="Contribuzione" ZoomLevel="63" >
+        <EntityTypeShape EntityType="dbEnteModel.join_tipo_voci_contribuzione_priorita_riscossione" Width="2" PointX="4.25" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tipo_avvpag_voci_contrib_new" Width="1.75" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_contribuzione" Width="2.75" PointX="10.875" PointY="0.5" />
+      </Diagram>
+      <Diagram DiagramId="c2ac69a7c0aa4e8998dd75aa458ad583" Name="RilevazioneAcquedotto" ZoomLevel="55" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_rilevazione_acquedotto_dettaglio" Width="2.75" PointX="10.375" PointY="12" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_aree" Width="1.5" PointX="3.875" PointY="2.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_zone" Width="1.5" PointX="3.875" PointY="6.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_aree_tab_zone" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_toponimi" Width="1.5" PointX="3.875" PointY="11.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_aree_tab_toponimi" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_rilevazione_acquedotto_smart" Width="4.5" PointX="13.875" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_rilevazione_acquedotto_smart_tab_aree" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_rilevazione_acquedotto_smart_tab_rilevazione_acquedotto_dettaglio" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_rilevazione_acquedotto_smart_tab_toponimi" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_rilevazione_acquedotto_smart_tab_zone" />
+        </Diagram>
+      <Diagram DiagramId="fa23e14a7f9c46c9b6d34de0fd95c505" Name="CoattivoSupGuidata" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_ispezioni_coattivo_new" Width="2.125" PointX="0.5" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="dbEnteModel.join_ispezioni_ingiunzioni" Width="2" PointX="0.5" PointY="1.75" IsExpanded="false" />
+        <AssociationConnector Association="dbEnteModel.FK_join_ispezioni_ingiunzioni_tab_ispezioni_coattivo_new" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_bene" Width="1.5" PointX="5.75" PointY="1.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_ingiunzioni_ispezione" Width="2.125" PointX="0.5" PointY="3" IsExpanded="false" />
+        <AssociationConnector Association="dbEnteModel.FK_join_ispezioni_ingiunzioni_tab_ingiunzioni_ispezione" />
+        <EntityTypeShape EntityType="dbEnteModel.join_ingfis_supervisione" Width="2" PointX="3.125" PointY="3" IsExpanded="false" />
+        <AssociationConnector Association="dbEnteModel.FK_join_ingfis_supervisione_tab_ingiunzioni_ispezione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_profilo_contribuente_new" Width="2.25" PointX="5.375" PointY="3" IsExpanded="false" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_profilo_contribuente_new_tab_ispezioni_coattivo_new" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="dbEnteModel.FK_tab_profilo_contribuente_new_tab_tipo_bene" />
+      </Diagram>
+      <Diagram DiagramId="e0171245d77e4577a06def418efbc9fe" Name="ConsuntivoLista" ShowGrid="false" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_consuntivo_lista_carico" Width="2.125" PointX="0.5" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_consuntivo_dett_lista_carico" Width="2.375" PointX="3.375" PointY="0.5" IsExpanded="false" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_consuntivo_dett_lista_carico_tab_consuntivo_lista_carico" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_consuntivo_soglie" Width="1.875" PointX="0.5" PointY="2.375" IsExpanded="false" />
+      </Diagram>
+      <Diagram DiagramId="ac739c0b0f194d14848fc236969e6d60" Name="ConsuntivoListaRiscosso" />
+      <Diagram DiagramId="fc497a36e6fa48a38b7ed2294c449dcd" Name="Domicilio" ZoomLevel="57" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_domicilio" Width="1.5" PointX="0.75" PointY="0.75" />
+      </Diagram>
+      <Diagram DiagramId="a1189ace083a4fb19f475dc90a3f9685" Name="Liste" ZoomLevel="64" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_controlli_qualita_emissione_avvpag" Width="1.5" PointX="1.875" PointY="0.5" />
+      </Diagram>
+      <Diagram DiagramId="1ccd8c1138b949c2ba034ca728e8ee40" Name="Rate" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_ruolo_mansione" Width="2.125" PointX="1.625" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_delibere_determine_tariffarie" Width="2" PointX="5.125" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_delibere_determine_tariffarie_anagrafica_ruolo_mansione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_rata_avv_pag_fatt_emissione" Width="1.625" PointX="2.125" PointY="3.75" />
+      </Diagram>
+      <Diagram DiagramId="467f7d1534fb45789c38ba113465ae2b" Name="DocInput" ZoomLevel="55" >
+        <EntityTypeShape EntityType="dbEnteModel.join_tab_doc_input_tab_doc_output" Width="1.5" PointX="10.625" PointY="4.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_doc_output" Width="1.5" PointX="8.375" PointY="20.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_doc_input_tab_doc_output_tab_doc_output" />
+      </Diagram>
+      <Diagram DiagramId="69e0c55b647947548099e56e5e047a58" Name="ProcConcorsuali" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stato_contribuente" Width="3.125" PointX="10.875" PointY="1.125" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_procedure_concorsuali" Width="3.625" PointX="10.625" PointY="7.125" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_procedure_concorsuali_anagrafica_stato_contribuente_apertura" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_procedure_concorsuali_anagrafica_stato_contribuente_chiusura" />
+        <EntityTypeShape EntityType="dbEnteModel.join_proc_concorsuali_crediti_privil_chiro" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_contribuenti_procedure_concorsuali" Width="3.75" PointX="18.375" PointY="5.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_procedure_concorsuali" Width="2.875" PointX="15" PointY="4.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_procedure_concorsuali_anagrafica_procedure_concorsuali" />
+        <AssociationConnector Association="dbEnteModel.FK_join_contribuenti_procedure_concorsuali_tab_procedure_concorsuali" />
+        <AssociationConnector Association="dbEnteModel.FK_join_proc_concorsuali_crediti_privil_chiro_tab_procedure_concorsuali" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_ricerca_infocamere" Width="3.375" PointX="4.5" PointY="2.25" />
+        </Diagram>
+      <Diagram DiagramId="9e6b679a722b419fa3c917b23b8b305b" Name="Fascicolo" ZoomLevel="69" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_fascicolo" Width="1.5" PointX="0.75" PointY="3.125" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_fascicolo" Width="1.5" PointX="8.625" PointY="5.375" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_fascicolo_tab_fascicolo" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_fascicolo_avvpag_allegati" Width="1.5" PointX="5" PointY="4.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_documenti" Width="1.5" PointX="13.25" PointY="3.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_fascicolo_avvpag_allegati_tab_documenti" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_fascicolo_tab_documenti" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fascicolo_avvpag_allegati" Width="1.5" PointX="2.875" PointY="3.25" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_fascicolo_avvpag_allegati_tab_fascicolo_avvpag_allegati" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fascicolo_avvpag_allegati_tab_fascicolo" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fascicolo_doc_output_allegati" Width="1.5" PointX="3.75" PointY="8.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fascicolo_doc_output_allegati_tab_fascicolo" />
+        <EntityTypeShape EntityType="dbEnteModel.join_documenti_fascicolo_doc_output_allegati" Width="1.5" PointX="15.5" PointY="7.375" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_fascicolo_allegati_doc_output_tab_documenti" />
+        <AssociationConnector Association="dbEnteModel.FK_join_documenti_fascicolo_allegati_doc_output_tab_fascicolo_doc_output_allegati" />
+      </Diagram>
+      <Diagram DiagramId="168885eeea7e4c2fa7af93f37edc2532" Name="SpedNot" ZoomLevel="71" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_validazione_approvazione_liste" Width="2.625" PointX="6.25" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_spedizione_notifica" Width="2.875" PointX="6.125" PointY="16.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_tipo_spedizione_notifica_nel_PF" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_tipo_spedizione_notifica_nel_PG" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_tipo_spedizione_notifica_PF" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_tipo_spedizione_notifica_PG" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_lista" Width="3.125" PointX="10" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_prog_lista" Width="1.75" PointX="10" PointY="5.125" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_prog_lista_tab_tipo_lista" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_tipo_spedizione_notifica" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_sped_not_fatt_emissione" Width="6" PointX="29.875" PointY="27.375" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_anagrafica_tipo_spedizione_notifica" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_sped_not" Width="3.75" PointX="9.75" PointY="9.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_anagrafica_tipo_spedizione_notifica" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_risorse" Width="1.5" PointX="19.25" PointY="27.75" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_risorse1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_risorse2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_risorse3" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_risorse4" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_risorse_emissione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_validazione_approvazione_liste_anagrafica_risorse_notifica" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_anagrafica_risorse_emissione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_fatt_emissione_anagrafica_risorse_notifica" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_anagrafica_risorse_emissione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_sped_not_anagrafica_risorse_notifica" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_quantita_spedizione" Width="1.5" PointX="25.875" PointY="5.5" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_stampatori" Width="2" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_tipo_spedizione_notifica_anagrafica_stampatori" />
+      </Diagram>
+      <Diagram DiagramId="a453917c5cfd4e4f8e662b6dd4c38d1d" Name="Stampe" ZoomLevel="88" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_sezioni_stampa" Width="2.125" PointX="1.75" PointY="1.5" />
+        <EntityTypeShape EntityType="dbEnteModel.join_sezioni_stampa_tipo_avv_pag" Width="1.5" PointX="6.125" PointY="1" />
+        <AssociationConnector Association="dbEnteModel.FK_join_sezioni_stampa_tipo_avv_pag_anagrafica_sezioni_stampa" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_ente_gestito" Width="1.5" PointX="8.25" PointY="3.375" />
+        <AssociationConnector Association="dbEnteModel.FK_join_sezioni_stampa_tipo_avv_pag_anagrafica_ente_gestito" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_avv_pag" Width="1.75" PointX="6.125" PointY="5.625" />
+        <AssociationConnector Association="dbEnteModel.FK_join_sezioni_stampa_tipo_avv_pag_anagrafica_tipo_avv_pag" />
+        <EntityTypeShape EntityType="dbEnteModel.join_sezioni_stampa_tipo_avv_pag_view" Width="2.75" PointX="1.125" PointY="4.875" />
+        <AssociationConnector Association="dbEnteModel.anagrafica_tipo_avv_pagjoin_sezioni_stampa_tipo_avv_pag_view" />
+        <AssociationConnector Association="dbEnteModel.anagrafica_ente_gestitojoin_sezioni_stampa_tipo_avv_pag_view" />
+        <AssociationConnector Association="dbEnteModel.anagrafica_sezioni_stampajoin_sezioni_stampa_tipo_avv_pag_view" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_selezione_report" Width="1.5" PointX="13.5" PointY="14.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_selezione_report_anagrafica_tipo_avv_pag" />
+      </Diagram>
+      <Diagram DiagramId="9fcc87f2a10f44d7aafc858570507a2e" Name="Poste" ZoomLevel="80" >
+        <EntityTypeShape EntityType="dbEnteModel.ser_regioni" Width="1.5" PointX="9.5" PointY="1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_poste_comune" Width="1.5" PointX="1.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_poste_strada" Width="1.5" PointX="4.75" PointY="1.375" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_poste_strada_tab_poste_comune" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_poste_arcostradale" Width="1.5" PointX="7.75" PointY="2.375" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_poste_arcostradale_tab_poste_strada" />
+        </Diagram>
+      <Diagram DiagramId="36340ab329674690a47346e01b52d1bb" Name="PuntoFisco" ZoomLevel="58" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_co1142_elenco_domicili_fiscali" Width="1.5" PointX="8" PointY="2.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_co1142_pf" Width="1.5" PointX="5.75" PointY="1.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_co1151_ditte_rappresentate" Width="1.5" PointX="3" PointY="6.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_co1151_elenco_artite_iva" Width="1.5" PointX="3" PointY="1.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_co1151_rappresentanti_legali" Width="1.5" PointX="3" PointY="10.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_co1142_elenco_domicili_fiscali_tab_co1142_pf" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_co1151" Width="1.5" PointX="0.75" PointY="3" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_co1151_ditte_rappresentate_tab_co1151" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_co1151_elenco_artite_iva_tab_co1151_elenco_artite_iva" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_co1151_rappresentanti_legali_tab_co1151" />
+      </Diagram>
+      <Diagram DiagramId="e426610043124bf18c889c0c1a3b38e6" Name="TributiMinisteriali" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_tributi_ministeriali" Width="2.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_voci_contribuzione" Width="1.5" PointX="6.375" PointY="2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_tributi_ministeriali_anagrafica_voci_contribuzione" />
+      </Diagram>
+      <Diagram DiagramId="40facb52a7df4f5fb5cff00dcb947588" Name="TabSupervisioneFinale" ZoomLevel="82" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag" Width="3.25" PointX="2.25" PointY="1.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_tab_avv_pag_riemesso" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag_fatt_emissione" Width="2.75" PointX="11.75" PointY="1.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_fatt_emissione_tab_avv_pag" />
+        <EntityTypeShape EntityType="dbEnteModel.TAB_SUPERVISIONE_FINALE_V2" Width="3.5" PointX="6.75" PointY="2.5" />
+        <AssociationConnector Association="dbEnteModel.FK_TAB_SUPERVISIONE_FINALE_V2_tab_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_fatt_emissione_TAB_SUPERVISIONE_FINALE_V2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_TAB_SUPERVISIONE_FINALE_V2" />
+        <AssociationConnector Association="dbEnteModel.FK_TAB_SUPERVISIONE_FINALE_V2_tab_avv_pag1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_file_trasmessi" Width="3.875" PointX="6.375" PointY="13.625" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tab_supervisione_profili" Width="2.625" PointX="11.625" PointY="27.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_tab_supervisione_profili_TAB_SUPERVISIONE_FINALE_V2" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_avv_pag" Width="4.125" PointX="6.75" PointY="41.375" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_fatt_emissione_anagrafica_tipo_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_TAB_SUPERVISIONE_FINALE_V2_anagrafica_tipo_avv_pag_da_emettere" />
+        <AssociationConnector Association="dbEnteModel.FK_TAB_SUPERVISIONE_FINALE_V2_anagrafica_tipo_avv_pag_emesso" />
+      </Diagram>
+      <Diagram DiagramId="5f4bbda15b41450cb99ae5ba427b812c" Name="FattEmissione" ZoomLevel="77" >
+        <EntityTypeShape EntityType="dbEnteModel.join_avv_pag_mov_pag_fatt_emissione" Width="3" PointX="2.625" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_mov_pag_fatt_emissione" Width="2.625" PointX="6.375" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_tipo_aa_regione" Width="2.25" PointX="0.75" PointY="6.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_tipo_r5_regione_tab_f24_tipo_aa_regione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_tipo_r1_regione" Width="2.125" PointX="3.75" PointY="6.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_tipo_r1_regione_tab_f24_tipo_aa_regione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_tipo_r2_regione" Width="1.5" PointX="3.75" PointY="16.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_tipo_r2_regione_tab_f24_tipo_aa_regione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_tipo_zz_regione" Width="1.5" PointX="3.75" PointY="24.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_tipo_zz_regione_tab_f24_tipo_aa_regione" />
+      </Diagram>
+      <Diagram DiagramId="2d73b34773584d8ba3443912bb81c879" Name="SuperVisione" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_iter_supervisione_atti_coa" Width="1.5" PointX="1.25" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tab_supervisione_profili" Width="1.5" PointX="6.875" PointY="1" />
+      </Diagram>
+      <Diagram DiagramId="ea68d34655c54b79a713e0cbb036b9f7" Name="Ser" >
+        <EntityTypeShape EntityType="dbEnteModel.ser_regioni" Width="1.5" PointX="4.125" PointY="3.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_risorse_ser_comuni" Width="2.5" PointX="8.75" PointY="7.25" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_risorse" Width="1.5" PointX="4.5" PointY="7.75" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_join_risorse_ser_comuni_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.ser_comuni" Width="1.5" PointX="7.875" PointY="0.5" />
+        <AssociationConnector Association="dbEnteModel.FK_join_risorse_ser_comuni_ser_comuni" />
+        <AssociationConnector Association="dbEnteModel.FK_ser_comuni_ser_regioni" />
+        <EntityTypeShape EntityType="dbEnteModel.ser_province" Width="1.5" PointX="12.375" PointY="0.875" />
+        <AssociationConnector Association="dbEnteModel.FK_ser_comuni_ser_province" />
+        <AssociationConnector Association="dbEnteModel.FK_ser_province_ser_regioni" />
+        <EntityTypeShape EntityType="dbEnteModel.ser_stati_esteri_new" Width="1.75" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_ser_comuni" />
+      </Diagram>
+      <Diagram DiagramId="960d6cb1ebe549bd9bfe50475eb21f69" Name="UfficialiRiscossione" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_quietanze" Width="1.5" PointX="8.375" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_atto_ufficiali_riscossione" Width="1.5" PointX="3.375" PointY="2.625" />
+      </Diagram>
+      <Diagram DiagramId="9ef5c13a886243dd9dcdbed5c3c379d4" Name="Citazioni" ZoomLevel="64" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_citazioni" Width="7" PointX="15.375" PointY="2.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag" Width="1.5" PointX="27.625" PointY="4.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_tab_avv_pag_riemesso" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_citazioni_tab_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_citazioni_tab_avv_pag1" />
+      </Diagram>
+      <Diagram DiagramId="3fe549a169df4dcb956456647e2a2c1a" Name="Finale" >
+        <EntityTypeShape EntityType="dbEnteModel.Finale1" Width="1.5" PointX="4" PointY="1.75" />
+      </Diagram>
+      <Diagram DiagramId="7a75f242f92c435bab1673ef76f64a03" Name="Rateizzazione" ZoomLevel="73" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_rateizzazioni" Width="2.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_esclusione_rateizzazione" Width="1.5" PointX="4.375" PointY="0.75" />
+      </Diagram>
+      <Diagram DiagramId="e65f589e41cf465282f9744482017db2" Name="IdUtente_to_IdRisorsa" ZoomLevel="100" >
+      </Diagram>
+      <Diagram DiagramId="23d320c299664e078585eefb9afd0c82" Name="Anomalie" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_anomalie_spedizioni" Width="2.375" PointX="5.375" PointY="0.875" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_controlli_qualita_emissione_avvpag" Width="2.75" PointX="10.875" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_anomalie_spedizioni_anagrafica_controlli_qualita_emissione_avvpag" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag" Width="1.5" PointX="1" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_tab_avv_pag_riemesso" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_anomalie_spedizioni_tab_avv_pag" />
+      </Diagram>
+      <Diagram DiagramId="d5702ea809884cfb8c15e937f92dd32e" Name="RivestizioniAngrafiche" ZoomLevel="80" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_rivestizione_anagrafica" Width="2.625" PointX="1" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_risposte_rivestizione_liste_errori" Width="1.5" PointX="14" PointY="1.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_contribuente" Width="1.5" PointX="7.875" PointY="6.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_referente" Width="1.5" PointX="12.125" PointY="6.375" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_referente_tab_contribuente" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_richieste_rivestizione_liste" Width="1.5" PointX="7.375" PointY="0.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_risposte_rivestizione_liste" Width="1.5" PointX="10.625" PointY="1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_richieste_rivestizione_liste_tab_contribuente" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_risposte_rivestizione_liste_tab_contribuente" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_richieste_rivestizione_liste_tab_referente" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_risposte_rivestizione_liste_tab_referente" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_richieste_rivestizione_liste_tab_rivestizione_anagrafica" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_risposte_rivestizione_liste_tab_richieste_rivliste" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_risposte_rivestizione_liste_errori_tab_risposte_rivestizione_liste" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_terzo" Width="1.5" PointX="16.125" PointY="1.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_terzo_sto" Width="1.5" PointX="14.25" PointY="5.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_terzo_sto_tab_terzo" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_anagrafiche_da_rivestire" Width="1.5" PointX="10.125" PointY="27.375" />
+        <AssociationConnector Association="dbEnteModel.fk_5714CAA1_A862_45F8_9D65_34B26AA659D9" />
+        </Diagram>
+      <Diagram DiagramId="de004d202d7644b3a43e70f25e2ef68b" Name="Ricorso" ZoomLevel="67" >
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_esito_sentenze" Width="1.5" PointX="9" PointY="10.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_spese_giudizio" Width="2.5" PointX="8.25" PointY="14.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_ricorsi" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_doc_entrate" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_causali_motivazioni_causali_esito" Width="1.5" PointX="5" PointY="4.25" />
+        <AssociationConnector Association="dbEnteModel.FK_join_causali_motivazioni_causali_esito_tab_tipo_doc_entrate" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_causale" Width="1.5" PointX="22" PointY="4.375" />
+        <AssociationConnector Association="dbEnteModel.FK_join_causali_motivazioni_causali_esito_anagrafica_causale" />
+        <AssociationConnector Association="dbEnteModel.FK_join_causali_motivazioni_causali_esito_anagrafica_causale1" />
+        <EntityTypeShape EntityType="dbEnteModel.join_causali_esito_nome_file_memorie" Width="1.5" PointX="7.875" PointY="7.5" />
+        <AssociationConnector Association="dbEnteModel.FK_join_causali_esito_nome_file_memorie_anagrafica_causale" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_registro_assegnazione_pratiche" Width="2.875" PointX="5" PointY="9.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_registro_assegnazione_pratiche_tab_tipo_doc_entrate" />
+      </Diagram>
+      <Diagram DiagramId="a4a0733eee074c18897008a154b2013e" Name="F24_regione" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_tipo_aa_regione" Width="1.5" PointX="0.75" PointY="17.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_tipo_r1_regione" Width="1.5" PointX="3" PointY="22.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_tipo_r2_regione" Width="1.5" PointX="3" PointY="11.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_tipo_r3_regione" Width="1.5" PointX="3" PointY="6.625" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_tipo_r4_regione" Width="1.5" PointX="3" PointY="2.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_tipo_r5_regione" Width="1.5" PointX="3" PointY="18.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_tipo_zz_regione" Width="1.5" PointX="3" PointY="31.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_tipo_r1_regione_tab_f24_tipo_aa_regione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_tipo_r2_regione_tab_f24_tipo_aa_regione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_tipo_r3_regione_tab_f24_tipo_aa_regione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_tipo_r4_regione_tab_f24_tipo_aa_regione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_tipo_r5_regione_tab_f24_tipo_aa_regione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_tipo_r5_regione_tab_f24_tipo_aa_regione1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_tipo_zz_regione_tab_f24_tipo_aa_regione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_esito_aci" Width="2.875" PointX="5.375" PointY="0.75" />
+      </Diagram>
+      <Diagram DiagramId="374e5389faa5450d9de6da98451d236b" Name="Rimborso" ZoomLevel="56" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_rimborsi" Width="3.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_avv_pag_mov_pag" Width="1.5" PointX="10.625" PointY="4" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag" Width="1.5" PointX="21.375" PointY="4.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_tab_avv_pag_riemesso" />
+        <AssociationConnector Association="dbEnteModel.FK_join_avv_pag_mov_pag_tab_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_join_avv_pag_mov_pag_tab_avv_pag1" />
+        <AssociationConnector Association="dbEnteModel.FK_join_avv_pag_mov_pag_tab_avv_pag2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_rimborsi_tab_avv_pag" />
+      </Diagram>
+      <Diagram DiagramId="a3bdb8c8ee8740378c01c0f3b072eb67" Name="TabModalitaRateAvvPag" ZoomLevel="50" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_modalita_rate_avvpag" Width="3.375" PointX="1.75" PointY="0.875" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_tipo_avv_pag" Width="3.75" PointX="7.5" PointY="4.625" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_modalita_rate_avvpag_anagrafica_tipo_avv_pag" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_cc_riscossione" Width="3" PointX="23.125" PointY="4.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_modalita_rate_avvpag_tab_cc_riscossione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_modalita_rate_avvpag_view" Width="3.125" PointX="14.875" PointY="2" />
+        <AssociationConnector Association="dbEnteModel.anagrafica_tipo_avv_pagtab_modalita_rate_avvpag_view" />
+        <EntityTypeShape EntityType="dbEnteModel.join_sezioni_stampa_tipo_avv_pag_view" Width="1.5" PointX="12" PointY="10.25" />
+        <AssociationConnector Association="dbEnteModel.anagrafica_tipo_avv_pagjoin_sezioni_stampa_tipo_avv_pag_view" />
+        <AssociationConnector Association="dbEnteModel.tab_cc_riscossionetab_modalita_rate_avvpag_view1" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_risorse" Width="1.5" PointX="29.5" PointY="5.75" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_modalita_rate_avvpag_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_modalita_rate_avvpag_anagrafica_risorse_emissione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_modalita_rate_avvpag_anagrafica_risorse_notifica" />
+        <AssociationConnector Association="dbEnteModel.anagrafica_risorsetab_modalita_rate_avvpag_view" />
+        </Diagram>
+      <Diagram DiagramId="af890fe4e66942a2bcbca3fda53c4cf7" Name="GestioneAvvocati" ZoomLevel="82" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_generale_udienze" Width="1.5" PointX="10.25" PointY="15.25" />
+        </Diagram>
+      <Diagram DiagramId="ae5e02653de94cd290bac0dde5315946" Name="EsecuzioneApplicazioni" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_esecuzione_applicazioni" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_risorse" Width="1.5" PointX="8.5" PointY="1" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_esecuzione_applicazioni_anagrafica_risorse" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_strutture_aziendali" Width="1.5" PointX="5.375" PointY="3.5" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_risorse_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_anagrafica_strutture_aziendali_anagrafica_risorse" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_esecuzione_applicazioni_anagrafica_strutture_aziendali" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_esecuzione_applicazioni_anagrafica_risorse1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_esecuzione_applicazioni_anagrafica_strutture_aziendali_prec" />
+      </Diagram>
+      <Diagram DiagramId="b33e792d45134fb5abcc2c336da77bda" Name="Applicazioni" ZoomLevel="79" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_esecuzione_applicazioni" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.join_applicazioni_link" Width="1.5" PointX="14.25" PointY="4.5" />
+        <EntityTypeShape EntityType="dbEnteModel.join_applicazioni_secondarie" Width="1.5" PointX="10.25" PointY="5" />
+      </Diagram>
+      <Diagram DiagramId="ac7d54b8e32f4b0aba40aa0491551fbe" Name="F24_comuni" ZoomLevel="100" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_a1" Width="1.5" PointX="0.75" PointY="19.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_g2" Width="1.5" PointX="3" PointY="36.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_g3" Width="1.5" PointX="3" PointY="25.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_g4" Width="1.5" PointX="3" PointY="31.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_g5" Width="1.5" PointX="3" PointY="2.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_g9" Width="1.5" PointX="3" PointY="19.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_z1" Width="1.5" PointX="5.75" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_g2_tab_f24_a1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_g3_tab_f24_a1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_g4_tab_f24_a1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_g5_tab_f24_a1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_g9_tab_f24_a1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_f24_g1" Width="1.5" PointX="3" PointY="42.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_f24_g1_tab_f24_a1" />
+      </Diagram>
+      <Diagram DiagramId="f33bc827b60d4ca99343cda32032810c" Name="Aci" ZoomLevel="47" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_esito_aci" Width="1.5" PointX="5.125" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.join_tab_supervisione_profili" Width="3" PointX="0.875" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_esito_aci_join_tab_supervisione_profili" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_esito_aci_messaggi" Width="1.5" PointX="9" PointY="2.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_esito_aci_messaggi_tab_esito_aci" />
+      </Diagram>
+      <Diagram DiagramId="50a6153a617a48339f7aaa04f1123381" Name="ipoteche" ZoomLevel="94" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_ipoteche" Width="1.5" PointX="4.25" PointY="0.5" />
+      </Diagram>
+      <Diagram DiagramId="88eb05ac7162485c888364a81e90d4ac" Name="SiatelBonifici" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_siatel_bonifici_bancari_ordinanti_0" Width="1.5" PointX="3.25" PointY="0.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_siatel_bonifici_bancari_ordinanti_9" Width="1.5" PointX="6.5" PointY="2" />
+        <AssociationConnector Association="dbEnteModel.siatel_09_fk" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_siatel_bonifici_bancari_ordinanti_1" Width="1.5" PointX="5.5" PointY="7.625" />
+        <AssociationConnector Association="dbEnteModel.siatel_19_fk" />
+      </Diagram>
+      <Diagram DiagramId="c00d92429cfb4af4b792d4eef1326f84" Name="Stragiudiziale" >
+        <EntityTypeShape EntityType="dbEnteModel.join_dichiarazione_terzo_contribuente" Width="2.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag" Width="1.5" PointX="8.75" PointY="2.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_tab_avv_pag_riemesso" />
+        <AssociationConnector Association="dbEnteModel.FK_join_dichiarazione_terzo_contribuente_tab_avv_pag" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_contribuente" Width="1.5" PointX="13.5" PointY="0.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_tab_contribuente" />
+        <AssociationConnector Association="dbEnteModel.FK_join_dichiarazione_terzo_contribuente_tab_contribuente1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_referente" Width="1.5" PointX="6.5" PointY="3.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_referente_tab_contribuente" />
+        <AssociationConnector Association="dbEnteModel.FK_join_dichiarazione_terzo_contribuente_tab_referente" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_terzo" Width="1.5" PointX="4.125" PointY="4.875" />
+        <AssociationConnector Association="dbEnteModel.FK_join_dichiarazione_terzo_contribuente_tab_terzo" />
+      </Diagram>
+      <Diagram DiagramId="c1c7fbb83b0c440cb5e42f8f8b1bce27" Name="tmp" >
+      </Diagram>
+      <Diagram DiagramId="7b9b9c13c80a42088a21782b6fe16be7" Name="pDenunce" ZoomLevel="76" >
+        <EntityTypeShape EntityType="dbEnteModel.join_oggetto_dati_metrici" Width="1.5" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="dbEnteModel.FK_D00175AC_245C_4CA9_8E54_1CD405312729" />
+      </Diagram>
+      <Diagram DiagramId="50f42ac1b29b4185a20f6161192dc6f2" Name="Carrello" ZoomLevel="60" >
+      </Diagram>
+      <Diagram DiagramId="749a199adf834b66b595715f6574b37c" Name="Acqua" ZoomLevel="74" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_contatore" Width="3.75" PointX="11.75" PointY="0.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_intervento" Width="3.75" PointX="9.25" PointY="12.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_letture" Width="3.75" PointX="17.375" PointY="1" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_tipo_contatore" Width="3.75" PointX="6.375" PointY="1.125" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_contatore_tab_tipo_contatore" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_letture_tab_contatore" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_letture_tab_intervento" />
+        <EntityTypeShape EntityType="dbEnteModel.anagrafica_agevolazione" Width="5.5" PointX="17.875" PointY="20.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_agevolazioni" Width="4" PointX="7.375" PointY="28.875" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_agevolazioni_anagrafica_agevolazione" />
+        <EntityTypeShape EntityType="dbEnteModel.join_fattcont_fattconsumi" Width="4" PointX="4.75" PointY="44.625" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fatt_consumi" Width="4" PointX="0.5" PointY="42.25" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fatt_cont" Width="4" PointX="25.25" PointY="10.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_fatt_info" Width="4" PointX="33.625" PointY="11.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_unita_contribuzione" Width="4" PointX="13.5" PointY="19.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_unita_contribuzione_fatt_emissione" Width="4" PointX="19.25" PointY="29.75" />
+        <AssociationConnector Association="dbEnteModel.FK_join_fattcont_fattconsumi_tab_fatt_consumi" />
+        <AssociationConnector Association="dbEnteModel.FK_join_fattcont_fattconsumi_tab_fatt_cont" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_info_tab_agevolazioni" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_agevolazioni" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_agevolazioni1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_agevolazioni2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_agevolazioni3" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_agevolazioni" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_agevolazioni1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_agevolazioni2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_agevolazioni3" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_cont_tab_contatore" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_info_tab_contatore" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_info_tab_fatt_consumi" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_fatt_consumi" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_fatt_consumi" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_cont_tab_letture" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_cont_tab_letture1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_info_tab_fatt_cont" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_info_tab_letture" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_info_tab_letture1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_info_tab_letture2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_info_tab_letture3" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_info_tab_letture4" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_info_tab_letture5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_info_tab_letture6" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_info_tab_letture7" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_info_tab_unita_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_intervento" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_intervento" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_unita_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_unita_contribuzione_fatt_emissione" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_avv_pag" Width="1.5" PointX="27.25" PointY="49.5" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_avv_pag_tab_avv_pag_riemesso" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_fatt_info_tab_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_avv_pag1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_avv_pag2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_fatt_emissione_tab_avv_pag3" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_avv_pag" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_avv_pag1" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_avv_pag2" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_avv_pag3" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_unita_contribuzione_tab_avv_pag4" />
+      </Diagram>
+      <Diagram DiagramId="53af5d545a8b436792b34bff7d16b969" Name="Mercati" >
+        <EntityTypeShape EntityType="dbEnteModel.join_spuntisti_prenotazione_piazzole" Width="3.25" PointX="7.75" PointY="7" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_area_mercato" Width="3.25" PointX="0.75" PointY="4.375" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_occupazione_piazzole" Width="3.25" PointX="7.875" PointY="3.5" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_spuntista" Width="3.25" PointX="3" PointY="11.375" />
+        <AssociationConnector Association="dbEnteModel.FK_join_spuntisti_prenotazione_piazzole_tab_occupazione_piazzole" />
+        <AssociationConnector Association="dbEnteModel.FK_join_spuntisti_prenotazione_piazzole_tab_spuntista" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_occupazione_piazzole_tab_area_mercato" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_spuntista_tab_area_mercato" />
+      </Diagram>
+      <Diagram DiagramId="4b8a8c8f6ead492caebf5ae2d9ccb96d" Name="pOOdgAreaMercatoCimiteri" >
+        <EntityTypeShape EntityType="dbEnteModel.tab_area_mercato" Width="1.5" PointX="9" PointY="0.875" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_cimiteri" Width="1.5" PointX="10.625" PointY="4.125" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_oggetti" Width="1.5" PointX="4.75" PointY="1.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_tab_area_mercato" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_tab_cimiteri" />
+        <EntityTypeShape EntityType="dbEnteModel.tab_oggetti_contribuzione" Width="1.5" PointX="2.375" PointY="1.25" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_contribuzione_tab_oggetti_contribuzione" />
+        <AssociationConnector Association="dbEnteModel.FK_tab_oggetti_contribuzione_tab_oggetti" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

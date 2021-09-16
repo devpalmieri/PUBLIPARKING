@@ -1,0 +1,173 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slick Playground</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="~/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="~/slick/slick-theme.css">
+
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="~/slick/slick.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        .slider-for {
+            height: 100px;
+            text-align: center;
+            background: #ffffff;
+            color: #000;
+            padding-top: 35px;
+            font-size: 24px;
+        }
+
+        .slider-nav h1 {
+            display: inline-block;
+            width: 100%;
+            height: 80px;
+        }
+
+        .slider-nav .slick-slide {
+            height: 80px;
+            color: #fff;
+            background: #007cba;
+            cursor: pointer;
+            text-align: center;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-nav">
+        <div><h2>Modalità di Pagamento</h2></div>
+        <div><h2>Parcheggi a Raso</h2></div>
+        <div><h2>Parcheggi in Struttura</h2></div>
+        <div><h2>Rimozione</h2></div>
+        <div><h2>ZTL e Noleggio</h2></div>
+    </div>
+    <div class="slider-for">
+        <div>
+            <h2>Modalità di Pagamento</h2>
+            <br />
+            <p style="text-align:left; font-size:16px">
+                - <strong>Monete</strong> (modalità ordinaria);<br />
+                - <strong>Carta di Credito</strong>: l’utente inserisce la carta di credito, digita il PIN (se richiesto) e premendo il tasto blu sulla tastiera aggiunge minuti di sosta con incrementi di importi parametrizzabili (ad esempio € 0,50);<br />
+                - <b>BLUPARKING CARD</b>: credito a scalare in modalità Real Time Parking (effettivo consumo tempo di sosta). La tessera è dotata di un microchip che memorizza l’orario di inizio sosta e, al termine della sosta, reinserendola nel parcometro, verrà calcolato l’importo detraendolo dal credito residuo.<br />
+                - <strong>SMS</strong>: l’utente invia un messaggio dal telefono. Per accedere al servizio è necessario ritirare la scheda di attivazione presso lo sportello <strong>PUBLIPARKING</strong> e attivarla indicando il numero di telefono dal quale verrà inviato il messaggio. Il credito si può ricaricare direttamente dai parcometri;<br />
+                - <strong>App &#8220;NÏNO&#8221; da smartphone</strong>: è la soluzione tecnologica proposta da <b>PUBLIPARKING</b> con cui l’account dell’utente si associa alla targa del veicolo.<br />
+                - <strong>App &#8220;Phonzie&#8221;</strong>: una volta scaricata l’App per le piattaforme principali (IOS, Android, Windows, Blackberry), occorre specificare il numero di targa del veicolo, la tariffa in vigore e confermare l’operazione.<br />
+                - <strong>App &#8220;Telepass Pay&#8221;</strong>: è la soluzione tecnologica proposta da Telepass. Inserire il numero di targa (che può essere quello associato al Telepass o uno nuovo) ed impostare la durata della sosta.
+            </p>
+            <p style="text-align:left"><strong>Ausiliario della Sosta</strong></p>
+            <p style="text-align:justify; font-size:16px">Il controllo delle occupazioni viene effettuato da <b>PUBLIPARKING</b> con personale dedicato ed appositamente formato con qualifica di ausiliario della sosta. Ciascun addetto al controllo monitora il settore affidatogli con puntuale attività di verifica e di aggiornamento dell&#8217;occupazione degli stalli. Completata la prima fase di controllo trasferisce le informazioni al centro servizi tramite il tablet in sua dotazione. In caso di violazioni, l’operatore può stampare l’avviso di accertamento mediante la stampante termica in dotazione e può documentare fotograficamente il veicolo.</p>
+
+
+
+        </div>
+        <div>
+            <h2>Parcheggi a Raso</h2>
+            <br />
+            <p style="text-align:justify; font-size:16px">Gli stalli vengono delimitati nei quattro lati dalle strisce blu e numerati progressivamente in modo che ogni stallo abbia un proprio numero identificativo, impresso sull’asfalto, immediatamente visibile e rilevabile dall’utente in sosta.</p>
+            <p style="text-align:justify; font-size:16px">L’utente, una volta parcheggiato il veicolo, può procedere con:</p>
+            <div style="padding: 10px; color: #262626; margin: 8px;"><strong>Modalità ordinaria</strong>: inserisce le monete sufficienti a coprire il periodo di sosta e torna al veicolo per esporre in modo visibile la ricevuta di pagamento;</div>
+            <div style="background-color: #d7d7d7; padding: 10px; color: #262626; border: 6px; border-color: #f28a00; border-style: solid; margin: 8px; font-size:16px">
+                <strong>Modalità “Numero Stallo”</strong>: è una delle soluzioni innovative proposte da <strong>PUBLIPARKING</strong> e prevede che l’utente indichi il numero di stallo occupato dal proprio veicolo. I dati inseriti sulla tastiera del parcometro saranno trasferiti al Centro Servizi (attraverso una connessione GPRS) e resi disponibili sui terminali degli operatori.<strong> Grazie a questo sistema l’utente NON deve tornare al veicolo per esporre la ricevuta</strong>
+            </div>
+            <div style="background-color: #d7d7d7; padding: 10px; color: #262626; font-size:16px; border: 6px; border-color: #f28a00; border-style: solid; margin: 8px;"><strong>Modalità “Numero di Targa</strong>”: è un’altra soluzione innovativa di <strong>PUBLIPARKING</strong> che prevede l’inserimento del numero di targa. Anche in questo caso, I dati inseriti sulla tastiera del parcometro saranno trasferiti al Centro Servizi (attraverso una connessione GPRS) e resi disponibili sui terminali degli operatori. <strong>Grazie a questo sistema l’utente NON deve tornare al veicolo per esporre la ricevuta.</strong></div>
+
+            <p style="text-align:justify; font-size:16px">
+                <strong>PROLUNGASOSTA</strong><br />
+            </p>
+            <p style="text-align:justify; font-size:16px">
+                Con il sistema Prolungasosta è possibile, da qualsiasi parcometro, prolungare il periodo di sosta anche prima della scadenza digitando il codice numerico indicato sul ticket associato in maniera univoca alla sosta del proprio veicolo.
+            </p>
+        </div>
+        <div>
+            <h2>Parcheggi in Struttura</h2>
+            <br />
+            <p style="text-align:justify; font-size:16px">
+                I varchi di ingresso e di uscita sono dotati di: barriera, telecamera di lettura targhe, telecamera di riscontro, spire di rilevazione veicoli;
+                il varco di ingresso è inoltre dotato di un cartello luminoso che indica lo stato di occupazione del parcheggio Libero/Completo.
+            </p>
+            <p style="text-align:left; font-size:16px"><strong>INGRESSO CON RILEVAZIONE DELLA TARGA DEL VEICOLO</strong></p>
+            <p style="text-align:justify; font-size:16px">
+                La vettura si ferma di fronte alla barriera di entrata; la spira rileva la presenza del veicolo ed attiva la telecamera,
+                le legge la targa e la trasmette unitamente alla data e all’ora di accesso al server di gestione che registra i dati ricevuti
+                ed invia il comando per alzare la barriera di ingresso.
+            </p>
+            <p style="text-align:left; font-size:16px"><strong>PAGAMENTO CON INDICAZIONE DELLA TARGA</strong></p>
+            <p style="text-align:justify; font-size:16px">
+                Il sistema di pagamento permette di pagare il tempo di permanenza nel parcheggio digitando la targa del veicolo presso la Cassa Automatica.
+                Al termine della transazione di pagamento il sistema emette la ricevuta riportante data e ora di ingresso, targa del veicolo corrispondente,
+                importo pagato e durata della sosta.
+            </p>
+            <p style="text-align:left; font-size:16px"><strong>USCITA CON RILEVAZIONE DELLA TARGA E VERIFICA PAGAMENTO</strong></p>
+            <p style="text-align:justify; font-size:16px">
+                La vettura si ferma di fronte alla barriera d’uscita; la spira rileva la presenza del veicolo ed attiva la telecamera che legge la targa del veicolo e trasmette al server di gestione che verifica la regolarità del pagamento ed invia il comando per alzare la barriera di uscita.
+            </p>
+            <p style="text-align:left; font-size:16px"><strong>GESTIONE UTENTI SPECIALI O ABBONATI</strong></p>
+            <p style="text-align:justify; font-size:16px">
+                Per la gestione degli utenti speciali o abbonati è prevista un’applicazione web che consentirà di monitorare gli accessi ai parcheggi, gestire
+                le targhe autorizzate all’accesso, inserire nuovi utenti speciali.
+            </p>
+        </div>
+        <div>
+            <h2>Rimozione</h2>
+            <br />
+            <p style="text-align:justify; font-size:16px">
+                <b>PUBLIPARKING</b> offre e favorisce il servizio di rimozione e di blocco dei veicoli che sono parcheggiati in divieto di sosta o posizioni da impedire la regolare
+                circolazione del flusso stradale. Il servizio è eseguito con l’utilizzo di carri attrezzi evoluti, costruiti per la rimozione, e dotati di ganasce per il blocco dei veicoli. Il personale di <b>PUBLIPARKING</b> effettua le attività di blocco e sblocco dei veicoli.
+
+                <br />
+                <br />
+                <b>PUBLIPARKING</b> provvede immediatamente a gestire le attività di rimozione e di riconsegna dei veicoli, quando questi sono custoditi in aree circoscritte
+                o coperte nella disponibilità di <b>PUBLIPARKING</b>.
+                <br />
+                <br />
+
+                <b>PUBLIPARKING</b> provvede inoltre ad effettuare le attività di riscossione e di rendicontazione delle attività effettuate e delle somme riscosse all’Ente Locale di riferimento.
+            </p>
+        </div>
+        <div>
+            <h2>ZTL e Noleggio</h2>
+            <br />
+            <p style="text-align:justify; font-size:16px">
+                <b>PUBLIPARKING</b> fornisce servizi integrati per il controllo degli accessi nelle zone a traffico limitato che includono la fornitura, la manutenzione delle
+                apparecchiature, la rilevazione automatica delle infrazioni, nonché i sistemi di pagamento degli accessi, in modalità presidiata, tramite cassa automatica, o
+                tramite pagamenti elettronici.
+                <br />
+                <br />
+                <b>PUBLIPARKING</b> fornisce apparecchiature autovelox di tipo mobile anche per periodi di breve durata,
+                provvedendo ad istruire il personale della Polizia Municipale per il corretto utilizzo.
+            </p>
+        </div>
+    </div>
+    <div style="min-height:570px"></div>
+
+</body>
+
+
+</html>
+
+<script type="text/javascript">
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
+    });
+</script>

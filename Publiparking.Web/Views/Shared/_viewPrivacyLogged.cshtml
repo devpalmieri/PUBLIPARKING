@@ -1,0 +1,53 @@
+﻿@using Publiparking.Web.Classes.Consts
+
+@{
+    string messageModal = ViewBag.messageModal;
+    string messageModalType = ViewBag.messageModalType;
+    string pdf = ViewBag.PathInfoPrivacyPDF;
+}
+
+<style>
+    .modal-content {
+        width: 799px !important;
+        margin: 30px auto !important;
+        margin-top: 60px !important
+    }
+</style>
+
+<div id="ModalInfoPrivacy" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header alert-info">
+
+                <h4 class="modal-title">Informativa sul trattamento dei dati personalie<br />ai sensi del regolamento UE 2016/79</h4>
+                @*<button type="button" class="close" data-dismiss="modal">
+            &times;
+        </button>*@
+                <a  class="close"asp-controller="HomeUtente" asp-action="Index">
+                    &times;
+                </a>
+            </div>
+            <div class="modal-body">
+                <iframe src='@pdf'
+                        width="100%" height="686" frameborder="0" style="border:0;" allowfullscreen="true">
+                </iframe>
+            </div>
+            <div class="modal-footer">
+                @*<input type="button" id="btnClosePopup" value="Chiudi" class="btn btn-@messageModalType" data-dismiss="modal" />*@
+                <a  asp-controller="HomeUtente" asp-action="Index" class="btn btn-info">
+                    Chiudi
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(pdf))
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            $("#ModalInfoPrivacy").modal("show");
+        };
+    </script>
+    ViewBag.PathInfoPrivacyPDF = string.Empty;
+}

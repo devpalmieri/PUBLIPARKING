@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Publisoftware.Data.BD
+{
+    public class JoinProcConcorsualiCreditiPrivilChiroBD : EntityBD<join_proc_concorsuali_crediti_privil_chiro>
+    {
+        public JoinProcConcorsualiCreditiPrivilChiroBD()
+        {
+
+        }
+
+    }
+}

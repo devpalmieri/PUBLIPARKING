@@ -1,0 +1,219 @@
+﻿
+@model Publiparking.Data.SqlServer.Core.Model.anagrafica_ente
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Create</h1>
+
+<h4>anagrafica_ente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="codice_ente" class="control-label"></label>
+                <input asp-for="codice_ente" class="form-control" />
+                <span asp-validation-for="codice_ente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="descrizione_ente" class="control-label"></label>
+                <input asp-for="descrizione_ente" class="form-control" />
+                <span asp-validation-for="descrizione_ente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cod_regione" class="control-label"></label>
+                <input asp-for="cod_regione" class="form-control" />
+                <span asp-validation-for="cod_regione" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cod_provincia" class="control-label"></label>
+                <input asp-for="cod_provincia" class="form-control" />
+                <span asp-validation-for="cod_provincia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cod_comune" class="control-label"></label>
+                <input asp-for="cod_comune" class="form-control" />
+                <span asp-validation-for="cod_comune" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cap" class="control-label"></label>
+                <input asp-for="cap" class="form-control" />
+                <span asp-validation-for="cap" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="indirizzo" class="control-label"></label>
+                <input asp-for="indirizzo" class="form-control" />
+                <span asp-validation-for="indirizzo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tel1" class="control-label"></label>
+                <input asp-for="tel1" class="form-control" />
+                <span asp-validation-for="tel1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tel2" class="control-label"></label>
+                <input asp-for="tel2" class="form-control" />
+                <span asp-validation-for="tel2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="id_tipo_ente" class="control-label"></label>
+                <input asp-for="id_tipo_ente" class="form-control" />
+                <span asp-validation-for="id_tipo_ente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="id_stato_contatto" class="control-label"></label>
+                <input asp-for="id_stato_contatto" class="form-control" />
+                <span asp-validation-for="id_stato_contatto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="flag_on_off" class="control-label"></label>
+                <input asp-for="flag_on_off" class="form-control" />
+                <span asp-validation-for="flag_on_off" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cod_fiscale" class="control-label"></label>
+                <input asp-for="cod_fiscale" class="form-control" />
+                <span asp-validation-for="cod_fiscale" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="p_iva" class="control-label"></label>
+                <input asp-for="p_iva" class="form-control" />
+                <span asp-validation-for="p_iva" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="data_ultimo_controllo_validita" class="control-label"></label>
+                <input asp-for="data_ultimo_controllo_validita" class="form-control" />
+                <span asp-validation-for="data_ultimo_controllo_validita" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nome_db" class="control-label"></label>
+                <input asp-for="nome_db" class="form-control" />
+                <span asp-validation-for="nome_db" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="flag_Tipo_rendicontazione" class="control-label"></label>
+                <input asp-for="flag_Tipo_rendicontazione" class="form-control" />
+                <span asp-validation-for="flag_Tipo_rendicontazione" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="flag_sportello" class="control-label"></label>
+                <input asp-for="flag_sportello" class="form-control" />
+                <span asp-validation-for="flag_sportello" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="flag_presenze" class="control-label"></label>
+                <input asp-for="flag_presenze" class="form-control" />
+                <span asp-validation-for="flag_presenze" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="flag_idrico" class="control-label"></label>
+                <input asp-for="flag_idrico" class="form-control" />
+                <span asp-validation-for="flag_idrico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="flag_sosta" class="control-label"></label>
+                <input asp-for="flag_sosta" class="form-control" />
+                <span asp-validation-for="flag_sosta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="user_name_db" class="control-label"></label>
+                <input asp-for="user_name_db" class="form-control" />
+                <span asp-validation-for="user_name_db" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="password_db" class="control-label"></label>
+                <input asp-for="password_db" class="form-control" />
+                <span asp-validation-for="password_db" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="indirizzo_ip_db" class="control-label"></label>
+                <input asp-for="indirizzo_ip_db" class="form-control" />
+                <span asp-validation-for="indirizzo_ip_db" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cod_ente" class="control-label"></label>
+                <input asp-for="cod_ente" class="form-control" />
+                <span asp-validation-for="cod_ente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="codice_concessione" class="control-label"></label>
+                <input asp-for="codice_concessione" class="form-control" />
+                <span asp-validation-for="codice_concessione" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tp_entity_id" class="control-label"></label>
+                <input asp-for="tp_entity_id" class="form-control" />
+                <span asp-validation-for="tp_entity_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pec" class="control-label"></label>
+                <input asp-for="pec" class="form-control" />
+                <span asp-validation-for="pec" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="flag_tipo_gestione_pagopa" class="control-label"></label>
+                <input asp-for="flag_tipo_gestione_pagopa" class="form-control" />
+                <span asp-validation-for="flag_tipo_gestione_pagopa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="codice_ente_pagopa" class="control-label"></label>
+                <input asp-for="codice_ente_pagopa" class="form-control" />
+                <span asp-validation-for="codice_ente_pagopa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="aux_digit_pagopa" class="control-label"></label>
+                <input asp-for="aux_digit_pagopa" class="form-control" />
+                <span asp-validation-for="aux_digit_pagopa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="application_code_pagopa" class="control-label"></label>
+                <input asp-for="application_code_pagopa" class="form-control" />
+                <span asp-validation-for="application_code_pagopa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="codice_segregazione_pagopa" class="control-label"></label>
+                <input asp-for="codice_segregazione_pagopa" class="form-control" />
+                <span asp-validation-for="codice_segregazione_pagopa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="codice_struttura_ente_pagopa" class="control-label"></label>
+                <input asp-for="codice_struttura_ente_pagopa" class="form-control" />
+                <span asp-validation-for="codice_struttura_ente_pagopa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CBILL" class="control-label"></label>
+                <input asp-for="CBILL" class="form-control" />
+                <span asp-validation-for="CBILL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="url_ente" class="control-label"></label>
+                <input asp-for="url_ente" class="form-control" />
+                <span asp-validation-for="url_ente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="id_risorsa_web" class="control-label"></label>
+                <input asp-for="id_risorsa_web" class="form-control" />
+                <span asp-validation-for="id_risorsa_web" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

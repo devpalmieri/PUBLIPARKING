@@ -1,0 +1,100 @@
+﻿@using Publisoftware.Publiparking.Web.Classes.Pagination
+@model Publisoftware.Publiparking.Web.Classes.Pagination.PaginatedList<Publiparking.Core.Data.SqlServer.Entities.AbbonamentiPeriodici>
+@*@inject IAntiforgery antiforgery*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    //var token = antiforgery.GetAndStoreTokens(Context).RequestToken;
+}
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="header-box-park">
+            <h2>Abbonamenti periodici</h2>
+
+        </div>
+        <hr class="hr-gray" />
+        <br />
+        <a asp-action="Create" asp-controller="AbbonamentiPeriodici">Nuovo abbonamento</a>
+        <br />
+        <form asp-action="Index" method="get">
+            <div class="form-actions no-color">
+                <p>
+                    Cerca: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
+                    <input type="submit" value="Search" class="btn btn-default" /> |
+                    <a asp-action="Index">Mostra tutto l'elenco</a>
+                </p>
+            </div>
+        </form>
+        @if (Model != null)
+        {
+            <table class="table" id="gridcarrello">
+                <thead>
+                    <tr>
+                        <th>
+                            <a asp-action="Index" asp-route-sortOrder="@ViewData["idAbbonamentoPeriodicoSortParm"]">Id</a>
+                        </th>
+                        <th>
+                            Codice
+                        </th>
+                        <th>
+                            <a asp-action="Index" asp-route-sortOrder="@ViewData["TargaSortParm"]">Targa</a>
+
+                        </th>
+                        <th>
+                            <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]">Valido dal</a>
+                        </th>
+                        <th>
+                            Valido al
+                        </th>
+                        <th>
+                            Cognome
+                        </th>
+                        <th>
+                            Nome
+                        </th>
+                        <th>
+                            E-Mail
+                        </th>
+                        <th style="width:20%"></th>
+                    </tr>
+                </thead>
+                <tbody id="row">
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.idAbbonamentoPeriodico)</td>
+                            <td>@Html.DisplayFor(modelItem => item.codice)</td>
+                            <td>@Html.DisplayFor(modelItem => item.targa)</td>
+                            <td>@Html.DisplayFor(modelItem => item.validoDal)</td>
+                            <td>@Html.DisplayFor(modelItem => item.validoAl)</td>
+                            <td>@Html.DisplayFor(modelItem => item.cognome)</td>
+                            <td>@Html.DisplayFor(modelItem => item.nome)</td>
+                            <td>@Html.DisplayFor(modelItem => item.email)</td>
+                            <td style="width:20%">
+                                <a asp-action="Edit" asp-route-id="@item.idAbbonamentoPeriodico">Modifica</a> |
+                                <a asp-action="Details" asp-route-id="@item.idAbbonamentoPeriodico">Dettagli</a> |
+                                <a asp-action="Delete" asp-route-id="@item.idAbbonamentoPeriodico">Rimuovi</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+            var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+            <a asp-action="Index"
+               asp-route-sortOrder="@ViewData["CurrentSort"]"
+               asp-route-pageNumber="@(Model.PageIndex - 1)"
+               asp-route-currentFilter="@ViewData["CurrentFilter"]"
+               class="btn btn-default @prevDisabled">
+                Previous
+            </a>
+            <a asp-action="Index"
+               asp-route-sortOrder="@ViewData["CurrentSort"]"
+               asp-route-pageNumber="@(Model.PageIndex + 1)"
+               asp-route-currentFilter="@ViewData["CurrentFilter"]"
+               class="btn btn-default @nextDisabled">
+                Next
+            </a>
+        }
+    </div>
+</div>

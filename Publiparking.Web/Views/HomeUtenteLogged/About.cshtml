@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    ViewData["Title"] = "Chi Siamo";
+    string pdfCodEtico = ViewBag.PathPDFCodEtico != null ? (string)ViewBag.PathPDFCodEtico : string.Empty;
+    string pdfCodAntimafica = ViewBag.PathPDFCodAntimafica != null ? (string)ViewBag.PathPDFCodAntimafica : string.Empty;
+}
+@*<h1>@ViewData["Title"]</h1>*@
+
+<div class="row">
+    <div class="col-xs-10 col-md-10">
+        <div class="col-md-12">
+            <div class="box-border-min box-default">
+                <div class="box-header with-border">
+                    <h1 class="box-title-large">Chi Siamo</h1>
+                </div>
+                <div class="box-body">
+                    <br />
+                    <p class="section-medium">
+                        <strong>PUBLIPARKING</strong> nasce nel 2013 ed opera nei servizi di gestione della sosta e della mobilità urbana. <strong>PUBLIPARKING</strong> è partecipata e controllata dalla
+                        <strong>PUBLISERVIZI</strong>, società leader nel settore dei servizi di gestione, accertamento e riscossione delle entrate degli enti locali. <strong>PUBLIPARKING</strong> ha oltre
+                        110 dipendenti (di cui 100 ausiliari della sosta), ed un capitale sociale di €. 110.00.
+                    </p>
+                    <p style="text-align:left">
+                        <strong>Codice Etico</strong>
+                    </p>
+                    <p class="section-medium">
+                        Questo codice esprime gli impegni e le responsabilità etiche nella conduzione degli affari e delle attività aziendali assunti dai collaboratori di <strong>PUBLIPARKING S.r.l.</strong>,
+                        siano essi amministratori o dipendenti in ogni accezione.<br /><br />
+                        <br />
+                        <a alt="Verifica il codice etico" class="btn btn-default" href="@pdfCodEtico" target="_blank"><i class="fas fa-paperclip" aria-hidden="true"></i> Codice Etico</a>
+                    </p>
+                    <hr class="hr-orange" />
+                    <p style="text-align:left">
+                        <strong>Codice Antimafia</strong>
+                    </p>
+                    <p class="section-medium">
+                        Il codice antimafia per la <strong>PUBLIPARKING S.r.l.</strong> costituisce uno strumento ulteriore di gestione e controllo (governance) dell'impresa, per chi opera all'interno
+                        di territori ad alto tasso di criminalità, al fine di fronteggiare e ridurre i rischi di infiltrazione da parte delle organizzazioni criminali.<br /><br /><br />
+                        <a alt="Verifica il codice antimafia" class="btn btn-default" href="@pdfCodAntimafica" target="_blank"><i class="fa fa-paperclip" aria-hidden="true"></i>Codice Antimafia</a>
+                    </p>
+                    <hr class="hr-orange" />
+                    <h3 style="text-align:left">
+                        <strong>PUBLIPARKING</strong> è partecipata e controllata da <strong>PUBLISERVIZI</strong>
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

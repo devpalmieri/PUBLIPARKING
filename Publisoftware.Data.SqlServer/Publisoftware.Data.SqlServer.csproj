@@ -1,0 +1,2256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{76B00F9D-E3C2-41DA-B5E8-401A8DF6EADF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Publisoftware.Data</RootNamespace>
+    <AssemblyName>Publisoftware.Data.SqlServer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ANAGRAFICA_ABI_CAB.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_agevolazione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_categoria.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_categoria_ZTL.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_causale.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_cicli.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_cicli_dettaglio.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_cod_stato_base.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_controlli_qualita_emissione_avvpag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_documenti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_ente.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_ente_codici.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_ente_gestito.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_ente_rilascio_documento.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_ente_riversamento.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_entrate.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_esito_sentenze.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_flag_esito_avvisi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_giorni_occupazione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_motivazioni_richiesta_info.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_pagopa_intermediari.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_pagopa_stazioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_parentela.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_procedure_concorsuali.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_rel_par_lac.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_risorse.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_ruolo_mansione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_servizi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_sezioni_stampa.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_spese_coattive.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_sportello.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stampatori.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_agevolazione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_anagrafe.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_avv_pag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_carrello.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_contatore.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_contribuente.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_denunce.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_doc.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_intervento.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_letture.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_lista.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_mov_pag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_oggetto.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_riga_avv_pag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_sped_not.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_stato_unita_contribuzione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_strutture_aziendali.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_agevolazione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_avv_pag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_cc.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_ciclo.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_contribuente.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_corrispettivo.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_difformita_notifica.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_diritto.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_documento.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_esito_notifica.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_lettura.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_nucleo_immobiliare.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_pagamento.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_parentela.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_piani_edificio.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_record.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_relazione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_servizi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_sesso.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_spedizione_notifica.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_udienza.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_tipo_veicolo.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_utilizzo.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_veicoli_marche.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_veicoli_tipo_serie.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="anagrafica_voci_contribuzione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="appo_sysdiagrams.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="calcolo_voci_contribuzione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbConfig\PSDCachingPolicy.cs" />
+    <Compile Include="DbConfig\PSDDBConfiguration.cs" />
+    <Compile Include="DbConfig\PSDDBEFInterceptor.cs" />
+    <Compile Include="CustomValidationAttrs\AtLeastOneOfTheCouple.cs" />
+    <Compile Include="CustomValidationAttrs\IsDateBeforeToday.cs" />
+    <Compile Include="CustomValidationAttrs\IsGreaterThan.cs" />
+    <Compile Include="Enum\CodStato.cs" />
+    <Compile Include="CustomValidationAttrs\IsDateAfter.cs" />
+    <Compile Include="CustomValidationAttrs\IsDateAfterToday.cs" />
+    <Compile Include="dbEnte.cs" />
+    <Compile Include="Enum\FlagTipoListaEnum.cs" />
+    <Compile Include="Enum\MonthName.cs" />
+    <Compile Include="Enum\PeriodicitaEnum.cs" />
+    <Compile Include="Finale1.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Itab_dett_estratto_conto_mensile.cs" />
+    <Compile Include="Interface\IContribuenteReferenteCampiComuniExts.cs" />
+    <Compile Include="Interface\IContribuenteReferenteCampiComuni.cs" />
+    <Compile Include="Interface\IF24G1R1.cs" />
+    <Compile Include="Interface\Carrello.cs" />
+    <Compile Include="Interface\Itab_avv_pag.cs" />
+    <Compile Include="Interface\Itab_unita_contribuzione.cs" />
+    <Compile Include="join_applicazioni_link.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_applicazioni_secondarie.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_avvcoa_ing.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_avv_pag_fatt_emissione_soggetto_debitore.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_avv_pag_mov_pag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_avv_pag_mov_pag_fatt_emissione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_avv_pag_referente.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_avv_pag_soggetto_debitore.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_causale_doc_new.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_causali_esito_nome_file_memorie.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_causali_motivazioni_causali_esito.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_contenitori_join_file.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_conto_economico_tipo_voce_contribuzione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_contribuenti_procedure_concorsuali.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_controlli_avvpag_fatt_emissione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_denunce_doc_input.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_denunce_motivazioni_richiesta_info.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_denunce_oggetti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_dichiarazione_terzo_contribuente.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_documenti_autorizzazione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_documenti_contribuenti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_documenti_contrib_ref.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_documenti_domiciliazioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_documenti_fascicolo.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_documenti_fascicolo_avvpag_allegati.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_documenti_fascicolo_doc_output_allegati.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_documenti_pratiche.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_documenti_pratiche_presentati.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_documenti_pratiche_richiesti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_documenti_referenti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_documenti_tab_terzo_debitore.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_doc_input_beni_avvpag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_doc_input_not_avvpag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_doc_input_pag_avvpag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_doc_input_riga_avvpag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_ente_ente_gestito.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_ente_strutture.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_ente_strutture_tipoavvpag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_entrate_macroentrate.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_fattcont_fattconsumi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_file.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_ingfis_supervisione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_ispezioni_ingiunzioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_lista_voci_contribuzione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_lst_emissione_lst_sped_not.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_movpag_rata_avv_pag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_notificatore_spese_notifica.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_oggetti_immobili.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_oggetto_agevolazioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_oggetto_dati_metrici.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_ogg_contatore.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_postel_sped_not.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_proc_concorsuali_crediti_privil_chiro.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_proprietari_immobili_coattivo.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_rate_avvpag_movpag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_referente_contribuente.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_referente_contribuente_avv_pag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_report_link.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_risorse_ser_comuni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_risorse_strutture.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_sezioni_stampa_tipo_avv_pag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_sezioni_stampa_tipo_avv_pag_view.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_spuntisti_prenotazione_piazzole.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_tablet_postazioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_tab_avv_pag_tab_doc_input.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_tab_carrello_tab_rate.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_tab_cc_riscoss_tipo_avvpag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_tab_doc_input_tab_doc_output.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_tab_ispezioni_coattivo_tipo_ispezione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_tab_supervisione_profili.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_terzo_referente.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_tipo_avvpag_voci_contrib.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_tipo_avvpag_voci_contrib_new.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_tipo_avvpag_voci_contrib_trasmesse.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_tipo_avv_pag_servizi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_tipo_lista_tipo_avv_pag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_tipo_stato_referenza.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_tipo_voci_contribuzione_priorita_riscossione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_udienza_tipo_udienza.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="join_utenti_enti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LinqExtended\AnagraficaAbiCabLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaAgevolazioniLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaCategoriaLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaCausaleLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaCicliDettaglioLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaCicliLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaCodStatoBaseLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaControlliQualitaEmissioneAvvPagLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaDocumentiLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaEnteCodiceLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaEnteGestitoLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaEnteLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaStatoCarrelloLinq.cs" />
+    <Compile Include="LinqExtended\JoinContribuentiProcedureConcorsualiLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaEntrateLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaParentelaLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaRuoloMansioneLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaSportelloLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaStatoMovPagLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaStatoUnitaContribuzioneLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaStatoAvvPagLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaStatoDocLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaTipoEsitoNotificaLinq.cs" />
+    <Compile Include="LinqExtended\JoinCausaliEsitoNomeFileMemorieLinq.cs" />
+    <Compile Include="LinqExtended\JoinCausaliMotivazioniCausaliEsitoLinq.cs" />
+    <Compile Include="LinqExtended\JoinDenunceOggettiLinq.cs" />
+    <Compile Include="LinqExtended\JoinDocumentiAutorizzazioneLinq.cs" />
+    <Compile Include="LinqExtended\JoinDocumentiFascicoloDocoutputAllegatiLinq.cs" />
+    <Compile Include="LinqExtended\JoinTerzoReferenteLinq.cs" />
+    <Compile Include="LinqExtended\JoinUtentiEntiLinq.cs" />
+    <Compile Include="LinqExtended\JoinLstEmissioneLstSpedNotLinq.cs" />
+    <Compile Include="LinqExtended\TabAnagraficheDaRivestireLinq.cs" />
+    <Compile Include="LinqExtended\JoinSpuntistiPrenotazionePiazzoleLinq.cs" />
+    <Compile Include="LinqExtended\TabOccupazionePiazzoleLinq.cs" />
+    <Compile Include="LinqExtended\TabRicercaInfocamereLinq.cs" />
+    <Compile Include="LinqExtended\TabSpuntistaLinq.cs" />
+    <Compile Include="LinqExtended\TabFattContLinq.cs" />
+    <Compile Include="LinqExtended\JoinFattContFattConsumiLinq.cs" />
+    <Compile Include="LinqExtended\TabFattInfoLinq.cs" />
+    <Compile Include="LinqExtended\TabFattConsumiLinq.cs" />
+    <Compile Include="LinqExtended\TabInterventoLinq.cs" />
+    <Compile Include="LinqExtended\TabAreaMercatoLinq.cs" />
+    <Compile Include="LinqExtended\TabTipoContatoreLinq.cs" />
+    <Compile Include="LinqExtended\TabDettMovPagLinq.cs" />
+    <Compile Include="LinqExtended\TabEsclusioneRateizzazioneLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaProcedureConcorsualiLinq.cs" />
+    <Compile Include="LinqExtended\TabAutorizzazioniLinq.cs" />
+    <Compile Include="POCOExtended\anagrafica_stato_carrello.cs" />
+    <Compile Include="POCOExtended\Finale1.cs" />
+    <Compile Include="POCOExtended\join_contribuenti_procedure_concorsuali.cs" />
+    <Compile Include="POCOExtended\join_documenti_autorizzazione.cs" />
+    <Compile Include="POCOExtended\join_terzo_referente.cs" />
+    <Compile Include="POCOExtended\join_spuntisti_prenotazione_piazzole.cs" />
+    <Compile Include="POCOExtended\tab_cimiteri.cs" />
+    <Compile Include="POCOExtended\tab_occupazione_piazzole.cs" />
+    <Compile Include="POCOExtended\tab_ricerca_infocamere.cs" />
+    <Compile Include="POCOExtended\tab_registro_cookie.cs" />
+    <Compile Include="POCOExtended\tab_registro_pag_senza_avviso.cs" />
+    <Compile Include="POCOExtended\tab_registro_pag_spontanei.cs" />
+    <Compile Include="POCOExtended\tab_spuntista.cs" />
+    <Compile Include="POCOExtended\tab_autorizzazioni.cs" />
+    <Compile Include="POCOExtended\join_utenti_enti.cs" />
+    <Compile Include="POCOExtended\join_lst_emissione_lst_sped_not.cs" />
+    <Compile Include="POCOExtended\tab_area_mercato.cs" />
+    <Compile Include="POCOExtended\tab_registro_cds.cs" />
+    <Compile Include="POCOExtended\tab_dett_estratto_conto_mensile.cs" />
+    <Compile Include="POCOExtended\tab_esclusione_rateizzazione.cs" />
+    <Compile Include="POCOExtended\join_fattcont_fattconsumi.cs" />
+    <Compile Include="POCOExtended\tab_fatt_cont.cs" />
+    <Compile Include="POCOExtended\tab_fatt_consumi.cs" />
+    <Compile Include="POCOExtended\tab_fatt_info.cs" />
+    <Compile Include="POCOExtended\tab_parametri_portale.cs" />
+    <Compile Include="POCOExtended\tab_rendiconto_NEW.cs" />
+    <Compile Include="POCOExtended\tab_sub_menu.cs" />
+    <Compile Include="POCOExtended\tab_tipo_contatore.cs" />
+    <Compile Include="POCOExtended\tab_tassonomia_pagopa.cs" />
+    <Compile Include="POCOLight\join_tab_carrello_tab_rate_light.cs" />
+    <Compile Include="LinqExtended\TabAgevolazioniVerificaLinq.cs" />
+    <Compile Include="LinqExtended\TabAgevolazioniLinq.cs" />
+    <Compile Include="LinqExtended\TabCategoriaTariffariaTosap.cs" />
+    <Compile Include="LinqExtended\TabFascicoloDocOutputAllegatiLinq.cs" />
+    <Compile Include="LinqExtended\TabProgCarrelloLinq.cs" />
+    <Compile Include="LinqExtended\TabSpeseGiudizioLinq.cs" />
+    <Compile Include="LinqExtended\TabCarrelloLinq.cs" />
+    <Compile Include="LinqExtended\JoinTabCarrelloTabRateLinq.cs" />
+    <Compile Include="LinqExtended\JoinDocumentiFascicolo.cs" />
+    <Compile Include="LinqExtended\JoinRateAvvPagMovPagLinq.cs" />
+    <Compile Include="LinqExtended\JoinRisorseSerComuniLinq.cs" />
+    <Compile Include="LinqExtended\JoinTabDocInputTabDocOutputLinq.cs" />
+    <Compile Include="LinqExtended\TabF24TipoR5RegioneLinq.cs" />
+    <Compile Include="LinqExtended\TabF24TipoZZRegioneLinq.cs" />
+    <Compile Include="LinqExtended\TabF24TipoR4RegioneLinq.cs" />
+    <Compile Include="LinqExtended\TabF24TipoR3RegioneLinq.cs" />
+    <Compile Include="LinqExtended\TabF24TipoR2RegioneLinq.cs" />
+    <Compile Include="LinqExtended\TabF24TipoR1RegioneLinq.cs" />
+    <Compile Include="LinqExtended\TabF24TipoAARegioneLinq.cs" />
+    <Compile Include="LinqExtended\TabDocOutputLinq.cs" />
+    <Compile Include="LinqExtended\TabModalitaRateAvvPagViewLinq.cs" />
+    <Compile Include="LinqExtended\TabModalitaSpednotDocOutputLinq.cs" />
+    <Compile Include="LinqExtended\TabGeneraleUdienzeLinq.cs" />
+    <Compile Include="LinqExtended\TabModelliFiscaliLinq.cs" />
+    <Compile Include="LinqExtended\TabRegistroAssegnazionePraticheLinq.cs" />
+    <Compile Include="LinqExtended\TabSentenzeLinq.cs" />
+    <Compile Include="LinqExtended\TabRimborsiLinq.cs" />
+    <Compile Include="LinqExtended\TabFascePignorabilitaBeniLinq.cs" />
+    <Compile Include="LinqExtended\TabTipoBeneLinq.cs" />
+    <Compile Include="LinqExtended\TabVincoliBeniPignoratiLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaTipoSpedizioneNotificaLinq.cs" />
+    <Compile Include="LinqExtended\JoinApplicazioniSecondarieLinq.cs" />
+    <Compile Include="LinqExtended\JoinAvvPagFattEmissioneSoggettoDebitoreLinq.cs" />
+    <Compile Include="LinqExtended\JoinAvvPagReferenteLinq.cs" />
+    <Compile Include="LinqExtended\JoinAvvPagSoggettoDebitoreLinq.cs" />
+    <Compile Include="LinqExtended\JoinCausaleDocNewLinq.cs" />
+    <Compile Include="LinqExtended\JoinContoEconomicoTipoVoceContribuzioneLinq.cs" />
+    <Compile Include="LinqExtended\JoinControlliAvvpagFattEmissioneLinq.cs" />
+    <Compile Include="LinqExtended\JoinDocInputBeniAvvPagLinq.cs" />
+    <Compile Include="LinqExtended\JoinDocInputNotAvvPagLinq.cs" />
+    <Compile Include="LinqExtended\JoinDocInputPagAvvPagLinq.cs" />
+    <Compile Include="LinqExtended\JoinDocumentiContribRefLinq.cs" />
+    <Compile Include="LinqExtended\JoinDocumentiContribuentiLinq.cs" />
+    <Compile Include="LinqExtended\JoinDocumentiDomiciliazioniLinq.cs" />
+    <Compile Include="LinqExtended\JoinDocumentiFascicoloAvvpagAllegatiLinq.cs" />
+    <Compile Include="LinqExtended\JoinDocumentiPraticheLinq.cs" />
+    <Compile Include="LinqExtended\JoinDocumentiReferentiLinq.cs" />
+    <Compile Include="LinqExtended\JoinDocumentiTabTerzoDebitoreLinq.cs" />
+    <Compile Include="LinqExtended\JoinEnteEnteGestitoLinq.cs" />
+    <Compile Include="LinqExtended\JoinEnteStrutturaTipoAvvPagLinq.cs" />
+    <Compile Include="LinqExtended\JoinFileLinq.cs" />
+    <Compile Include="LinqExtended\JoinIngfisSupervisioneLinq.cs" />
+    <Compile Include="LinqExtended\JoinListaVociContribuzioneLinq.cs" />
+    <Compile Include="LinqExtended\JoinOggettiImmobiliLinq.cs" />
+    <Compile Include="LinqExtended\JoinOggettoAgevolazioniLinq.cs" />
+    <Compile Include="LinqExtended\JoinOggettoDatiMetriciLinq.cs" />
+    <Compile Include="LinqExtended\JoinReferenteContribuenteAvvPagLinq.cs" />
+    <Compile Include="LinqExtended\JoinTabSupervisioneProfiliLinq.cs" />
+    <Compile Include="LinqExtended\JoinTipoAvvpagVociContribNewLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaStatoContatoreLinq.cs" />
+    <Compile Include="LinqExtended\JoinTipoAvvpagVociContribTrasmesseLinq.cs" />
+    <Compile Include="LinqExtended\JoinTipoStatoReferenzaLinq.cs" />
+    <Compile Include="LinqExtended\SerStatiEsteriNewLinq.cs" />
+    <Compile Include="LinqExtended\TabAllegatiDigitaliLinq.cs" />
+    <Compile Include="LinqExtended\TabAvvisiAnomaliListeCaricoLinq.cs" />
+    <Compile Include="LinqExtended\TabCalcoloTipoVociContribuzioneLinq.cs" />
+    <Compile Include="LinqExtended\TabCategoriaTariffariaCosapLinq.cs" />
+    <Compile Include="LinqExtended\TabCategoriaTariffariaIcpLinq.cs" />
+    <Compile Include="LinqExtended\TabCategoriaTariffariaImmobiliLinq.cs" />
+    <Compile Include="LinqExtended\TabConsuntivoDettListaCaricoLinq.cs" />
+    <Compile Include="LinqExtended\TabConsuntivoListaCaricoLinq.cs" />
+    <Compile Include="LinqExtended\TabContribuenteStoNewLinq.cs" />
+    <Compile Include="LinqExtended\TabContribuzioneLinq.cs" />
+    <Compile Include="LinqExtended\TabControlliQualitaListeCaricoLinq.cs" />
+    <Compile Include="LinqExtended\TabDatiMetriciCatastaliLinq.cs" />
+    <Compile Include="LinqExtended\TabDatiMetriciDichiaratiLinq.cs" />
+    <Compile Include="LinqExtended\TabDocumentiLinq.cs" />
+    <Compile Include="LinqExtended\TabDettRiscossioneLinq.cs" />
+    <Compile Include="LinqExtended\TabEnteServiziLinq.cs" />
+    <Compile Include="LinqExtended\TabFascicoloAvvPagAllegatiLinq.cs" />
+    <Compile Include="LinqExtended\TabFascicoloLinq.cs" />
+    <Compile Include="LinqExtended\TabImmobiliCoattivo.cs" />
+    <Compile Include="LinqExtended\TabIterSupervisioneAttiCoaLinq.cs" />
+    <Compile Include="LinqExtended\TabListaSpedNotificheLinq.cs" />
+    <Compile Include="LinqExtended\TabModalitaRateAvvPagLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaRisorseLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaStatoContribuenteLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaStruttureAziendaliLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaTipoAgevolazioneLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaTipoAvvPagLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaTipoCicloLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaTipoContribuenteLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaTipoDirittoLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaTipoPagamentoLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaTipoRelazioneLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaTipoServiziLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaTipoServizioLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaTipoUdienzaLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaTipoVeicoloLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaUtilizzoLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaVeicoliMarcheLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaVeicoliTipoSerieLinq.cs" />
+    <Compile Include="LinqExtended\AnagraficaVociContribuzioneLinq.cs" />
+    <Compile Include="LinqExtended\JoinApplicazioniLinkLinq.cs" />
+    <Compile Include="LinqExtended\JoinAvvPagMovPagLinq.cs" />
+    <Compile Include="LinqExtended\JoinEnteStrutture.cs" />
+    <Compile Include="LinqExtended\JoinEntrateMacroentrateLinq.cs" />
+    <Compile Include="LinqExtended\JoinIspezioneIngiunzioniLinq.cs" />
+    <Compile Include="LinqExtended\JoinOggContatoreLinq.cs" />
+    <Compile Include="LinqExtended\JoinReferenteContribuenteLinq.cs" />
+    <Compile Include="LinqExtended\JoinRisorseStruttureLinq.cs" />
+    <Compile Include="LinqExtended\JoinTabAvvPagTabDocInputLinq.cs" />
+    <Compile Include="LinqExtended\JoinTabIspezioniCoattivoTipoIspezioneLinq.cs" />
+    <Compile Include="LinqExtended\JoinTipoAvvpagServiziLinq.cs" />
+    <Compile Include="LinqExtended\TabAreeLinq.cs" />
+    <Compile Include="LinqExtended\TabAssegnazioneRilevazioniLinq.cs" />
+    <Compile Include="LinqExtended\TabAutoritaGiudiziariaLinq.cs" />
+    <Compile Include="LinqExtended\TabCcRiscossioneLinq.cs" />
+    <Compile Include="LinqExtended\TabCcRiversamentoLinq.cs" />
+    <Compile Include="LinqExtended\TabCcTesoreriaLinq.cs" />
+    <Compile Include="LinqExtended\TabContatoreLinq.cs" />
+    <Compile Include="LinqExtended\TabDocInputLinq.cs" />
+    <Compile Include="LinqExtended\TabFabbricatiLinq.cs" />
+    <Compile Include="LinqExtended\TabIngiunzioniIspezioneLinq.cs" />
+    <Compile Include="LinqExtended\TabIspezioniCoattivoNewLinq.cs" />
+    <Compile Include="LinqExtended\TabIspezioniCoattivoV2Linq.cs" />
+    <Compile Include="LinqExtended\TabJoinAvvcoaIngfisV2Linq.cs" />
+    <Compile Include="LinqExtended\TabListaLettureLinq.cs" />
+    <Compile Include="LinqExtended\TabLettureLinq.cs" />
+    <Compile Include="LinqExtended\TabLogOperatoriLinq.cs" />
+    <Compile Include="LinqExtended\SerComuniLinq.cs" />
+    <Compile Include="LinqExtended\SerProvinceLinq.cs" />
+    <Compile Include="LinqExtended\SerRegioniLinq.cs" />
+    <Compile Include="LinqExtended\TabAbilitazioneLinq.cs" />
+    <Compile Include="LinqExtended\TabApplicazioniLinq.cs" />
+    <Compile Include="LinqExtended\TabAvvPagFattEmissioneLinq.cs" />
+    <Compile Include="LinqExtended\TabAvvPagLinq.cs" />
+    <Compile Include="LinqExtended\TabCategoriaTariffariaIciLinq.cs" />
+    <Compile Include="LinqExtended\TabCategoriaTariffariaImuLinq.cs" />
+    <Compile Include="LinqExtended\TabCategoriaTariffariaLinq.cs" />
+    <Compile Include="LinqExtended\TabCategoriaTariffariaTasiLinq.cs" />
+    <Compile Include="LinqExtended\TabCicliEnteDettaglioLinq.cs" />
+    <Compile Include="LinqExtended\TabCicliEnteLinq.cs" />
+    <Compile Include="LinqExtended\TabContribuenteLinq.cs" />
+    <Compile Include="LinqExtended\TabDomicilioLinq.cs" />
+    <Compile Include="LinqExtended\TabEsecuzioneApplicazioniLinq.cs" />
+    <Compile Include="LinqExtended\TabFunzionalitaLinq.cs" />
+    <Compile Include="LinqExtended\TabListeLinq.cs" />
+    <Compile Include="LinqExtended\TabLogOperazioniOperatoreLinq.cs" />
+    <Compile Include="LinqExtended\TabLogOperazioniUtenteLinq.cs" />
+    <Compile Include="LinqExtended\TabLogUtentiLinq.cs" />
+    <Compile Include="LinqExtended\TabMacroentrateLinq.cs" />
+    <Compile Include="LinqExtended\TabMarcaVeicoloLinq.cs" />
+    <Compile Include="LinqExtended\TabModelloVeicoloLinq.cs" />
+    <Compile Include="LinqExtended\TabMovPagLinq.cs" />
+    <Compile Include="LinqExtended\TabNotificatoreLinq.cs" />
+    <Compile Include="LinqExtended\TabOggettiContribuzioneLinq.cs" />
+    <Compile Include="LinqExtended\TabPianificazioneCicliDettaglioLinq.cs" />
+    <Compile Include="LinqExtended\TabPianificazioneCicliEntiGestitiLinq.cs" />
+    <Compile Include="LinqExtended\TabPianificazioneCicliInputEmissioneLinq.cs" />
+    <Compile Include="LinqExtended\TabPianificazioneCicliInputImportazioneFileLinq.cs" />
+    <Compile Include="LinqExtended\TabPianificazioneCicliInputRendicontazioneLinq.cs" />
+    <Compile Include="LinqExtended\TabPianificazioneCicliLinq.cs" />
+    <Compile Include="LinqExtended\TabPostazioniLinq.cs" />
+    <Compile Include="LinqExtended\TabPosteArcostradaleLinq.cs" />
+    <Compile Include="LinqExtended\TabPosteComuneLinq.cs" />
+    <Compile Include="LinqExtended\TabPosteStradaLinq.cs" />
+    <Compile Include="LinqExtended\TabProcedureConcorsualiLinq.cs" />
+    <Compile Include="LinqExtended\TabProcedureLinq.cs" />
+    <Compile Include="LinqExtended\TabProfiloContribuenteNewLinq.cs" />
+    <Compile Include="LinqExtended\TabProgDocLinq.cs" />
+    <Compile Include="LinqExtended\TabRataAvvPagLinq.cs" />
+    <Compile Include="LinqExtended\TabRateizzazioniLinq.cs" />
+    <Compile Include="LinqExtended\TabReferenteLinq.cs" />
+    <Compile Include="LinqExtended\TabReferenteStoLinq.cs" />
+    <Compile Include="LinqExtended\TabRicorsiLinq.cs" />
+    <Compile Include="LinqExtended\TabRilevatoreLinq.cs" />
+    <Compile Include="LinqExtended\TabSpedNotLinq.cs" />
+    <Compile Include="LinqExtended\TabSupervisioneFinaleV2Linq.cs" />
+    <Compile Include="LinqExtended\TabTerreniLinq.cs" />
+    <Compile Include="LinqExtended\TabTerzoDebitoreLinq.cs" />
+    <Compile Include="LinqExtended\TabTerzoLinq.cs" />
+    <Compile Include="LinqExtended\TabTerzoStoLinq.cs" />
+    <Compile Include="LinqExtended\TabTipoDocEntrateLinq.cs" />
+    <Compile Include="LinqExtended\TabTipoEnteLinq.cs" />
+    <Compile Include="LinqExtended\TabTipoIspezioneLinq.cs" />
+    <Compile Include="LinqExtended\TabTipoListaLinq.cs" />
+    <Compile Include="LinqExtended\TabTipoOggettoLinq.cs" />
+    <Compile Include="LinqExtended\TabTipoVoceContribuzioneLinq.cs" />
+    <Compile Include="LinqExtended\TabTitolaritaLinq.cs" />
+    <Compile Include="LinqExtended\TabToponimiLinq.cs" />
+    <Compile Include="LinqExtended\TabTributiMinisterialiLinq.cs" />
+    <Compile Include="LinqExtended\TabUnitaContribuzioneFattEmissioneLinq.cs" />
+    <Compile Include="LinqExtended\TabUnitaContribuzioneLinq.cs" />
+    <Compile Include="LinqExtended\TabUtentiLinq.cs" />
+    <Compile Include="LinqExtended\TabValidazioneApprovazioneListeLinq.cs" />
+    <Compile Include="LinqExtended\TabValidazioneApprovazioneListeSpedizioneLinq.cs" />
+    <Compile Include="LinqExtended\TabVociContrattualiNewLinq.cs" />
+    <Compile Include="Enum\ModalitaOperativaEnum.cs" />
+    <Compile Include="LinqExtended\TabZoneLinq.cs" />
+    <Compile Include="LinqExtended\TabDelibereDetermineTariffarieLinq.cs" />
+    <Compile Include="POCOExtended\ANAGRAFICA_ABI_CAB.cs" />
+    <Compile Include="POCOExtended\anagrafica_stato_denunce.cs" />
+    <Compile Include="POCOExtended\anagrafica_agevolazione.cs" />
+    <Compile Include="POCOExtended\anagrafica_categoria.cs" />
+    <Compile Include="POCOExtended\anagrafica_categoria_ZTL.cs" />
+    <Compile Include="POCOExtended\anagrafica_causale.cs" />
+    <Compile Include="POCOExtended\join_causali_esito_nome_file_memorie.cs" />
+    <Compile Include="POCOExtended\join_causali_motivazioni_causali_esito.cs" />
+    <Compile Include="POCOExtended\join_dichiarazione_terzo_contribuente.cs" />
+    <Compile Include="POCOExtended\join_denunce_oggetti.cs" />
+    <Compile Include="POCOExtended\join_tab_carrello_tab_rate.cs" />
+    <Compile Include="POCOExtended\tab_categoria_tariffaria_tosap.cs" />
+    <Compile Include="POCOExtended\tab_fascicolo_doc_output_allegati.cs" />
+    <Compile Include="POCOExtended\tab_pec_configurazioni.cs" />
+    <Compile Include="POCOExtended\tab_prog_carrello.cs" />
+    <Compile Include="POCOExtended\tab_prog_iuv.cs" />
+    <Compile Include="POCOExtended\tab_siatel_bonifici_bancari_ordinanti_0.cs" />
+    <Compile Include="POCOExtended\tab_siatel_bonifici_bancari_ordinanti_1.cs" />
+    <Compile Include="POCOExtended\tab_siatel_bonifici_bancari_ordinanti_9.cs" />
+    <Compile Include="POCOExtended\tab_spese_giudizio.cs" />
+    <Compile Include="POCOExtended\tab_carrello.cs" />
+    <Compile Include="POCOExtended\anagrafica_cicli.cs" />
+    <Compile Include="POCOExtended\anagrafica_cicli_dettaglio.cs" />
+    <Compile Include="POCOExtended\anagrafica_cod_stato_base.cs" />
+    <Compile Include="POCOExtended\anagrafica_controlli_qualita_emissione_avvpag.cs" />
+    <Compile Include="POCOExtended\anagrafica_documenti.cs" />
+    <Compile Include="POCOExtended\anagrafica_ente.cs" />
+    <Compile Include="EnteDBContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnteDBContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EnteDBContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EnteDBContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnteDBContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="POCOExtended\anagrafica_ente_codici.cs" />
+    <Compile Include="POCOExtended\anagrafica_ente_gestito.cs" />
+    <Compile Include="POCOExtended\anagrafica_ente_riversamento.cs" />
+    <Compile Include="POCOExtended\anagrafica_esito_sentenze.cs" />
+    <Compile Include="POCOExtended\anagrafica_entrate.cs" />
+    <Compile Include="POCOExtended\anagrafica_flag_esito_avvisi.cs" />
+    <Compile Include="POCOExtended\anagrafica_giorni_occupazione.cs" />
+    <Compile Include="POCOExtended\anagrafica_parentela.cs" />
+    <Compile Include="POCOExtended\anagrafica_procedure_concorsuali.cs" />
+    <Compile Include="POCOExtended\anagrafica_rel_par_lac.cs" />
+    <Compile Include="POCOExtended\anagrafica_risorse.cs" />
+    <Compile Include="POCOExtended\anagrafica_ruolo_mansione.cs" />
+    <Compile Include="POCOExtended\anagrafica_servizi.cs" />
+    <Compile Include="POCOExtended\anagrafica_sezioni_stampa.cs" />
+    <Compile Include="POCOExtended\anagrafica_spese_coattive.cs" />
+    <Compile Include="POCOExtended\anagrafica_sportello.cs" />
+    <Compile Include="POCOExtended\anagrafica_stampatori.cs" />
+    <Compile Include="POCOExtended\anagrafica_stato_agevolazione.cs" />
+    <Compile Include="POCOExtended\anagrafica_stato_avv_pag.cs" />
+    <Compile Include="POCOExtended\anagrafica_stato_contatore.cs" />
+    <Compile Include="POCOExtended\anagrafica_stato_contribuente.cs" />
+    <Compile Include="POCOExtended\anagrafica_stato_doc.cs" />
+    <Compile Include="POCOExtended\anagrafica_stato_intervento.cs" />
+    <Compile Include="POCOExtended\anagrafica_stato_letture.cs" />
+    <Compile Include="POCOExtended\anagrafica_stato_mov_pag.cs" />
+    <Compile Include="POCOExtended\anagrafica_stato_oggetto.cs" />
+    <Compile Include="POCOExtended\anagrafica_stato_sped_not.cs" />
+    <Compile Include="POCOExtended\anagrafica_stato_unita_contribuzione.cs" />
+    <Compile Include="POCOExtended\anagrafica_strutture_aziendali.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_agevolazione.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_avv_pag.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_cc.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_contribuente.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_diritto.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_documento.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_esito_notifica.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_lettura.cs" />
+    <Compile Include="LinqExtended\IQueryableExt.cs" />
+    <Compile Include="POCOExtended\join_rate_avvpag_movpag.cs" />
+    <Compile Include="POCOExtended\tab_anagrafiche_da_rivestire.cs" />
+    <Compile Include="POCOExtended\tab_contribuente_sto.cs" />
+    <Compile Include="POCOExtended\tab_esito_aci.cs" />
+    <Compile Include="POCOExtended\tab_esito_aci_messaggi.cs" />
+    <Compile Include="POCOExtended\tab_f24_a1.cs" />
+    <Compile Include="POCOExtended\tab_f24_g1.cs" />
+    <Compile Include="POCOExtended\tab_f24_g9.cs" />
+    <Compile Include="POCOExtended\tab_f24_tipo_r2_regione.cs" />
+    <Compile Include="POCOExtended\tab_f24_tipo_r3_regione.cs" />
+    <Compile Include="POCOExtended\tab_f24_tipo_r4_regione.cs" />
+    <Compile Include="POCOExtended\tab_f24_tipo_r5_regione.cs" />
+    <Compile Include="POCOExtended\tab_f24_tipo_aa_regione.cs" />
+    <Compile Include="POCOExtended\tab_f24_tipo_r1_regione.cs" />
+    <Compile Include="POCOExtended\tab_f24_tipo_zz_regione.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_nucleo_immobiliare.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_pagamento.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_parentela.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_piani_edificio.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_record.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_relazione.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_servizi.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_spedizione_notifica.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_udienza.cs" />
+    <Compile Include="POCOExtended\anagrafica_tipo_veicolo.cs" />
+    <Compile Include="POCOExtended\anagrafica_utilizzo.cs" />
+    <Compile Include="POCOExtended\anagrafica_veicoli_marche.cs" />
+    <Compile Include="POCOExtended\anagrafica_veicoli_tipo_serie.cs" />
+    <Compile Include="POCOExtended\anagrafica_voci_contribuzione.cs" />
+    <Compile Include="POCOExtended\BaseEntity.cs" />
+    <Compile Include="POCOExtended\calcolo_voci_contribuzione.cs" />
+    <Compile Include="POCOExtended\join_applicazioni_secondarie.cs" />
+    <Compile Include="POCOExtended\join_avv_pag_fatt_emissione_soggetto_debitore.cs" />
+    <Compile Include="POCOExtended\join_avv_pag_mov_pag_fatt_emissione.cs" />
+    <Compile Include="POCOExtended\join_avv_pag_soggetto_debitore.cs" />
+    <Compile Include="POCOExtended\join_documenti_fascicolo.cs" />
+    <Compile Include="POCOExtended\join_tab_doc_input_tab_doc_output.cs" />
+    <Compile Include="POCOExtended\join_conto_economico_tipo_voce_contribuzione.cs" />
+    <Compile Include="POCOExtended\join_documenti_contribuenti.cs" />
+    <Compile Include="POCOExtended\join_documenti_contrib_ref.cs" />
+    <Compile Include="POCOExtended\join_documenti_domiciliazioni.cs" />
+    <Compile Include="POCOExtended\join_documenti_fascicolo_avvpag_allegati.cs" />
+    <Compile Include="POCOExtended\join_documenti_pratiche.cs" />
+    <Compile Include="POCOExtended\join_documenti_referenti.cs" />
+    <Compile Include="POCOExtended\join_documenti_tab_terzo_debitore.cs" />
+    <Compile Include="POCOExtended\join_doc_input_beni_avvpag.cs" />
+    <Compile Include="POCOExtended\join_doc_input_not_avvpag.cs" />
+    <Compile Include="POCOExtended\join_doc_input_pag_avvpag.cs" />
+    <Compile Include="POCOExtended\join_ente_ente_gestito.cs" />
+    <Compile Include="POCOExtended\join_ente_strutture_tipoavvpag.cs" />
+    <Compile Include="POCOExtended\join_ingfis_supervisione.cs" />
+    <Compile Include="POCOExtended\join_lista_voci_contribuzione.cs" />
+    <Compile Include="POCOExtended\join_movpag_rata_avv_pag.cs" />
+    <Compile Include="POCOExtended\join_oggetti_immobili.cs" />
+    <Compile Include="POCOExtended\join_oggetto_dati_metrici.cs" />
+    <Compile Include="POCOExtended\join_proc_concorsuali_crediti_privil_chiro.cs" />
+    <Compile Include="POCOExtended\join_proprietari_immobili_coattivo.cs" />
+    <Compile Include="POCOExtended\join_referente_contribuente_avv_pag.cs" />
+    <Compile Include="POCOExtended\join_risorse_ser_comuni.cs" />
+    <Compile Include="POCOExtended\join_sezioni_stampa_tipo_avv_pag.cs" />
+    <Compile Include="POCOExtended\join_tablet_postazioni.cs" />
+    <Compile Include="POCOExtended\join_tab_supervisione_profili.cs" />
+    <Compile Include="POCOExtended\join_tipo_avvpag_voci_contrib_new.cs" />
+    <Compile Include="POCOExtended\join_tipo_avvpag_voci_contrib_trasmesse.cs" />
+    <Compile Include="POCOExtended\join_tipo_stato_referenza.cs" />
+    <Compile Include="POCOExtended\join_tipo_voci_contribuzione_priorita_riscossione.cs" />
+    <Compile Include="POCOExtended\ser_codici_catastali.cs" />
+    <Compile Include="POCOExtended\ser_stati_esteri_new.cs" />
+    <Compile Include="POCOExtended\tab_agevolazioni_verifica.cs" />
+    <Compile Include="POCOExtended\tab_allegati_digitali.cs" />
+    <Compile Include="POCOExtended\tab_anomalie_spedizioni.cs" />
+    <Compile Include="POCOExtended\tab_firma_digitale.cs" />
+    <Compile Include="POCOExtended\tab_ipoteche.cs" />
+    <Compile Include="POCOExtended\tab_modalita_rate_avvpag_view.cs" />
+    <Compile Include="POCOExtended\tab_modelli_fiscali.cs" />
+    <Compile Include="POCOExtended\tab_richieste_rivestizione_liste.cs" />
+    <Compile Include="POCOExtended\tab_avvisi_anomali_liste_carico.cs" />
+    <Compile Include="POCOExtended\tab_avv_pag_base.cs" />
+    <Compile Include="POCOExtended\tab_calcolo_tipo_voci_contribuzione.cs" />
+    <Compile Include="POCOExtended\tab_categoria_tariffaria_cosap.cs" />
+    <Compile Include="POCOExtended\tab_citazioni.cs" />
+    <Compile Include="POCOExtended\tab_contribuente.cs" />
+    <Compile Include="POCOExtended\tab_contribuente_sto_new.cs" />
+    <Compile Include="POCOExtended\tab_controlli_qualita_liste_carico.cs" />
+    <Compile Include="POCOExtended\tab_dati_metrici_catastali.cs" />
+    <Compile Include="POCOExtended\tab_dati_metrici_dichiarati.cs" />
+    <Compile Include="POCOExtended\tab_delibere_determine_tariffarie.cs" />
+    <Compile Include="POCOExtended\tab_det_riscosso_periodo_lista.cs" />
+    <Compile Include="POCOExtended\tab_documenti.cs" />
+    <Compile Include="POCOExtended\tab_doc_output.cs" />
+    <Compile Include="POCOExtended\tab_ente_servizi.cs" />
+    <Compile Include="POCOExtended\tab_fascicolo.cs" />
+    <Compile Include="POCOExtended\tab_fascicolo_avvpag_allegati.cs" />
+    <Compile Include="POCOExtended\tab_file_esiti_notifiche.cs" />
+    <Compile Include="POCOExtended\tab_file_trasmessi.cs" />
+    <Compile Include="POCOExtended\tab_immobili_coattivo.cs" />
+    <Compile Include="POCOExtended\tab_iter_supervisione_atti_coa.cs" />
+    <Compile Include="POCOExtended\tab_modalita_rate_avvpag.cs" />
+    <Compile Include="POCOExtended\tab_modalita_spednot_doc_output.cs" />
+    <Compile Include="POCOExtended\tab_mov_pag_fatt_emissione.cs" />
+    <Compile Include="POCOExtended\tab_note.cs" />
+    <Compile Include="POCOExtended\tab_oggetti_contribuzione_verifica.cs" />
+    <Compile Include="POCOExtended\tab_persone.cs" />
+    <Compile Include="POCOExtended\tab_piano_conti_economici.cs" />
+    <Compile Include="POCOExtended\tab_postazioni.cs" />
+    <Compile Include="POCOExtended\tab_poste_arcostradale.cs" />
+    <Compile Include="POCOExtended\tab_poste_comune.cs" />
+    <Compile Include="POCOExtended\tab_poste_strada.cs" />
+    <Compile Include="POCOExtended\tab_procedure_concorsuali.cs" />
+    <Compile Include="POCOExtended\tab_progressivi_formalita_aci.cs" />
+    <Compile Include="POCOExtended\tab_prog_avvpag.cs" />
+    <Compile Include="POCOExtended\tab_quantita_spedizione.cs" />
+    <Compile Include="POCOExtended\tab_quietanze.cs" />
+    <Compile Include="POCOExtended\tab_rata_avv_pag_fatt_emissione.cs" />
+    <Compile Include="POCOExtended\tab_rateizzazioni.cs" />
+    <Compile Include="POCOExtended\tab_referente_sto.cs" />
+    <Compile Include="POCOExtended\tab_registro_giornaliero_riscossioni.cs" />
+    <Compile Include="POCOExtended\tab_registro_assegnazione_pratiche.cs" />
+    <Compile Include="POCOExtended\tab_registro_ufficiali_riscossione.cs" />
+    <Compile Include="POCOExtended\tab_risposte_rivestizione_liste.cs" />
+    <Compile Include="POCOExtended\tab_risposte_rivestizione_liste_errori.cs" />
+    <Compile Include="POCOExtended\tab_sentenze.cs" />
+    <Compile Include="POCOExtended\tab_ricorsi.cs" />
+    <Compile Include="POCOExtended\tab_rimborsi.cs" />
+    <Compile Include="POCOExtended\tab_riscosso_periodo_lista.cs" />
+    <Compile Include="POCOExtended\tab_riversamenti_contrattuali.cs" />
+    <Compile Include="POCOExtended\tab_rivestizione_anagrafica.cs" />
+    <Compile Include="POCOExtended\tab_selezione_report.cs" />
+    <Compile Include="POCOExtended\tab_sped_not_fatt_emissione.cs" />
+    <Compile Include="POCOExtended\tab_storico_anagrafe.cs" />
+    <Compile Include="POCOExtended\ExtensionMethods.cs" />
+    <Compile Include="POCOExtended\IGestioneStato.cs" />
+    <Compile Include="POCOExtended\ISoftDeleted.cs" />
+    <Compile Include="POCOExtended\IValidator.cs" />
+    <Compile Include="POCOExtended\join_applicazioni_link.cs" />
+    <Compile Include="POCOExtended\join_avv_pag_mov_pag.cs" />
+    <Compile Include="POCOExtended\join_causale_doc_new.cs" />
+    <Compile Include="POCOExtended\join_controlli_avvpag_fatt_emissione.cs" />
+    <Compile Include="POCOExtended\join_denunce_doc_input.cs" />
+    <Compile Include="POCOExtended\join_doc_input_riga_avvpag.cs" />
+    <Compile Include="POCOExtended\join_ente_strutture.cs" />
+    <Compile Include="POCOExtended\join_entrate_macroentrate.cs" />
+    <Compile Include="POCOExtended\join_file.cs" />
+    <Compile Include="POCOExtended\join_ispezioni_ingiunzioni.cs" />
+    <Compile Include="POCOExtended\join_oggetto_agevolazioni.cs" />
+    <Compile Include="POCOExtended\join_ogg_contatore.cs" />
+    <Compile Include="POCOExtended\join_referente_contribuente.cs" />
+    <Compile Include="POCOExtended\join_report_link.cs" />
+    <Compile Include="POCOExtended\join_risorse_strutture.cs" />
+    <Compile Include="POCOExtended\join_tab_avv_pag_tab_doc_input.cs" />
+    <Compile Include="POCOExtended\join_tab_cc_riscoss_tipo_avvpag.cs" />
+    <Compile Include="POCOExtended\join_tab_ispezioni_coattivo_tipo_ispezione.cs" />
+    <Compile Include="POCOExtended\join_tipo_avv_pag_servizi.cs" />
+    <Compile Include="POCOExtended\join_tipo_lista_tipo_avv_pag.cs" />
+    <Compile Include="POCOExtended\ser_comuni.cs" />
+    <Compile Include="POCOExtended\ser_province.cs" />
+    <Compile Include="POCOExtended\ser_regioni.cs" />
+    <Compile Include="POCOExtended\tab_abilitazione.cs" />
+    <Compile Include="POCOExtended\tab_agevolazioni.cs" />
+    <Compile Include="POCOExtended\tab_anagrafe.cs" />
+    <Compile Include="POCOExtended\tab_applicazioni.cs" />
+    <Compile Include="POCOExtended\tab_aree.cs" />
+    <Compile Include="POCOExtended\tab_assegnazione_rilevazioni.cs" />
+    <Compile Include="POCOExtended\tab_autorita_giudiziaria.cs" />
+    <Compile Include="POCOExtended\tab_avv_pag.cs" />
+    <Compile Include="POCOExtended\tab_avv_pag_fatt_emissione.cs" />
+    <Compile Include="POCOExtended\tab_avv_pag_fatt_rettifica.cs" />
+    <Compile Include="POCOExtended\tab_boll_pag.cs" />
+    <Compile Include="POCOExtended\tab_categoria_tariffaria.cs" />
+    <Compile Include="POCOExtended\tab_categoria_tariffaria_acs.cs" />
+    <Compile Include="POCOExtended\tab_categoria_tariffaria_ici.cs" />
+    <Compile Include="POCOExtended\tab_categoria_tariffaria_icp.cs" />
+    <Compile Include="POCOExtended\tab_categoria_tariffaria_immobili.cs" />
+    <Compile Include="POCOExtended\tab_categoria_tariffaria_imu.cs" />
+    <Compile Include="POCOExtended\tab_categoria_tariffaria_tasi.cs" />
+    <Compile Include="POCOExtended\tab_categoria_tariffaria_ZTL.cs" />
+    <Compile Include="POCOExtended\tab_categorie_fabbricati.cs" />
+    <Compile Include="POCOExtended\tab_causali_estr_conto.cs" />
+    <Compile Include="POCOExtended\tab_cc_riscossione.cs" />
+    <Compile Include="POCOExtended\tab_cc_riversamento.cs" />
+    <Compile Include="POCOExtended\tab_cc_tesoreria.cs" />
+    <Compile Include="POCOExtended\tab_cicli_ente.cs" />
+    <Compile Include="POCOExtended\tab_codici_tributi_ministeriali.cs" />
+    <Compile Include="POCOExtended\tab_consuntivo_dett_lista_carico.cs" />
+    <Compile Include="POCOExtended\tab_consuntivo_lista_carico.cs" />
+    <Compile Include="POCOExtended\tab_contatore.cs" />
+    <Compile Include="POCOExtended\tab_contratti_NEW.cs" />
+    <Compile Include="POCOExtended\tab_contribuzione.cs" />
+    <Compile Include="POCOExtended\tab_denunce_contratti.cs" />
+    <Compile Include="POCOExtended\tab_dett_mov_pag.cs" />
+    <Compile Include="POCOExtended\tab_dett_riscossione.cs" />
+    <Compile Include="POCOExtended\tab_doc_input.cs" />
+    <Compile Include="POCOExtended\tab_domicilio.cs" />
+    <Compile Include="POCOExtended\tab_esecuzione_applicazioni.cs" />
+    <Compile Include="POCOExtended\tab_fabbricati.cs" />
+    <Compile Include="POCOExtended\tab_funzionalita.cs" />
+    <Compile Include="POCOExtended\tab_immobili.cs" />
+    <Compile Include="POCOExtended\tab_ingiunzioni_ispezione.cs" />
+    <Compile Include="POCOExtended\tab_intervento.cs" />
+    <Compile Include="POCOExtended\tab_ispezioni_coattivo_new.cs" />
+    <Compile Include="POCOExtended\tab_ispezioni_coattivo_v2.cs" />
+    <Compile Include="POCOExtended\tab_join_avvcoa_ingfis_v2.cs" />
+    <Compile Include="POCOExtended\tab_letture.cs" />
+    <Compile Include="POCOExtended\tab_lista_letture.cs" />
+    <Compile Include="POCOExtended\tab_lista_sped_notifiche.cs" />
+    <Compile Include="POCOExtended\tab_liste.cs" />
+    <Compile Include="POCOExtended\tab_locazione_contratto.cs" />
+    <Compile Include="POCOExtended\tab_locazione_immobili.cs" />
+    <Compile Include="POCOExtended\tab_locazione_soggetto.cs" />
+    <Compile Include="POCOExtended\tab_log_operatori.cs" />
+    <Compile Include="POCOExtended\tab_log_operazioni_operatore.cs" />
+    <Compile Include="POCOExtended\tab_log_operazioni_utente.cs" />
+    <Compile Include="POCOExtended\tab_log_utenti.cs" />
+    <Compile Include="POCOExtended\tab_macroentrate.cs" />
+    <Compile Include="POCOExtended\tab_marca_veicolo.cs" />
+    <Compile Include="POCOExtended\tab_modello_veicolo.cs" />
+    <Compile Include="POCOExtended\tab_mov_pag.cs" />
+    <Compile Include="POCOExtended\tab_mov_pag_ici.cs" />
+    <Compile Include="POCOExtended\tab_multilanguage.cs" />
+    <Compile Include="POCOExtended\tab_notificatore.cs" />
+    <Compile Include="POCOExtended\tab_oggetti.cs" />
+    <Compile Include="POCOExtended\tab_oggetti_contribuzione.cs" />
+    <Compile Include="POCOExtended\tab_pagine.cs" />
+    <Compile Include="POCOExtended\tab_pianificazione_cicli.cs" />
+    <Compile Include="POCOExtended\tab_pianificazione_cicli_dettaglio.cs" />
+    <Compile Include="POCOExtended\tab_pianificazione_cicli_input_emissione.cs" />
+    <Compile Include="POCOExtended\tab_pianificazione_cicli_input_importazione_file.cs" />
+    <Compile Include="POCOExtended\tab_pianificazione_cicli_input_rendicontazione.cs" />
+    <Compile Include="POCOExtended\tab_procedure.cs" />
+    <Compile Include="POCOExtended\tab_profilo_contribuente_new.cs" />
+    <Compile Include="POCOExtended\tab_qualita_terreno.cs" />
+    <Compile Include="POCOExtended\tab_rata_avv_pag.cs" />
+    <Compile Include="POCOExtended\tab_referente.cs" />
+    <Compile Include="POCOExtended\tab_report.cs" />
+    <Compile Include="POCOExtended\tab_rilevatore.cs" />
+    <Compile Include="POCOExtended\tab_rilevazione_acquedotto.cs" />
+    <Compile Include="POCOExtended\tab_rilevazione_acquedotto_dettaglio.cs" />
+    <Compile Include="POCOExtended\tab_sped_not.cs" />
+    <Compile Include="POCOExtended\tab_supervisione_finale_v2.cs" />
+    <Compile Include="POCOExtended\tab_tablet.cs" />
+    <Compile Include="POCOExtended\tab_terreni.cs" />
+    <Compile Include="POCOExtended\tab_terzo.cs" />
+    <Compile Include="POCOExtended\tab_terzo_debitore.cs" />
+    <Compile Include="POCOExtended\tab_terzo_sto.cs" />
+    <Compile Include="POCOExtended\tab_tipi_diritti.cs" />
+    <Compile Include="POCOExtended\tab_tiposervizio_entrata_cc.cs" />
+    <Compile Include="POCOExtended\tab_tipo_atto_ufficiali_riscossione.cs" />
+    <Compile Include="POCOExtended\tab_fasce_pignorabilita_beni.cs" />
+    <Compile Include="POCOExtended\tab_tipo_bene.cs" />
+    <Compile Include="POCOExtended\tab_tipo_doc_entrate.cs" />
+    <Compile Include="POCOExtended\tab_tipo_ente.cs" />
+    <Compile Include="POCOExtended\tab_tipo_input_output_funzione.cs" />
+    <Compile Include="POCOExtended\tab_tipo_ispezione.cs" />
+    <Compile Include="POCOExtended\tab_tipo_lista.cs" />
+    <Compile Include="POCOExtended\tab_tipo_nota.cs" />
+    <Compile Include="POCOExtended\tab_tipo_oggetto.cs" />
+    <Compile Include="POCOExtended\tab_tipo_pagamento.cs" />
+    <Compile Include="POCOExtended\tab_tipo_toponimo.cs" />
+    <Compile Include="POCOExtended\tab_tipo_voce_contribuzione.cs" />
+    <Compile Include="POCOExtended\tab_titolarita.cs" />
+    <Compile Include="POCOExtended\tab_toponimi.cs" />
+    <Compile Include="POCOExtended\tab_generale_udienze.cs" />
+    <Compile Include="POCOExtended\tab_udienze.cs" />
+    <Compile Include="POCOExtended\tab_unita_contribuzione.cs" />
+    <Compile Include="POCOExtended\tab_unita_contribuzione_fatt_emissione.cs" />
+    <Compile Include="POCOExtended\tab_unita_contribuzione_fatt_rettifica.cs" />
+    <Compile Include="POCOExtended\tab_utenti.cs" />
+    <Compile Include="POCOExtended\tab_validazione_approvazione_liste.cs" />
+    <Compile Include="POCOExtended\tab_validazione_approvazione_liste_spedizione.cs" />
+    <Compile Include="POCOExtended\tab_veicoli.cs" />
+    <Compile Include="POCOExtended\tab_vincoli_beni_pignorati.cs" />
+    <Compile Include="POCOExtended\tab_voci_contrattuali_NEW.cs" />
+    <Compile Include="POCOExtended\tab_zone.cs" />
+    <Compile Include="POCOLight\ANAGRAFICA_ABI_CAB_light.cs" />
+    <Compile Include="POCOLight\anagrafica_agevolazione_light.cs" />
+    <Compile Include="POCOLight\anagrafica_tipo_esito_notifica_light.cs" />
+    <Compile Include="POCOLight\anagrafica_causale_light.cs" />
+    <Compile Include="POCOLight\anagrafica_documenti_light.cs" />
+    <Compile Include="POCOLight\anagrafica_ente_light_nonav.cs" />
+    <Compile Include="POCOLight\anagrafica_risorse_light.cs" />
+    <Compile Include="POCOLight\anagrafica_stato_contatore_light.cs" />
+    <Compile Include="POCOLight\anagrafica_strutture_aziendali_light.cs" />
+    <Compile Include="POCOLight\anagrafica_strutture_aziendali_light_nonav.cs" />
+    <Compile Include="POCOLight\join_avv_pag_fatt_emissione_soggetto_debitore_light.cs" />
+    <Compile Include="POCOLight\join_avv_pag_mov_pag_light.cs" />
+    <Compile Include="POCOLight\join_avv_pag_soggetto_debitore_light.cs" />
+    <Compile Include="POCOLight\join_documenti_fascicolo_light.cs" />
+    <Compile Include="POCOLight\join_documenti_fascicolo_doc_output_allegati_light.cs" />
+    <Compile Include="POCOLight\join_documenti_fascicolo_avvpag_allegati_light.cs" />
+    <Compile Include="POCOLight\join_causale_doc_new.cs" />
+    <Compile Include="POCOLight\tab_agevolazioni_verifica_light.cs" />
+    <Compile Include="POCOLight\tab_agevolazioni_light.cs" />
+    <Compile Include="POCOLight\join_tab_ispezioni_coattivo_tipo_ispezione_light.cs" />
+    <Compile Include="POCOLight\join_file_light.cs" />
+    <Compile Include="POCOLight\join_lista_voci_contribuzione_light.cs" />
+    <Compile Include="POCOLight\join_ispezioni_ingiunzioni_light.cs" />
+    <Compile Include="POCOLight\join_oggetto_agevolazioni_light.cs" />
+    <Compile Include="POCOLight\join_oggetto_dati_metrici_light.cs" />
+    <Compile Include="POCOLight\join_referente_contribuente_light.cs" />
+    <Compile Include="POCOLight\tab_carrello_light.cs" />
+    <Compile Include="POCOLight\tab_categoria_tariffaria_tosap_light.cs" />
+    <Compile Include="POCOLight\tab_consuntivi_lista_light.cs" />
+    <Compile Include="POCOLight\tab_consuntivi_riscosso_lista_light.cs" />
+    <Compile Include="POCOLight\join_fattcont_fattconsumi_light.cs" />
+    <Compile Include="POCOLight\tab_fatt_info_light.cs" />
+    <Compile Include="POCOLight\tab_fatt_cont_light.cs" />
+    <Compile Include="POCOLight\tab_fatt_consumi_light.cs" />
+    <Compile Include="POCOLight\tab_intervento_light.cs" />
+    <Compile Include="POCOLight\tab_rottamazioni_light.cs" />
+    <Compile Include="POCOLight\tab_tipo_contatore_light.cs" />
+    <Compile Include="POCOLight\tab_doc_output_light.cs" />
+    <Compile Include="POCOLight\tab_fascicolo_doc_output_allegati_light.cs" />
+    <Compile Include="POCOLight\tab_sentenza_light.cs" />
+    <Compile Include="POCOLight\tab_rimborsi_light.cs" />
+    <Compile Include="POCOLight\tab_ricorsi_light.cs" />
+    <Compile Include="POCOLight\tab_tassonomia_pagopa_light.cs" />
+    <Compile Include="POCOLight\tab_vincoli_beni_pignorati_light.cs" />
+    <Compile Include="POCOLight\join_tab_avv_pag_tab_doc_input_light.cs" />
+    <Compile Include="POCOLight\join_tab_supervisione_profili_light.cs" />
+    <Compile Include="POCOLight\tab_allegati_digitali_light.cs" />
+    <Compile Include="POCOLight\tab_applicazioni_light.cs" />
+    <Compile Include="POCOLight\tab_assegnazione_rilevazioni_light.cs" />
+    <Compile Include="POCOLight\tab_avv_pag_dto.cs" />
+    <Compile Include="POCOLight\tab_avv_pag_fatt_emissione_light.cs" />
+    <Compile Include="POCOLight\tab_avv_pag_light.cs" />
+    <Compile Include="POCOLight\tab_categoria_tariffaria_cosap_light.cs" />
+    <Compile Include="POCOLight\tab_categoria_tariffaria_icp_light.cs" />
+    <Compile Include="POCOLight\tab_categoria_tariffaria_immobili_light.cs" />
+    <Compile Include="POCOLight\tab_categoria_tariffaria_light.cs" />
+    <Compile Include="POCOLight\tab_categoria_tariffaria_tasi_light.cs" />
+    <Compile Include="POCOLight\tab_cc_riscossione_light.cs" />
+    <Compile Include="POCOLight\tab_contatore_light.cs" />
+    <Compile Include="POCOLight\tab_contribuente_light.cs" />
+    <Compile Include="POCOLight\tab_contribuzione_light.cs" />
+    <Compile Include="POCOLight\tab_dati_metrici_catastali_light.cs" />
+    <Compile Include="POCOLight\tab_dati_metrici_dichiarati_light.cs" />
+    <Compile Include="POCOLight\tab_documenti_light.cs" />
+    <Compile Include="POCOLight\tab_doc_input_light.cs" />
+    <Compile Include="POCOLight\tab_fabbricati_light.cs" />
+    <Compile Include="POCOLight\tab_fascicolo_avvpag_allegati_light.cs" />
+    <Compile Include="POCOLight\tab_fascicolo_light.cs" />
+    <Compile Include="POCOLight\tab_ispezioni_coattivo_new_light.cs" />
+    <Compile Include="POCOLight\tab_letture_light.cs" />
+    <Compile Include="POCOLight\tab_liste_light.cs" />
+    <Compile Include="POCOLight\tab_mov_pag_light.cs" />
+    <Compile Include="POCOLight\tab_oggetti_contribuzione_light.cs" />
+    <Compile Include="POCOLight\tab_profilo_contribuente_new_light.cs" />
+    <Compile Include="POCOLight\tab_rata_avv_pag_light.cs" />
+    <Compile Include="POCOLight\tab_rateizzazioni_anagrafica_light.cs" />
+    <Compile Include="POCOLight\tab_rateizzazioni_light.cs" />
+    <Compile Include="POCOLight\tab_referente_light.cs" />
+    <Compile Include="POCOLight\tab_rilevatore_light.cs" />
+    <Compile Include="POCOLight\tab_sped_not_light.cs" />
+    <Compile Include="POCOLight\tab_terreni_light.cs" />
+    <Compile Include="POCOLight\tab_terzo_debitore_light.cs" />
+    <Compile Include="POCOLight\tab_terzo_light.cs" />
+    <Compile Include="POCOLight\tab_titolarita_light.cs" />
+    <Compile Include="POCOLight\tab_toponimi_light.cs" />
+    <Compile Include="POCOExtended\tab_tributi_ministeriali.cs" />
+    <Compile Include="POCOLight\tab_unita_contribuzione_fatt_emissione_light.cs" />
+    <Compile Include="POCOLight\tab_unita_contribuzione_light.cs" />
+    <Compile Include="POCOLight\AcquisizioniRG_Citazioni_Light.cs" />
+    <Compile Include="POCOLight\Verifica_Stato_Ispezioni_Coattivo_Light.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LinqExtended\TabCitazioniLinq.cs" />
+    <Compile Include="PSBaseEntity.cs" />
+    <Compile Include="ser_codici_catastali.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ser_comuni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ser_comuni_aci.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ser_province.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ser_regioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ser_stati_esteri.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ser_stati_esteri_new.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_consuntivo_lista_riscosso_storicizza_Result.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_consuntivo_lista_storicizza_Result.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="System.Linq.Dynamic\Dynamic.cs" />
+    <Compile Include="tab_abilitazione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_agevolazioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_agevolazioni_verifica.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_allegati_digitali.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_anagrafe.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_anagrafiche_da_rivestire.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_anomalie_spedizioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_applicazioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_area_mercato.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_aree.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_aree_senza_cosap.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_assegnazione_istanze.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_assegnazione_rilevazioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_autorita_giudiziaria.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_autorizzazioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_avvisi_anomali_liste_carico.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_avv_pag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_avv_pag_fatt_emissione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_avv_pag_fatt_rettifica.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_boll_pag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_calcolo_tipo_voci_contribuzione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_carrello.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_categoria_tariffaria.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_categoria_tariffaria_acs.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_categoria_tariffaria_cosap.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_categoria_tariffaria_ici.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_categoria_tariffaria_icp.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_categoria_tariffaria_immobili.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_categoria_tariffaria_imu.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_categoria_tariffaria_tasi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_categoria_tariffaria_tosap.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_categoria_tariffaria_ZTL.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_categorie_fabbricati.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_causali_estr_conto.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_cc_pagamento.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_cc_riscossione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_cc_riversamento.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_cc_tesoreria.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_cicli_ente.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_cicli_ente_dettaglio.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_cimiteri.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_citazioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_co1142_elenco_domicili_fiscali.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_co1142_pf.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_co1151.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_co1151_ditte_rappresentate.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_co1151_elenco_artite_iva.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_co1151_rappresentanti_legali.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_codice_tributo_f24.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_codici_tributi_ministeriali.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_cod_identificativi_secondo_cf.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_competenze.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_comunicazione_smarriti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_consuntivo_dett_lista_carico.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_consuntivo_lista_carico.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_consuntivo_soglie.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_consuntivo_soglie_tipo.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_contatore.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_contenitori.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_contratti_NEW.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_contribuente.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_contribuente_sto.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_contribuente_sto_new.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_contribuzione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_controdeduzioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_controlli_qualita_liste_carico.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_corrispettivi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_crediti_debiti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_cuas.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_dati_metrici_catastali.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_dati_metrici_dichiarati.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_delibere_determine_tariffarie.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_denunce_contratti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_dett_estratto_conto_mensile.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_dett_lista.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_dett_lista_sped_not.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_dett_mov_pag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_dett_mov_pag_ici.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_dett_riscossione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_det_riscosso_periodo_lista.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_documenti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_doc_input.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_doc_output.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_domande_segrete.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_domicilio.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_ente_escluso_emissione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_ente_servizi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_errori_pagopa.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_esclusione_rateizzazione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_esecuzione_applicazioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_esito_aci.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_esito_aci_messaggi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_estratto_conto.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_a1.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_g1.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_g2.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_g3.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_g4.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_g5.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_g9.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_tipo_aa_regione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_tipo_r1_regione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_tipo_r2_regione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_tipo_r3_regione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_tipo_r4_regione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_tipo_r5_regione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_tipo_zz_regione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_f24_z1.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_fabbricati.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_fabbricati_identificativi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_fabbricati_indirizzi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_fabbricati_riserve.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_fabbricati_utilita_comuni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_fasce_pignorabilita_beni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_fascicolo.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_fascicolo_avvpag_allegati.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_fascicolo_doc_output_allegati.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_fatt_consumi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_fatt_cont.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_fatt_info.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_fermi_azioni_manuali.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_file_esiti_notifiche.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_file_trasmessi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_firma_digitale.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_funzionalita.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_funzioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_generale_udienze.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_help_pagine.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_idpspid.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_immobili.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_immobili_coattivo.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_ingiunzioni_ispezione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_input_consuntivi_rendiconti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_intervento.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_ipoteche.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_ispezione_coattivo.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_ispezioni_coattivo_new.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_ispezioni_coattivo_v2.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_iter_supervisione_atti_coa.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_JOIN_AVVCOA_INGFIS_V2.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_letture.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_lista_ente_gestito.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_lista_letture.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_lista_riscossione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_lista_sped_notifiche.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_liste.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_locazione_contratto.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_locazione_immobili.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_locazione_soggetto.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_log_operatori.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_log_operazioni_operatore.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_log_operazioni_utente.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_log_utenti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_macroentrate.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_marca_veicolo.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_menu_orizzontale.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_modalita_rate_avvpag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_modalita_rate_avvpag_view.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_modalita_spednot_doc_output.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_modelli_fiscali.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_modello_veicolo.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_mov_pag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_mov_pag_fatt_emissione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_mov_pag_ici.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_multilanguage.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_note.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_notificatore.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_occupazione_piazzole.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_oggetti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_oggetti_contribuzione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_oggetti_contribuzione_verifica.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_pagine.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_pagopa_eventi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_pagopa_flusso_rendicontazione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_parametri_portale.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_pec_configurazioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_persone.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_pianificazione_cicli.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_pianificazione_cicli_dettaglio.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_pianificazione_cicli_enti_gestiti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_pianificazione_cicli_input_emissione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_pianificazione_cicli_input_importazione_file.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_pianificazione_cicli_input_rendicontazione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_piano_conti_economici.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_postazioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_poste_arcostradale.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_poste_comune.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_poste_provincia.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_poste_strada.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_procedure.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_procedure_concorsuali.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_procure.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_profilo_contribuente_new.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_progressivi_formalita_aci.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_prog_avvpag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_prog_carrello.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_prog_doc.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_prog_iuv.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_prog_lista.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_prog_lista_post_notifiche.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_qualita_terreno.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_quantita_spedizione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_quietanze.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_rata_avv_pag.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_rata_avv_pag_fatt_emissione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_rateizzazioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_referente.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_referente_sto.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_registro_assegnazione_pratiche.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_registro_cds.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_registro_cookie.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_registro_giornaliero_riscossioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_registro_pag_senza_avviso.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_registro_pag_spontanei.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_registro_spid.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_registro_ufficiali_riscossione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_rendiconto.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_rendiconto_NEW.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_report.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_ricerca_infocamere.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_richieste_rivestizione_liste.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_ricorsi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_rilevatore.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_rilevazione_acquedotto.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_rilevazione_acquedotto_dettaglio.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_rilevazione_acquedotto_smart.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_rimborsi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_riscosso_periodo_lista.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_risposte_rivestizione_liste.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_risposte_rivestizione_liste_errori.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_riversamenti_contrattuali.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_rivestizione_anagrafica.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_rssfeed_fisco.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_segnalazione_anomalie_elaborazione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_selezione_report.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_selezione_report_view.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_sentenze.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_sezioni_contenuti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_siatel_bonifici_bancari_ordinanti_0.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_siatel_bonifici_bancari_ordinanti_1.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_siatel_bonifici_bancari_ordinanti_9.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_sped_not.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_sped_not_fatt_emissione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_spese_giudizio.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_spuntista.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_storico_anagrafe.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_stru_ris.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_sub_menu.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAB_SUPERVISIONE_FINALE_V2.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tablet.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tassonomia_pagopa.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_terreni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_terreni_deduzioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_terreni_porzioni.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_terreni_riserve.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_terzo.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_terzo_debitore.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_terzo_sto.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipi_diritti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipi_toponimo_catasto.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipo_atto_ufficiali_riscossione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipo_bene.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipo_contatore.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipo_doc_entrate.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipo_ente.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipo_input_output_funzione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipo_ispezione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipo_lista.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipo_nota.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipo_oggetto.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipo_pagamento.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipo_servizio_entrata_cc.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipo_toponimo.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tipo_voce_contribuzione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_titolarita.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_toponimi.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_toponimi_catasto.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_toponimi_categoria_speciale.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_toponimi_normalizzati_2.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_tributi_ministeriali.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_udienze.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_unita_contribuzione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_unita_contribuzione_fatt_emissione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_unita_contribuzione_fatt_rettifica.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_utenti.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_validazione_approvazione_liste.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_validazione_approvazione_liste_spedizione.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_veicoli.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_veicoli_icp.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_veicoli_vincoli.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_Veicoli_ZTL.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_vincoli_beni_pignorati.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_voci_contrattuali_NEW.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tab_zone.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\DataExceptionHelpers.cs" />
+    <Compile Include="Utilities\SqlServerInformationSchemaTable.cs" />
+    <Compile Include="v_report_stato_lista.cs">
+      <DependentUpon>EnteDBContext.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="EnteDBContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EnteDBContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Diagram\ContribuenteDiagram.dgml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Diagram\ReferentiDiagram.dgml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EnteDBContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EnteDBContext.edmx</DependentUpon>
+      <LastGenOutput>EnteDBContext.Context.cs</LastGenOutput>
+    </None>
+    <None Include="EnteDBContext.edmx.diagram">
+      <DependentUpon>EnteDBContext.edmx</DependentUpon>
+    </None>
+    <None Include="EnteDBContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EnteDBContext.edmx</DependentUpon>
+      <LastGenOutput>EnteDBContext.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Publisoftware.Utility.Log\Publisoftware.Utility.Log.csproj">
+      <Project>{5AC27392-E99E-4797-B68B-A866C41F48BF}</Project>
+      <Name>Publisoftware.Utility.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Publisoftware.Utility\Publisoftware.Utility.csproj">
+      <Project>{465616D6-144E-4911-8D26-427CBE713A4B}</Project>
+      <Name>Publisoftware.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SP\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Questo progetto fa riferimento a uno o più pacchetti NuGet che non sono presenti sul computer in uso. Abilitare il ripristino dei pacchetti NuGet per scaricarli. Per ulteriori informazioni, visitare http://go.microsoft.com/fwlink/?LinkID=322105. Il file mancante è {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

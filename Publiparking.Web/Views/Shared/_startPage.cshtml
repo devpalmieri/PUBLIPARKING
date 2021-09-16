@@ -1,0 +1,177 @@
+﻿@using System.Web.Optimization
+@using Microsoft.AspNetCore.Mvc.Rendering
+@using WebHelpers.Mvc5.Enum
+@using Publiparking.Web.Classes
+@{
+    string messageModal = ViewBag.ModalMessage != null ? (string)ViewBag.ModalMessage : (TempData["ModalMessage"] != null ? (string)TempData["ModalMessage"] : string.Empty);
+    string messageModalType = ViewBag.ModalTypeMessage != null ? (string)ViewBag.ModalTypeMessage : (TempData["ModalTypeMessage"] != null ? (string)TempData["ModalTypeMessage"] : "info");
+    string pdfInfoPrivacy = ViewBag.PathInfoPrivacyPDF;
+    string HasRemoveCookie = ViewBag.RemoveCookieConsenso;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Publisoftware.Publiparking.Web</title>
+    <environment include="Development,Formazione,Produzione">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/fontawesome/css/all.css" />
+        <link rel="stylesheet" href="~/css/PubliparkingSheet.css" />
+        <link rel="stylesheet" href="/css/jquery.autocomplete.css" />
+    </environment>
+    <environment names="Development,Formazione,Produzione">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+    </environment>
+</head>
+<body>
+    @Html.Partial("_MessageBox", new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "messageModal", messageModal }, { "messageModalType", messageModalType } })
+    <header>
+        <center>
+            <a class="navbar-brand" asp-area="" asp-controller="HomeUtente" asp-action="Index"><img src="~/Images/logo-publiparking-def.png" alt="Publiparking" title="Publiparking" /></a>
+            @{
+                var defaulHome = startMode.Value.DefaultHome;
+            }
+            @if (defaulHome.ToUpper() == ParkConsts.DEFAULT_HOME_UTENTE)
+            {
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                    <div class="container">
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between nav-border">
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item item-border">
+                                    <a class="nav-link text-blue" asp-area="" asp-controller="HomeUtente" asp-action="Esperienza">Esperienza</a>
+                                </li>
+                                <li class="nav-item item-border">
+                                    <a class="nav-link text-blue" asp-area="" asp-controller="HomeUtente" asp-action="About">Chi Siamo</a>
+                                </li>
+                                @*<li class="nav-item item-border">
+                                        <a class="nav-link text-blue" asp-area="" asp-controller="HomeUtente" asp-action="Referenze">Referenze</a>
+                                    </li>*@
+                                <li class="nav-item item-border">
+                                    <a class="nav-link text-blue" asp-area="" asp-controller="HomeUtente" asp-action="Contact"><span>Contatti</span></a>
+                                </li>
+                                <li class="nav-item item-border">
+                                    <a class="nav-link text-blue" asp-area="" asp-controller="HomeUtente" asp-action="Appointments"><span><i class="fas fa-calendar-alt"></i> Per Appuntamenti</span></a>
+                                </li>
+                                <li class="nav-item item-border">
+                                    <a class="nav-link text-blue" asp-area="" asp-controller="HomeUtente" asp-action="Privacy">Privacy</a>
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <a href="https://applicazione.fiscolocale.it/portale/homeutente" class="btn btn-primary" target="_blank">Publiservizi</a>
+                                </li>
+                                <li class="nav-item login-item">
+                                    <a class="modal-link nav-link text-blue" asp-area="" asp-controller="HomeUtente" asp-action="Login">Area Riservata</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            }
+        </center>
+    </header>
+
+    <div class="container">
+        @*<partial name="_CookieConsentPartial" />*@
+        <main role="main" class="pb-3">
+            <hr class="hr-orange" />
+            @if (!string.IsNullOrEmpty(HasRemoveCookie))
+            {
+                <partial name="_removeCookie" />
+            }
+            @if (!string.IsNullOrEmpty(pdfInfoPrivacy))
+            {
+                <partial name="_viewPrivacy" />
+            }
+            @RenderBody()
+            @if (defaulHome.ToUpper() == ParkConsts.DEFAULT_HOME_UTENTE)
+            {
+                if (!Sessione.GetPrivacy())
+                {
+                    <partial name="_CookieBox" />
+                }
+            }
+        </main>
+    </div>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+    <footer class="border-top footer text-muted">
+        <center>
+            <div class="container">
+                <div class="row">
+                    @if (Sessione.GetCookieAccepted() != null)
+                    {
+                        if (Sessione.GetCookieAccepted() == true)
+                        {
+                            <div class="col-md-3 footer-col">
+                                <div class="form-group">
+                                    <a asp-area="" asp-controller="HomeUtente" asp-action="RemoveConsenso"><i class="fa fa-lock" aria-hidden="true"></i> Rimuovi Consenso Cookie</a>
+                                </div>
+                            </div>
+                        }
+                    }
+
+                    <div class="col-md-6 footer-col">
+                        <div class="form-group">
+                            &copy; 2021 - Publisoftware - <a asp-area="" asp-controller="HomeUtente" asp-action="AccettaPrivacy"><i class="fa fa-info-circle" aria-hidden="true"></i> Informativa Privacy</a>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3 footer-col">
+                        <div class="form-group">
+                            <a asp-area="" asp-controller="HomeUtente" asp-action="PubliparkingPrivacy"><i class="fa fa-lock" aria-hidden="true"></i> Publiparking Policy Privacy</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </center>
+    </footer>
+
+    <script type="text/javascript">
+        var messageErroreAjax = "Errore durante l\'elaborazione della richiesta. I dati sono stati registrati ed inviati al supporto. Grazie.";
+    </script>
+    <environment include="Development,Formazione,Produzione">
+        <script src="~/js/plugins/jquery/jquery-3.3.1.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/Microsoft.jQuery.Unobtrusive.Ajax/jquery.unobtrusive-ajax.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        @*<script src="~/js/plugins/bootstrap/bootstrap.js"></script>*@
+        <script src="~/js/plugins/fastclick/fastclick.js"></script>
+        <script src="~/js/plugins/slimscroll/jquery.slimscroll.js"></script>
+        <script src="~/js/plugins/bootstrap-select/bootstrap-select.js"></script>
+        <script src="~/js/plugins/moment/moment.js"></script>
+        <script src="~/js/plugins/datepicker/bootstrap-datepicker.js"></script>
+        <script src="~/js/plugins/icheck/icheck.js"></script>
+        <script src="~/js/plugins/validator/validator.js"></script>
+        <script src="~/js/plugins/inputmask/jquery.inputmask.bundle.js"></script>
+        <script src="~/js/adminlte.js"></script>
+        <script src="~/js/init.js"></script>
+
+        @*<script src="~/lib/jquery/dist/jquery.js"></script>*@
+        <script src="~/lib/Microsoft.jQuery.Unobtrusive.Ajax/jquery.unobtrusive-ajax.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    </environment>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+
+</html>
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

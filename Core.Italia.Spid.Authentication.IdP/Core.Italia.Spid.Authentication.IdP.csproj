@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\SpidAuthentication\Italia.Spid.Authentication\IdP\IdentityProvider.cs" Link="IdP\IdentityProvider.cs" />
+    <Compile Include="..\SpidAuthentication\Italia.Spid.Authentication\IdP\IdentityProviderConfigData.cs" Link="IdP\IdentityProviderConfigData.cs" />
+    <Compile Include="..\SpidAuthentication\Italia.Spid.Authentication\IdP\IdentityProviderMetadata.cs" Link="IdP\IdentityProviderMetadata.cs" />
+    <Compile Include="..\SpidAuthentication\Italia.Spid.Authentication\IdP\IdentityProvidersList.cs" Link="IdP\IdentityProvidersList.cs" />
+    <Compile Include="..\SpidAuthentication\Italia.Spid.Authentication\IdP\IdpAuthnResponse.cs" Link="IdP\IdpAuthnResponse.cs" />
+    <Compile Include="..\SpidAuthentication\Italia.Spid.Authentication\IdP\IdpLogoutResponse.cs" Link="IdP\IdpLogoutResponse.cs" />
+    <Compile Include="..\SpidAuthentication\Italia.Spid.Authentication\LogWriter.cs" Link="LogWriter.cs" />
+    <Compile Include="..\SpidAuthentication\Italia.Spid.Authentication\SamlConsts.cs" Link="SamlConsts.cs" />
+    <Compile Include="..\SpidAuthentication\Italia.Spid.Authentication\Saml\SamlHelper.cs" Link="Saml\SamlHelper.cs" />
+    <Compile Include="..\SpidAuthentication\Italia.Spid.Authentication\Saml\SamlRequestsStatus.cs" Link="Saml\SamlRequestsStatus.cs" />
+    <Compile Include="..\SpidAuthentication\Italia.Spid.Authentication\Saml\XmlSigningHelper.cs" Link="Saml\XmlSigningHelper.cs" />
+    <Compile Include="..\SpidAuthentication\Italia.Spid.Authentication\Schema\SamlSchemas.cs" Link="Schema\SamlSchemas.cs" />
+    <Compile Include="..\SpidAuthentication\Italia.Spid.Authentication\SpidUserInfoHelper.cs" Link="SpidUserInfoHelper.cs" />
+    <Compile Include="..\SpidAuthentication\Italia.Spid.Authentication\X509Helper.cs" Link="X509Helper.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="IdP\" />
+    <Folder Include="Schema\" />
+    <Folder Include="Saml\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>

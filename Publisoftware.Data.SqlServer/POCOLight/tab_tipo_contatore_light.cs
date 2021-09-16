@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Publisoftware.Data.POCOLight
+{
+    public class tab_tipo_contatore_light
+    {
+        public int id_tipo_contatore { get; set; }
+    }
+}

@@ -1,0 +1,206 @@
+﻿@model Publiparking.Web.Models.Account.LoginViewModel
+
+@{
+    ViewBag.Title = "Accedi Operatore";
+    string message = ViewBag.message != null ? (string)ViewBag.message : string.Empty;
+    Int32 messageType = ViewBag.messageType != null ? (Int32)ViewBag.messageType : 1;
+    bool hasEnte = ViewBag.HasEnte != null ? (bool)ViewBag.HasEnte : false;
+    bool isFormVisible = ViewBag.IsFormVisible != null ? (bool)ViewBag.IsFormVisible : false;
+    Layout = "~/Views/Shared/_startPage.cshtml";
+}
+<environment include="Development,Formazione,Produzione">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/PubliparkingSheet.css" />
+    <link rel="stylesheet" href="~/css/fontawesome/css/all.css" />
+
+</environment>
+<div class="row">
+    <div class="col-md-12">
+        @if (message != string.Empty)
+        {
+            <div id="div_message" class="row">
+                <div class="col-md-12 col-md-offset-0">
+                    @Html.Partial("MessageBarPartial", new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "message", message }, { "messageType", messageType } })
+
+                    @if (!hasEnte)
+                    {
+                        <center>
+
+                            <a asp-area="" asp-controller="HomeOperatore" asp-action="Index" class="btn btn-primary">Ritorna alla Home Page</a>
+
+                        </center>
+                        <br />
+                    }
+                </div>
+            </div>
+        }
+        @if (isFormVisible)
+        {
+            <section id="loginForm">
+                <div class="box box-default">
+                    <div class="box-header without-border">
+                        <h1 class="box-title" style="font-size:26px">Autenticazione Operatore</h1>
+                        <br />
+                        @*<h2 class="box-title">Inserire le credenziali per accedere.</h2>*@
+
+                    </div>
+                    <div class="box-body">
+                        <div class="row">
+                            @using (Html.BeginForm("Login", "HomeOperatore", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, false, new { @class = "form-horizontal", role = "form" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <table style="margin-left:16px">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:10%">Tipo Ente:</td>
+                                            <td style="width:19%">
+                                                @Html.DropDownListFor(m => m.selected_id_tipo_ente, new SelectList(Model.listTipoEnte, "id_tipo_ente", "desc_tipo_ente"), new { @id = "ddlTipoEnte" })
+                                                <span asp-validation-for="selected_id_tipo_ente" class="text-danger"></span>
+                                            </td>
+                                            <td style="width:15%">Seleziona l'Ente:</td>
+                                            <td>
+                                                @Html.DropDownListFor(m => m.selEnteId, new SelectList(Model.listEnte, "id_ente", "descrizione_ente"), new { @id = "ddlEnte" })
+                                                <span asp-validation-for="selEnteId" class="text-danger"></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="form-group">
+                                    <label asp-for="UserName" class="col-md-2  control-label"></label>
+                                    <div class="col-md-10">
+                                        <input class="form-control text_35" asp-for="UserName">
+                                        <span asp-validation-for="UserName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Password" class="col-md-2  control-label"></label>
+                                    <div class="col-md-10">
+                                        <input type="password" class="form-control text_35" asp-for="Password">
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                </div>
+                              
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Accedi" class="btn btn-default" alt="Esegue l'autenticazione" />                                        
+                                        <a asp-area="" asp-controller="HomeOperatore" asp-action="Index" alt="Annulla l'autenticazione e ritorna alla Home Page" class="btn btn-default">Annulla</a>
+                                    </div>
+                                </div>                             
+                            }
+                        </div>
+                    </div>
+                    <br /><br /><br /><br /><br /><br />
+                </div>
+            </section>
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-8" style="text-align:left">
+        <div id="id_url" style="display: none; margin-top:-8px">
+            <a id="link_ente" href='#' target="_blank" class="btn btn-drop-dark" style="height:49px;padding-top: 13px;">
+                <span></span>
+            </a>
+        </div>
+    </div>
+</div>
+<div style="height:100%"></div>
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+<environment include="Development,Formazione,Produzione">
+    <script src="~/js/plugins/jquery/jquery-3.3.1.js"></script>
+    <script src="~/js/plugins/bootstrap/bootstrap.js"></script>
+    <script src="~/js/plugins/fastclick/fastclick.js"></script>
+    <script src="~/js/plugins/slimscroll/jquery.slimscroll.js"></script>
+    <script src="~/js/plugins/bootstrap-select/bootstrap-select.js"></script>
+    <script src="~/js/plugins/moment/moment.js"></script>
+    <script src="~/js/plugins/datepicker/bootstrap-datepicker.js"></script>
+    <script src="~/js/plugins/icheck/icheck.js"></script>
+    <script src="~/js/plugins/validator/validator.js"></script>
+    <script src="~/js/plugins/inputmask/jquery.inputmask.bundle.js"></script>
+    <script src="~/js/plugins/datepicker/bootstrap-datepicker.js"></script>
+    <script src="~/js/adminlte.js"></script>
+    <script src="~/js/init.js"></script>
+</environment>
+<script type="text/javascript">
+    $(document).ready(function () {
+        TipoEnteChange();
+        EnteChange();
+
+    });
+    $(function () {
+        $("#ddlTipoEnte").change(function (e) {
+            TipoEnteChange();
+        });
+    });
+    $(function () {
+        $("#ddlEnte").change(function (e) {
+            EnteChange();
+        });
+    });
+    function TipoEnteChange() {
+        if ($("#ddlTipoEnte").val() != ""){
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("GetEntiByTipo", "UnloggedBase")",
+                data: { "IdTipoEnte": $("#ddlTipoEnte").val()},
+                success: function (data) {
+                    $('#ddlEnte').removeAttr('disabled');
+                    $("#ddlEnte").html('');
+                    $("#ddlEnte").append($('<option></option>').val(0).html("Seleziona..."));
+
+                    var found=false;
+                    $.each(data, function (id, option) {
+                        $("#ddlEnte").append($('<option></option>').val(option.id_ente).html(option.descrizione_ente));
+                        if (option.id_ente == '@Model.selEnteId') {
+                            found = true;
+                        }
+                    });
+
+                    if (@Model.selEnteId != 0 && found) {
+                        $("#ddlEnte").val(@Model.selEnteId);
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                   alert(messageErroreAjax);
+                }
+            });
+        }
+        else {
+            $('#ddlEnte').attr('disabled', 'disabled');
+            $("#ddlEnte").html('');
+        }
+    }
+         function EnteChange() {
+          if ($("#ddlEnte").val() != "") {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("SelectEnte", "HomeUtente")",
+                data: { "IdEnte": $("#ddlEnte").val()},
+                success: function (data) {
+                    var arr = data.split(';');
+                    if (arr[0] == null || arr[0] == '') {
+                        $("#id_url").css("display", "none");
+                    }
+                    else {
+                        $("#id_url").css("display", "block");
+                        $("#link_ente").attr('href', arr[0]);
+                        $("#link_ente").html('Visita il sito del ' + arr[1]);
+
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(messageErroreAjax);
+                }
+            });
+        }
+        else {
+            $('#ddlEnte').attr('disabled', 'disabled');
+            $("#ddlEnte").html('');
+        }
+    }
+</script>
+
+

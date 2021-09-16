@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Publiparking.Core.Data.SqlServer\Publiparking.Core.Data.SqlServer.csproj" />
+    <ProjectReference Include="..\Publiparking.Core.Utilities\Publiparking.Core.Utilities.csproj" />
+    <ProjectReference Include="..\Publiparking.Core.Utility\Publiparking.Core.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

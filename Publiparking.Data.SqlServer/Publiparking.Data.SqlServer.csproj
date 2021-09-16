@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
+    <RootNamespace>Publiparking.Data</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.0" />
+    <EntityDeploy Include="..\Publiparking.Data.EdmxDesignHost\DbParkCtxModel.edmx" Link="Entities\DbParkCtxModel.edmx" />
+    <Compile Include="..\Publiparking.Data.EdmxDesignHost\*.cs" Exclude="..\Publiparking.Data.EdmxDesignHost\DbParkCtx.Designer.cs;..\Publiparking.Data.EdmxDesignHost\Properties\AssemblyInfo.cs" Link="Entities\*.cs" />
+  </ItemGroup>
+
+</Project>

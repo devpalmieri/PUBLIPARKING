@@ -1,0 +1,13 @@
+﻿Da PowerShell come amministratore
+- Installazione
+
+--- Test Locale
+New-Service -Name "ImportPhonzie" -BinaryPathName D:\Publisoftware\Sorgenti\Publisoftware\Publiparking.Service.ImportPhonzieTicket\bin\Debug\Publiparking.Service.ImportPhonzieTicket.exe
+
+--- Su Server
+New-Service -Name "ImportPhonzie" -BinaryPathName [PATH]\Publiparking.Service.ImportPhonzieTicket.exe
+
+
+- Disinstallazione
+(gwmi win32_service -filter "name='ImportPhonzie'").delete()
+ 

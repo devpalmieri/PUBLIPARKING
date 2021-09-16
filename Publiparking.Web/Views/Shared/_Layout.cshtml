@@ -1,0 +1,133 @@
+﻿@using System.Web.Optimization
+@using Microsoft.AspNetCore.Mvc.Rendering
+@using Publiparking.Web.Configuration
+@inject IAntiforgery antiforgery
+@inject Microsoft.Extensions.Options.IOptions<StartMode> startMode
+@using WebHelpers.Mvc5.Enum
+@{
+    var token = antiforgery.GetAndStoreTokens(Context).RequestToken;
+    string messageModal = ViewBag.ModalMessage != null ? (string)ViewBag.ModalMessage : (TempData["ModalMessage"] != null ? (string)TempData["ModalMessage"] : string.Empty);
+    string messageModalType = ViewBag.ModalTypeMessage != null ? (string)ViewBag.ModalTypeMessage : (TempData["ModalTypeMessage"] != null ? (string)TempData["ModalTypeMessage"] : "info");
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @*<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">*@
+
+    <title>@ViewData["Title"] - Publisoftware.Publiparking.Web</title>
+    <environment include="Development,Formazione,Produzione">
+        <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+        @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+        <link rel="stylesheet" href="~/css/bootstrap-select.css" />
+        <link rel="stylesheet" href="~/css/bootstrap-datepicker3.min.css" />
+        <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="~/css/icheck/orange.min.css" />
+        @*<link rel="stylesheet" href="~/css/PubliparkingSheet.css" />*@
+        <link rel="stylesheet" href="~/css/skins/skin-blue.css" />
+        <link rel="stylesheet" href="~/css/fontawesome/css/all.css" />
+        <link rel="stylesheet" href="~/css/PubliparkingSheet.css" />
+        <link rel="stylesheet" href="/css/jquery.autocomplete.css" />
+    </environment>
+
+    <environment names="Development,Formazione,Produzione">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+    </environment>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    @Html.Partial("_MessageBox", new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "messageModal", messageModal }, { "messageModalType", messageModalType } })
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="ppkToken" name="ppkToken" value="@token">
+    <div class="wrapper">
+        @Html.Partial("_Header")
+        @Html.Partial("_Sidebar")
+        <div class="content-wrapper">
+            <section class="content-header" style="float:left; height:0px;margin-top:-6px !important">
+            </section>
+            @*<<<<<<<<<ALERTS  MESSAGE>>>>>>>*@
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        @Html.Raw(@ViewBag.Alert)
+                    </div>
+                </div>
+            </div>
+            @*<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>*@
+            @*<section class="content">
+                    <hr class="hr-orange" />
+                    @RenderBody()
+
+                </section>*@
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()                    
+                </main>
+            </div>
+            <footer class="border-top footer text-muted" style="font-size:16px">
+                <div class="container">
+                    @*<center>
+                            &copy; 2021 - Publisoftware.Publiparking.Web - <a asp-area="" asp-controller="HomeUtente" asp-action="Privacy">Privacy</a>
+                        </center>*@
+                    <div class="row" style="padding-top:12px">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                &copy; 2021 - Publisoftware - <a href="~/Documents/Privacy/doc_privacy.pdf" target="_blank" title="Informativa Privacy"><i class="fa fa-info-circle" aria-hidden="true"></i> Informativa Privacy</a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <a href="~/Documents/Privacy/Privacy_Policy_Publiparking_1_0.pdf" title="Publiparking Policy Privacy" target="_blank"><i class="fa fa-lock" aria-hidden="true"></i> Publiparking Policy Privacy</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+        @Html.Partial("_ControlSidebar")
+    </div>
+    <environment include="Development,Formazione,Produzione">
+        <script src="~/js/plugins/jquery/jquery-3.3.1.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/Microsoft.jQuery.Unobtrusive.Ajax/jquery.unobtrusive-ajax.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        @*<script src="~/js/plugins/bootstrap/bootstrap.js"></script>*@
+        <script src="~/js/plugins/fastclick/fastclick.js"></script>
+        <script src="~/js/plugins/slimscroll/jquery.slimscroll.js"></script>
+        <script src="~/js/plugins/bootstrap-select/bootstrap-select.js"></script>
+        <script src="~/js/plugins/moment/moment.js"></script>
+        <script src="~/js/plugins/datepicker/bootstrap-datepicker.js"></script>
+        <script src="~/js/plugins/icheck/icheck.js"></script>
+        <script src="~/js/plugins/validator/validator.js"></script>
+        <script src="~/js/plugins/inputmask/jquery.inputmask.bundle.js"></script>
+        <script src="~/js/adminlte.js"></script>
+        <script src="~/js/init.js"></script>
+
+        @*<script src="~/lib/jquery/dist/jquery.js"></script>*@
+        <script src="~/lib/Microsoft.jQuery.Unobtrusive.Ajax/jquery.unobtrusive-ajax.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+    @RenderSection("ViewSpecificJavascript", required: false)
+</body>
+
+</html>
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+

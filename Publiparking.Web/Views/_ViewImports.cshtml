@@ -1,0 +1,10 @@
+﻿@using Publiparking.Web
+@using Publiparking.Web.Models
+@using Publiparking.Core.Data
+@using Microsoft.AspNetCore.Antiforgery
+@using Publiparking.Web.Configuration
+@using Microsoft.Extensions.Options
+@using Publiparking.Web.Classes.Consts
+@inject IAntiforgery antiforgery
+@inject Microsoft.Extensions.Options.IOptions<StartMode> startMode
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers

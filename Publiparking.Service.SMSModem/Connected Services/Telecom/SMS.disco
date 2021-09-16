@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://www.smsmacnil.it/smsgw/SMS.asmx?wsdl" docRef="http://www.smsmacnil.it/smsgw/SMS.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://www.smsmacnil.it/smsgw/SMS.asmx" xmlns:q1="http://smsmacnil.it/smsgw/" binding="q1:SMSSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://www.smsmacnil.it/smsgw/SMS.asmx" xmlns:q2="http://smsmacnil.it/smsgw/" binding="q2:SMSSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,31 @@
+﻿# {"citycode":"8068", "tlUserType":"3","devicecode":"15","numero":"35606914","targa":"CW247HV","startpark":"12/07/2019 10:10:35","endpark":"12/07/2019 12:10:35","amount":"200","tipopagamento":"Coin","tipo_operazione":"1","tipo_transazione":0,"area":4}
+POST https://localhost:44391/ws/WSTickets.asmx/CreateDes HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Accept: application/json
+
+{
+  "data":"IMLdOdgJPlfZBEnRkoUQPIV_ZyeKVRK5o7L2ftGIgzr9CgjoyGWCvW11oTZL85atbA6s2xZawKbGomHdbm0Ns_qUdlkt7ZGnbPwzD5ppLWccyUAAOAMMcU_2RQ4a70YWmo5upYDY5bHY71PypieWaGBqOp5Rht_QeAyKrKm8MPSEAQhKvEJD0lEa9HzbnogDAP_MsZ2n72c5c6_dbHUsCnkT7vZLBWnDLcZisIDUWMmIXMK8fPiEiMBZ5n-9UFe9TxNFdDBbYmnMHG7IlR2lttgu1DjiqGQSmuoOHShdjP9zRHVNmGCUOQ=="
+}
+
+###
+
+# {"citycode":"8068","devicecode":"10","numero":"35606628","targa":"EZ010","startpark":"12/07/2019 10:08:51","endpark":"12/07/2019 11:08:51","amount":"100","tipopagamento":"Coin","tipo_operazione":"1","tipo_transazione":0,"area":2}
+POST http://localhost:7846/ws/WSTickets.asmx/CreateDes HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Accept: application/json
+
+{
+    "data":"IMLdOdgJPlfZBEnRkoUQPIV_ZyeKVRK5o7L2ftGIgzrpguBfXw1z_b4s2EGyiQfLwp8SaBJzbbBlmdb308a2WmIz7g_fXWsorBekradLuZY52nZ2493oLKHzK72ad-Z4GvTh8qvHBAdG_m_JWMqPnNzoQs5nhnJmYfYDYZGpUtpct9drdOl0ttkyuPj9UWoGFyDPe-NUaK6SdnsxqWoqLrnlbS0fvof7IDva8ny7jYDvZFdW2ROrRNM2G5Q00M3lxRhijKwCYC3FQ28NIPB6qMmdb7hmI__zP5LONkPrcCRp-BrwJsF5DQ=="
+}
+
+###
+
+# {"citycode":"8068","devicecode":"8","numero":"35606439","targa":"FP455AT","startpark":"12/07/2019 10:08:49","endpark":"12/07/2019 12:38:49","amount":"250","tipopagamento":"Coin","tipo_operazione":"1","tipo_transazione":0,"area":3}
+POST http://localhost:44391/ws/WSTickets.asmx/CreateDes HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Accept: application/json
+
+{
+    "data":"IMLdOdgJPlfZBEnRkoUQPIV_ZyeKVRK5o7L2ftGIgzoA5mhJ2JOSBZhN-HBm5iHfIflJoY6Ma2dw5xuo6mSXYmQ8da4HoiPODxO4yc4FQlEMBdvQJgUolOhlBmcJsW9d0z9HWwr0jd8ZSu4E-mFY53NbZI4PzemXfcEDL3hp0SGJCEawJYEN2U69hJ75zPwKE7wj5oMWu4ThUlZY25NeLCrZIEFGvYpDAYf_CqTehh-uIrkP0n8cSzdAwSKZJQo-pBq5qTMs0S7xb5UK_qGxibItynAW_E0ba7dQNXaMVU3E7wdbWgLSuw=="
+}
+

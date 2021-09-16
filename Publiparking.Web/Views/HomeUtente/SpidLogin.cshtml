@@ -1,0 +1,181 @@
+﻿@using Italia.Spid.Authentication.IdP
+@using Publiparking.Web.Classes
+@using Publiparking.Web.Classes.Consts 
+@{
+    Layout = "~/Views/Shared/_startPage.cshtml";
+    List<IdentityProviderConfigData> listIDP = null;
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#ddlSPID").click(function () {
+            if ($("#spid-idp-button-small-post").hasClass('hideDDL')) {
+                $('#spid-idp-button-small-post').removeClass('hideDDL');
+                $('#spid-idp-button-small-post').addClass('showDDL');
+            }
+            else {
+                $('#spid-idp-button-small-post').addClass('hideDDL');
+                $('#spid-idp-button-small-post').removeClass('showDDL');
+            }
+        });
+    });
+</script>
+<div id="main" class="container-fluid body-content">
+    <div class="row">
+        @*@Html.AntiForgeryToken()*@
+        <div class="col-xs-12 col-md-12">
+            <div class="box_simple box-default-simple">
+                <div class="box-body">
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label></label>
+                                </div>
+                                <div class="form-group">
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label></label>
+                                    <img src="~/Images/Spid/spid-logo-a-lb.png" title="SPID" alt="SPID" style="width:50%" />
+                                </div>
+                                <div class="form-group">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label></label>
+                                    @*<img src="~/img/default/area-riservata-fiscolocale.jpg" style="width:75%; height:300px; max-height:300px; min-height:20px" />*@
+                                </div>
+                                <div class="form-group">
+                                </div>
+                            </div>
+                            @*<div class="col-md-1">
+                                    <div class="form-group">
+                                        <label></label>
+                                    </div>
+                                    <div class="form-group">
+
+                                    </div>
+                                </div>*@
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label></label>
+                                </div>
+                                <div class="form-group">
+
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <p style="text-align:justify;font-size: 17px;">
+                                        <strong>SPID</strong> è il sistema di accesso che consente di utilizzare, con un identità digitale unica, i servizi online della Pubblica Amministrazione e dei
+                                        privati accreditati.
+                                        <br />
+                                        Se sei già in possesso di un'identità digitale, accedi con le credenziali del tuo gestore.
+                                        <br />
+                                        Se non hai ancora un'identità digitale, richiedila ad uno dei gestori.
+                                    </p>
+                                    <p><a href="http://www.spid.gov.it" target="_blank">Maggiori informazioni su SPID</a></p>
+                                    <p><a href="http://www.spid.gov.it/richiedi-spid" target="_blank">Non hai SPID?</a></p>
+                                    <p><a href="http://www.spid.gov.it/serve-aiuto" target="_blank">Serve aiuto?</a></p>
+                                    <br />
+                                    <p>
+                                        <a href="https://www.agid.gov.it/" title="AgID" target="_blank">
+                                            <img src="~/Images/Spid/spid-agid-logo-lb.png" title="SPID" alt="SPID" style="width:89%" />
+                                        </a>
+
+                                    </p>
+                                    <p>
+                                        <a asp-action="AnnullaAutenticazioneSpid" asp-controller="HomeUtente" id="lnkAnnulla"
+                                           class="btn btn-danger" style="font-weight:600;">
+                                            Ritorna alla pagina di Autenticazione
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            @if (ViewBag.Logged == false)
+                            {
+                                //APERTURA DEGLI IDP TRAMITE MENU' A DISCESA'
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <div class="LoginBoxSPID">
+                                            <a class="italia-it-button italia-it-button-size-l button-spid" aria-expanded="false" id="ddlSPID"
+                                               aria-haspopup="true" style="font-size: 15px;" href="#"
+                                               spid-idp-button="#spid-idp-button-small-post">
+                                                <span class="italia-it-button-icon">
+                                                    <img title="" alt="" src="~/images/Spid/spid-ico-circle-bb.png">
+                                                </span>
+                                                <span class="italia-it-button-text">Entra con SPID</span>
+                                            </a>
+                                            <div class="spid-idp-button spid-idp-button-tip spid-idp-button-relative hideDDL" id="spid-idp-button-small-post" style="text-align: left;">
+                                                <ul class="spid-idp-button-menu" id="spid-idp-list-small-root-post" aria-labelledby="spid-idp">
+
+                                                    @if (Sessione.GetListIDPd() != null)
+                                                    {
+                                                        listIDP = Sessione.GetListIDPd();
+                                                        foreach (IdentityProviderConfigData link in listIDP)
+                                                        {
+                                                            <li class="spid-idp-button-link">
+                                                                <a href='@Url.Action("SpidRequest", "HomeUtente", new { IdPName = link.EntityId })'>
+                                                                    <img class="idp-button-idp-logo" title=@link.Description alt=@link.Description src='@Url.Content(link.logo)' />
+                                                                </a>
+                                                            </li>
+                                                        }
+                                                        <li class="spid-idp-support-link">
+                                                            <a style="font-size: 15px;" href="http://www.spid.gov.it" target="_blank">Maggiori informazioni</a>
+                                                        </li>
+
+                                                        <li class="spid-idp-support-link">
+                                                            <a style="font-size: 15px;" href="http://www.spid.gov.it/richiedi-spid" target="_blank">Non hai SPID?</a>
+                                                        </li>
+                                                        <li class="spid-idp-support-link">
+                                                            <a style="font-size: 15px;" href="http://www.spid.gov.it/serve-aiuto" target="_blank">Serve aiuto?</a>
+                                                        </li>
+
+                                                    }
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            }
+                            @if (ViewBag.Logged == true)
+                            {
+                                <div class="col-md-3">
+                                    <div class="LogoutBoxSPID">
+                                        <a class="italia-it-button italia-it-button-size-m button-spid" aria-expanded="false" id="ddlSPID"
+                                           aria-haspopup="true" style="font-size: 15px;" href='@Url.Action("LogoutRequest", "HomeUtente")'
+                                           spid-idp-button="#spid-idp-button-small-post">
+                                            <span class="italia-it-button-icon">
+                                                <img title="" alt="" src="~/images/spid/spid-ico-circle-bb.png">
+                                            </span>
+                                            <span class="italia-it-button-text">Disconnetti da SPID</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            }
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label></label>
+                                </div>
+                                <br />
+                                <div class="form-group">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

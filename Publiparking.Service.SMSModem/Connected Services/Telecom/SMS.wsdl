@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://smsmacnil.it/smsgw/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://smsmacnil.it/smsgw/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://smsmacnil.it/smsgw/">
+      <s:element name="InviaSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodiceCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdRichiesta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mittente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Testo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Destinatari" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Notifica" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InviaSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InviaSMSResult" type="tns:EsitiInviaSMSList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EsitiInviaSMSList">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="error_code" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_Richiesta" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EsitiInviaSMSElements" type="tns:ArrayOfEsitoInviaSMSElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEsitoInviaSMSElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EsitoInviaSMSElement" nillable="true" type="tns:EsitoInviaSMSElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EsitoInviaSMSElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id_SMS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Destinatario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Residuo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ElencoNotifiche">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodiceCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdRichiesta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DaDataV" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ElencoNotificheResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ElencoNotificheResult" type="tns:NotificheList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="NotificheList">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="error_code" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_Richiesta" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NotificaElements" type="tns:ArrayOfNotificaElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNotificaElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NotificaElement" nillable="true" type="tns:NotificaElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NotificaElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CodiceSMS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroCellulare" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Testo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RicercaNotifica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodiceCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdRichiesta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Id_SMS" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RicercaNotificaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RicercaNotificaResult" type="tns:NotificheList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SmsInviati">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodiceCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdRichiesta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DaDataV" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SmsInviatiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SmsInviatiResult" type="tns:SmsInvList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SmsInvList">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="error_code" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_Richiesta" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SmsInvElements" type="tns:ArrayOfSmsInvElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSmsInvElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SmsInvElement" nillable="true" type="tns:SmsInvElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SmsInvElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroCellulare" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mittente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Testo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SmsRicevuti">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodiceCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdRichiesta" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DaDataV" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SmsRicevutiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SmsRicevutiResult" type="tns:SmsRicList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SmsRicList">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="error_code" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_Richiesta" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SmsRicElements" type="tns:ArrayOfSmsRicElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSmsRicElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SmsRicElement" nillable="true" type="tns:SmsRicElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SmsRicElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroCellulare" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Testo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreditoResiduo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodiceCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdRichiesta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreditoResiduoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditoResiduoResult" type="tns:CreditList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreditList">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="error_code" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_Richiesta" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreditElements" type="tns:ArrayOfCreditElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCreditElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CreditElement" nillable="true" type="tns:CreditElement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CreditElement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CodiceCliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResiduoSMS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResiduoNotifiche" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InviaSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:InviaSMS" />
+  </wsdl:message>
+  <wsdl:message name="InviaSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:InviaSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ElencoNotificheSoapIn">
+    <wsdl:part name="parameters" element="tns:ElencoNotifiche" />
+  </wsdl:message>
+  <wsdl:message name="ElencoNotificheSoapOut">
+    <wsdl:part name="parameters" element="tns:ElencoNotificheResponse" />
+  </wsdl:message>
+  <wsdl:message name="RicercaNotificaSoapIn">
+    <wsdl:part name="parameters" element="tns:RicercaNotifica" />
+  </wsdl:message>
+  <wsdl:message name="RicercaNotificaSoapOut">
+    <wsdl:part name="parameters" element="tns:RicercaNotificaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SmsInviatiSoapIn">
+    <wsdl:part name="parameters" element="tns:SmsInviati" />
+  </wsdl:message>
+  <wsdl:message name="SmsInviatiSoapOut">
+    <wsdl:part name="parameters" element="tns:SmsInviatiResponse" />
+  </wsdl:message>
+  <wsdl:message name="SmsRicevutiSoapIn">
+    <wsdl:part name="parameters" element="tns:SmsRicevuti" />
+  </wsdl:message>
+  <wsdl:message name="SmsRicevutiSoapOut">
+    <wsdl:part name="parameters" element="tns:SmsRicevutiResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreditoResiduoSoapIn">
+    <wsdl:part name="parameters" element="tns:CreditoResiduo" />
+  </wsdl:message>
+  <wsdl:message name="CreditoResiduoSoapOut">
+    <wsdl:part name="parameters" element="tns:CreditoResiduoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SMSSoap">
+    <wsdl:operation name="InviaSMS">
+      <wsdl:input message="tns:InviaSMSSoapIn" />
+      <wsdl:output message="tns:InviaSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ElencoNotifiche">
+      <wsdl:input message="tns:ElencoNotificheSoapIn" />
+      <wsdl:output message="tns:ElencoNotificheSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RicercaNotifica">
+      <wsdl:input message="tns:RicercaNotificaSoapIn" />
+      <wsdl:output message="tns:RicercaNotificaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SmsInviati">
+      <wsdl:input message="tns:SmsInviatiSoapIn" />
+      <wsdl:output message="tns:SmsInviatiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SmsRicevuti">
+      <wsdl:input message="tns:SmsRicevutiSoapIn" />
+      <wsdl:output message="tns:SmsRicevutiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreditoResiduo">
+      <wsdl:input message="tns:CreditoResiduoSoapIn" />
+      <wsdl:output message="tns:CreditoResiduoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SMSSoap" type="tns:SMSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InviaSMS">
+      <soap:operation soapAction="http://smsmacnil.it/smsgw/InviaSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ElencoNotifiche">
+      <soap:operation soapAction="http://smsmacnil.it/smsgw/ElencoNotifiche" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RicercaNotifica">
+      <soap:operation soapAction="http://smsmacnil.it/smsgw/RicercaNotifica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SmsInviati">
+      <soap:operation soapAction="http://smsmacnil.it/smsgw/SmsInviati" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SmsRicevuti">
+      <soap:operation soapAction="http://smsmacnil.it/smsgw/SmsRicevuti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditoResiduo">
+      <soap:operation soapAction="http://smsmacnil.it/smsgw/CreditoResiduo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSSoap12" type="tns:SMSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InviaSMS">
+      <soap12:operation soapAction="http://smsmacnil.it/smsgw/InviaSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ElencoNotifiche">
+      <soap12:operation soapAction="http://smsmacnil.it/smsgw/ElencoNotifiche" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RicercaNotifica">
+      <soap12:operation soapAction="http://smsmacnil.it/smsgw/RicercaNotifica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SmsInviati">
+      <soap12:operation soapAction="http://smsmacnil.it/smsgw/SmsInviati" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SmsRicevuti">
+      <soap12:operation soapAction="http://smsmacnil.it/smsgw/SmsRicevuti" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditoResiduo">
+      <soap12:operation soapAction="http://smsmacnil.it/smsgw/CreditoResiduo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SMS">
+    <wsdl:port name="SMSSoap" binding="tns:SMSSoap">
+      <soap:address location="http://www.smsmacnil.it/smsgw/SMS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSSoap12" binding="tns:SMSSoap12">
+      <soap12:address location="http://www.smsmacnil.it/smsgw/SMS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

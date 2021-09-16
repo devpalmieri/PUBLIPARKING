@@ -1,0 +1,45 @@
+AbbonamentiPeriodiciController
+View (AbbonamentiPeriodici)
+Index
+Create
+Edit
+Delete
+Modifica Controller e Action in database tab_menu_secondo_livello
+AbbonamentiPeriodiciBD
+Model: AbbonamentiPeriodiciViewModel
+PubliparkingSheet CSS:
+.header-form {
+    background-color: #FFF;
+    color: #0b4a6d;
+    margin-left: -18px;
+}
+.header-form-blue {
+    background-color: #FFF;
+    color: #007cba;
+    margin-left: -18px;
+}
+_Header.cshtml
+<a href="@Url.Action("Index", "HomeUtenteLogged")" class="logo">
+        @* Mini logo for sidebar 50x50 pixels *@
+        <span class="logo-mini"><b>P</b>PK</span>
+        <span class="logo-lg">
+            <img src="~/Images/logo-publiparking-def.png" title="Publiparking" alt="Publiparking" style="width:85%;" />
+        </span>
+</a>
+DBParkContext:
+ modelBuilder.Entity<AbbonamentiPeriodici>().HasQueryFilter(post => post.flag_on_off == "1");
+ modelBuilder.Entity<Abbonamenti>().HasQueryFilter(post => post.flag_on_off == "1");
+ modelBuilder.Entity<AbbonamentiRinnovi>().HasQueryFilter(post => post.flag_on_off == "1");
+
+SENZA FLAG_ON_OFF
+ser_comuni
+PAGOPA_INTERMEDIARI
+PAGOPA_STAZIONI
+ser_province
+ser_regioni
+tab_domande_segrete
+tab_tipo_ente
+ser_stati_esteri
+Operatori
+tab_ambiente
+

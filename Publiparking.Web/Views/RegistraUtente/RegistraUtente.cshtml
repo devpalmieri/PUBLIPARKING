@@ -1,0 +1,265 @@
+﻿@model Publiparking.Web.Models.RegistraUtenteViewModel
+
+@{
+    string message = ViewBag.message != null ? (string)ViewBag.message : string.Empty;
+    Int32 messageType = ViewBag.messageType != null ? (Int32)ViewBag.messageType : 1;
+    bool isVerificaUtente = ViewBag.isVerificaUtente != null ? (bool)ViewBag.isVerificaUtente : false;
+    Int32 IdUtente = ViewBag.IdUtente != null ? (Int32)ViewBag.IdUtente : -1;
+
+}
+
+<style type="text/css">
+    .td-padleft_15 {
+        padding-left: 15px !important;
+    }
+
+    .label-padleft_16 {
+        padding-left: 16px !important;
+    }
+
+    .table th, table td {
+        padding: .325em;
+        text-align: left;
+    }
+
+    .table-rec {
+        margin-left: 14px !important;
+        background-color: #f8f8f8;
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-12">
+        @*@if (message != string.Empty)
+            {
+                <div id="div_message" class="row">
+                    <div class="col-md-12 col-md-offset-0">
+                        @Html.Partial("MessageBarPartial", new ViewDataDictionary(new Microsoft.AspNetCore.Mvc.ModelBinding.EmptyModelMetadataProvider(), new Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary()) { { "message", message }, { "messageType", messageType } })
+
+                    </div>
+                </div>
+            }*@
+        @if (isVerificaUtente == true)
+        {
+
+        }
+        @if (isVerificaUtente == false)
+        {
+            <section id="registerForm">
+                <div class="box box-default">
+                    <div class="box-header without-border">
+                        <h1 class="box-title" style="font-size:26px">Registrazione nuovo utente</h1>
+                        <br />
+                        <span class="box-title-warning">I campi con l'asterisco (*) sono obbligatori.</span>
+
+                    </div>
+                    <div class="box-body">
+                        <div class="row">
+                            @using (Html.BeginForm("Registra", "RegistraUtente", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, false, new { @id = "form_registra_utente", @class = "form-horizontal", role = "form" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div id="dvCredenziali">
+                                    <fieldset class="fielset-orange">
+                                        <legend class="legend-orange">Credenziali</legend>
+
+                                        <div class="form-group">
+                                            <input type="hidden" id="IdUtente" name="IdUtente" value="@IdUtente" />
+                                            <table class="table-responsive table-rec" style="background-color:transparent; border:none;table-layout:fixed;">
+                                                <tr style="background-color:transparent; border:none">
+                                                    <td class="td-width-14">Username:<span class="mandatory">*</span></td>
+                                                    <td class="td-width-36">
+                                                        <input class="form-control" asp-for="UserName">
+                                                        <span asp-validation-for="UserName" class="text-danger"></span>
+                                                    </td>
+                                                    <td class="td-width-16"></td>
+                                                    <td class="td-width-34">
+                                                    </td>
+                                                </tr>
+                                                <tr style="background-color:transparent; border:none">
+                                                    <td class="td-width-14">Password:<span class="mandatory">*</span></td>
+                                                    <td class="td-width-36">
+                                                        <input type="password" class="form-control" asp-for="Password">
+                                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                                    </td>
+                                                    <td class="td-width-16">Conferma Password:<span class="mandatory">*</span></td>
+                                                    <td class="td-width-34">
+                                                        <input type="password" class="form-control" asp-for="passwordConferma">
+                                                        <span asp-validation-for="passwordConferma" class="text-danger"></span>
+                                                    </td>
+                                                </tr>
+                                                <tr style="background-color:transparent; border:none">
+                                                    <td class="td-width-14">Domanda Segreta:</td>
+                                                    <td class="td-width-36">
+                                                        @Html.DropDownListFor(m => m.selDomandaSegretaId, new SelectList(Model.listDomandaSegreta, "id_domanda_segreta", "domanda"), new { @id = "DomandaSegreta", @class = "form-control" })
+                                                    </td>
+                                                    <td class="td-width-16">Risposta Segreta:<span class="mandatory">*</span></td>
+                                                    <td class="td-width-34">
+                                                        <input class="form-control" asp-for="rispostaSegreta">
+                                                        <span asp-validation-for="rispostaSegreta" class="text-danger"></span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="divider div-transparent div-arrow-down" style="margin-top:0px !important;"></div>
+                                <br />
+                                <div id="dvAnag" class="fielset-orange">
+                                    <fieldset>
+                                        <legend class="legend-orange" style="padding-right:0px; margin-left:0px">Dati Anagrafici</legend>
+                                        <table class="table-responsive table-rec" style="background-color:transparent; border:none;table-layout:fixed">
+                                            <tr style="background-color:transparent; border:none">
+                                                <td class="td-width-14">Nome:<span class="mandatory">*</span></td>
+                                                <td class="td-width-36">
+                                                    <input class="form-control text-width-100" asp-for="nome">
+                                                    <span asp-validation-for="nome" class="text-danger"></span>
+                                                </td>
+                                                <td class="td-width-14">Cognome:<span class="mandatory">*</span></td>
+                                                <td class="td-width-36">
+                                                    <input class="form-control text-width-100" asp-for="cognome">
+                                                    <span asp-validation-for="cognome" class="text-danger"></span>
+                                                </td>
+                                            </tr>
+                                            <tr style="background-color:transparent; border:none">
+                                                <td class="td-width-14">Cod. Fiscale:<span class="mandatory">*</span></td>
+                                                <td class="td-width-36">
+                                                    <input class="form-control text-width-100" asp-for="codFiscalePIVA">
+                                                    <span asp-validation-for="codFiscalePIVA" class="text-danger"></span>
+                                                </td>
+                                                <td class="td-width-14">Sesso:<span class="mandatory">*</span></td>
+                                                <td class="td-width-36">
+                                                    @Html.DropDownListFor(m => m.id_sesso, new List<SelectListItem>
+                                                    {
+                                                    new SelectListItem{ Text = "M", Value = "1" },
+                                                    new SelectListItem{ Text = "F", Value = "2" }
+                                                    }, new { @id = "Sesso", @class = "form-control text-width-100", required = "required" })
+                                                    <span asp-validation-for="id_sesso" class="text-danger"></span>
+                                                </td>
+                                            </tr>
+                                            <tr style="background-color:transparent; border:none">
+                                                <td class="td-width-14">Stato Nascita:<span class="mandatory">*</span></td>
+                                                <td class="td-width-36">
+                                                    <input asp-for="stato_nas" type="text" class="form-control text-width-100" id="txtStatoNascita" name="txtStatoNascita" />
+                                                    @Html.HiddenFor(m => m.stato_nas, new { @id = "HiddenStatoNascita", @name = "stato_nas", @class = "form-control" })
+                                                    <span asp-validation-for="stato_nas" class="text-danger"></span>
+                                                </td>
+                                                <td class="td-width-14">Comune Nascita:<span class="mandatory">*</span></td>
+                                                <td class="td-width-36">
+                                                    <input asp-for="comune_nas" type="text" class="form-control text-width-100" id="txtComNascita" name="comune_nas" />
+                                                    @Html.HiddenFor(m => m.cod_comune_nas, new { @id = "HiddenComuneNascita", @name = "cod_comune_nas", @class = "form-control" })
+                                                    <span asp-validation-for="comune_nas" class="text-danger"></span>
+                                                </td>
+                                            </tr>
+                                            <tr style="background-color:transparent; border:none">
+                                                <td class="td-width-14">Data Nascita:<span class="mandatory">*</span></td>
+                                                <td class="td-width-36">
+                                                    <input asp-for="data_nas" class="form-control text-width-100" asp-format="{yyyy-MM-dd}" />
+                                                    <span asp-validation-for="data_nas" class="text-danger"></span>
+                                                </td>
+                                                <td class="td-width-14">Email:<span class="mandatory">*</span></td>
+                                                <td class="td-width-36">
+                                                    <input class="form-control text-width-100" asp-for="email">
+                                                    <span asp-validation-for="email" class="text-danger"></span>
+                                                </td>
+                                            </tr>
+                                            <tr style="background-color:transparent; border:none">
+                                                <td class="td-width-14">Tel. Fisso:</td>
+                                                <td class="td-width-36">
+                                                    <input class="form-control text-width-100" asp-for="TelMobile">
+                                                </td>
+                                                <td class="td-width-14">Mobile:</td>
+                                                <td class="td-width-36">
+                                                    <input class="form-control text-width-100" asp-for="TelFisso">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </fieldset>
+                                    <fieldset class="fielset-orange">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <a style="margin-bottom: 4px; margin-top: 4px;" asp-area="" asp-controller="HomeUtente" asp-action="Index" alt="Annulla la registrazione e ritorna alla Home Page" class="btn btn-default">Annulla</a>
+                                            <input type="submit" value="Registra" class="btn btn-default" alt="Esegue la registrazione" />
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                            }
+                        </div>
+                    </div>
+                    <br /><br /><br /><br /><br /><br />
+                </div>
+            </section>
+        }
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    $(function () {
+        $('#txtStatoNascita').autocomplete({
+            lookup: function (query, done) {
+
+                if (console) {
+                    console.log("StatoDiNascita: query: " + query);
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("GetStati","UnloggedBase")",
+                    data: {
+                        'pIniziali': query
+
+                    },
+                    success: function (data) {
+                        if (console) { console.table(data); }
+                        done(data);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        done({ suggestions: [] });
+                    }
+                });
+            },
+            deferRequestBy: 150,
+            onSelect: function (suggestion) {
+                if ( console) {
+                    console.log("StatoDiNascita: suggestion: " + JSON.stringify(suggestion, null, 2));
+                }
+                $("#HiddenStatoNascita").val(suggestion.data);
+            }
+        });
+    });
+
+    $(function () {
+        $('#txtComNascita').autocomplete({
+            lookup: function (query, done) {
+
+                if (console) {
+                    console.log("ComuneDiNascita: query: " + query);
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("GetComuni","UnloggedBase")",
+                    data: {
+                        'pIniziali': query, 'pAttivi': '0'
+
+                    },
+                    success: function (data) {
+                        if (console) { console.table(data); }
+                        done(data);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        done({ suggestions: [] });
+                    }
+                });
+            },
+            deferRequestBy: 150,
+            onSelect: function (suggestion) {
+                if ( console) {
+                    console.log("ComuneDiNascita: suggestion: " + JSON.stringify(suggestion, null, 2));
+                }
+                $("#HiddenComuneNascita").val(suggestion.data);
+            }
+        });
+    });
+
+</script>

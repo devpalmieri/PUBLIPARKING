@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0586B199-A68B-4EEA-AD67-C4BEABC750D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Publisoftware.Data.BD</RootNamespace>
+    <AssemblyName>Publisoftware.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BD\AnagraficaStatoCarrelloBD.cs" />
+    <Compile Include="BD\JoinContribuentiProcedureConcorsualiBD.cs" />
+    <Compile Include="BD\Finale1BD.cs" />
+    <Compile Include="BD\AnagraficaAbiCabBD.cs" />
+    <Compile Include="BD\AnagraficaAgevolazioneBD.cs" />
+    <Compile Include="BD\AnagraficaPagoPAIntermediariBD.cs" />
+    <Compile Include="BD\AnagraficaPagoPAStazioniBD.cs" />
+    <Compile Include="BD\JoinCausaliEsitoNomeFileMemorieBD.cs" />
+    <Compile Include="BD\JoinCausaliMotivazioniCausaliEsitoBD.cs" />
+    <Compile Include="BD\AnagraficaStatoMovPagBD.cs" />
+    <Compile Include="BD\JoinDenunceOggettiBD.cs" />
+    <Compile Include="BD\JoinDenunceOggettiBDAnnullamentoVERS18.cs" />
+    <Compile Include="BD\JoinDenunceOggettiBDAnnullamento.cs" />
+    <Compile Include="BD\JoinDichiarazioneTerzoContribuenteBD.cs" />
+    <Compile Include="BD\JoinDocumentiAutorizzazioneBD.cs" />
+    <Compile Include="BD\JoinDocumentiFascicoloDocoutputAllegatiBD.cs" />
+    <Compile Include="BD\JoinTerzoReferenteBD.cs" />
+    <Compile Include="BD\JoinSpuntistiPrenotazionePiazzoleBD.cs" />
+    <Compile Include="BD\TabCimiteriBD.cs" />
+    <Compile Include="BD\TabRicercaInfocamereBD.cs" />
+    <Compile Include="BD\TabRegistroCookieBD.cs" />
+    <Compile Include="BD\TabRegistroPagSenzaAvvisoBD.cs" />
+    <Compile Include="BD\TabOccupazionePiazzoleBD.cs" />
+    <Compile Include="BD\TabSpuntistaBD.cs" />
+    <Compile Include="BD\TabAutorizzazioniBD.cs" />
+    <Compile Include="BD\JoinUtentiEntiBD.cs" />
+    <Compile Include="BD\TabDettEstrattoContoMensileBD.cs" />
+    <Compile Include="BD\TabAreaMercatoBD.cs" />
+    <Compile Include="BD\TabRegistroSpidBD.cs" />
+    <Compile Include="BD\TabMenuOrizontaleBD.cs" />
+    <Compile Include="BD\TabPagoPAFlussoRendicontazioneBD.cs" />
+    <Compile Include="BD\JoinTabCarrelloTabRateBD.cs" />
+    <Compile Include="BD\JoinFattContFattConsumiBD.cs" />
+    <Compile Include="BD\TabFattInfoBD.cs" />
+    <Compile Include="BD\TabFattContBD.cs" />
+    <Compile Include="BD\TabFattConsumiBD.cs" />
+    <Compile Include="BD\TabSubMenuBD.cs" />
+    <Compile Include="BD\TabTipoContatoreBD.cs" />
+    <Compile Include="BD\TabTassonomiaPagoPaBD.cs" />
+    <Compile Include="BD\TabCategoriaTariffariaIcpBD.cs" />
+    <Compile Include="BD\TabCategoriaTariffariaTosapDB.cs" />
+    <Compile Include="BD\TabEnteEsclusoEmissioneBD.cs" />
+    <Compile Include="BD\TabHelpPagineBD.cs" />
+    <Compile Include="BD\TabPagoPAEventiBD.cs" />
+    <Compile Include="BD\TabProgCarrelloBD.cs" />
+    <Compile Include="BD\TabProgIuvBD.cs" />
+    <Compile Include="BD\TabEsclusioneRateizzazioneBD.cs" />
+    <Compile Include="BD\TabRSSFeedFiscoBD.cs" />
+    <Compile Include="BD\TabSezioniContenutiBD.cs" />
+    <Compile Include="BD\TabFascicoloDocOutputAllegatiBD.cs" />
+    <Compile Include="BD\TabSiatelBonificiBancariOrdinanti9BD.cs" />
+    <Compile Include="BD\TabSiatelBonificiBancariOrdinanti0BD.cs" />
+    <Compile Include="BD\TabSiatelBonificiBancariOrdinanti1BD.cs" />
+    <Compile Include="BD\TabSpeseGiudizioBD.cs" />
+    <Compile Include="BD\TabCarrelloBD .cs" />
+    <Compile Include="BD\AnagraficaCategoriaBD.cs" />
+    <Compile Include="BD\AnagraficaCategoriaZTLBD.cs" />
+    <Compile Include="BD\AnagraficaCausaleBD.cs" />
+    <Compile Include="BD\AnagraficaCicliBD.cs" />
+    <Compile Include="BD\AnagraficaCicliDettaglioBD.cs" />
+    <Compile Include="BD\AnagraficaCodiciTributiMinisterialiBD.cs" />
+    <Compile Include="BD\AnagraficaCodStatoBaseBD.cs" />
+    <Compile Include="BD\AnagraficaControlliQualitaEmissioneAvvPagBD.cs" />
+    <Compile Include="BD\AnagraficaDocumentiBD.cs" />
+    <Compile Include="BD\AnagraficaEnteBD.cs" />
+    <Compile Include="BD\AnagraficaEnteCodiceBD.cs" />
+    <Compile Include="BD\AnagraficaEnteGestitoBD.cs" />
+    <Compile Include="BD\AnagraficaEnteRiversamentoBD.cs" />
+    <Compile Include="BD\AnagraficaEntrateBD.cs" />
+    <Compile Include="BD\AnagraficaFlagEsitoAvvisiBD.cs" />
+    <Compile Include="BD\AnagraficaGiorniOccupazioneBD.cs" />
+    <Compile Include="BD\AnagraficaParentelaBD.cs" />
+    <Compile Include="BD\AnagraficaProcedureConcorsualiBD.cs" />
+    <Compile Include="BD\AnagraficaEsitoSentenze.cs" />
+    <Compile Include="BD\AnagraficaRelParLacBD.cs" />
+    <Compile Include="BD\AnagraficaRisorseBD.cs" />
+    <Compile Include="BD\AnagraficaRuoloMansioneBD.cs" />
+    <Compile Include="BD\AnagraficaServiziBD.cs" />
+    <Compile Include="BD\AnagraficaSezioniStampaBD.cs" />
+    <Compile Include="BD\AnagraficaSpeseCoattiveBD.cs" />
+    <Compile Include="BD\AnagraficaSportelloBD.cs" />
+    <Compile Include="BD\AnagraficaStampatoriBD.cs" />
+    <Compile Include="BD\AnagraficaStatoUnitaContribuzioneBD.cs" />
+    <Compile Include="BD\AnagraficaStatoAvvPagBD.cs" />
+    <Compile Include="BD\AnagraficaStatoContatoreBD.cs" />
+    <Compile Include="BD\AnagraficaStatoContribuenteBD.cs" />
+    <Compile Include="BD\AnagraficaStatoDocBD.cs" />
+    <Compile Include="BD\AnagraficaStatoInterventoBD.cs" />
+    <Compile Include="BD\AnagraficaStatoLettureBD.cs" />
+    <Compile Include="BD\AnagraficaStruttureAziendaliBD.cs" />
+    <Compile Include="BD\AnagraficaTipoAgevolazioneBD.cs" />
+    <Compile Include="BD\AnagraficaTipoAvvPagBD.cs" />
+    <Compile Include="BD\AnagraficaTipoCcBD.cs" />
+    <Compile Include="BD\AnagraficaTipoCicloBD.cs" />
+    <Compile Include="BD\AnagraficaTipoContribuenteBD.cs" />
+    <Compile Include="BD\AnagraficaTipoDirittoBD.cs" />
+    <Compile Include="BD\AnagraficaTipoDocumentoBD.cs" />
+    <Compile Include="BD\AnagraficaTipoEsitoNotificaBD.cs" />
+    <Compile Include="BD\AnagraficaTipoLetturaBD.cs" />
+    <Compile Include="BD\AnagraficaTipoNotaBD.cs" />
+    <Compile Include="BD\AnagraficaTipoNucleoImmobiliareBD.cs" />
+    <Compile Include="BD\AnagraficaTipoPagamentoBD.cs" />
+    <Compile Include="BD\AnagraficaTipoParentelaBD.cs" />
+    <Compile Include="BD\AnagraficaTipoPianiEdificioBD.cs" />
+    <Compile Include="BD\AnagraficaTipoRecordBD.cs" />
+    <Compile Include="BD\AnagraficaTipoRelazioneBD.cs" />
+    <Compile Include="BD\AnagraficaTipoServiziBD.cs" />
+    <Compile Include="BD\AnagraficaTipoSpedizioneNotificaBD.cs" />
+    <Compile Include="BD\AnagraficaTipoUdienzaBD.cs" />
+    <Compile Include="BD\AnagraficaTipoVeicoloBD.cs" />
+    <Compile Include="BD\AnagraficaUtilizzoBD.cs" />
+    <Compile Include="BD\AnagraficaVeicoliMarcheBD.cs" />
+    <Compile Include="BD\AnagraficaVeicoliTipoSerieBD.cs" />
+    <Compile Include="BD\JoinDocumentiFascicolo.cs" />
+    <Compile Include="BD\JoinRateAvvPagMovPagBD.cs" />
+    <Compile Include="BD\JoinTabDocInputTabDocOutputBD.cs" />
+    <Compile Include="BD\TabAnagraficheDaRivestireBD.cs" />
+    <Compile Include="BD\TabCodiceTributoBD.cs" />
+    <Compile Include="BD\TabContenitoriBD.cs" />
+    <Compile Include="BD\TabDocOutputBD.cs" />
+    <Compile Include="BD\TabEsitoAciBd.cs" />
+    <Compile Include="BD\TabEsitoAciMessaggiBD.cs" />
+    <Compile Include="BD\TabEstrattoContoBD.cs" />
+    <Compile Include="BD\TabF24A1BD.cs" />
+    <Compile Include="BD\TabF24G1BD.cs" />
+    <Compile Include="BD\TabF24G2BD.cs" />
+    <Compile Include="BD\TabF24G3BD.cs" />
+    <Compile Include="BD\TabF24G4BD.cs" />
+    <Compile Include="BD\TabF24G5BD.cs" />
+    <Compile Include="BD\TabF24G9BD.cs" />
+    <Compile Include="BD\TabF24TipoAARegioneBD.cs" />
+    <Compile Include="BD\TabF24TipoR5RegioneBD.cs" />
+    <Compile Include="BD\TabF24TipoR4RegioneBD.cs" />
+    <Compile Include="BD\TabF24TipoR2RegioneBD.cs" />
+    <Compile Include="BD\TabF24TipoR3RegioneBD.cs" />
+    <Compile Include="BD\TabF24TipoR1RegioneBD.cs" />
+    <Compile Include="BD\TabF24TipoZZRegioneBD.cs" />
+    <Compile Include="BD\TabFileEsitiNotificheBD.cs" />
+    <Compile Include="BD\TabFirmaGigitale.cs" />
+    <Compile Include="BD\TabIpotecheBD.cs" />
+    <Compile Include="BD\TabModalitaRateAvvPagView.cs" />
+    <Compile Include="BD\TabModalitaSpednotDocOutputBD.cs" />
+    <Compile Include="BD\TabModelliFiscaliBD.cs" />
+    <Compile Include="BD\TabProcureBD.cs" />
+    <Compile Include="BD\TabGeneraleUdienzeBD.cs" />
+    <Compile Include="BD\TabReferentiDaRivestireBD.cs" />
+    <Compile Include="BD\TabRendicontoNewBD.cs" />
+    <Compile Include="BD\TabRichiesteRivestizioneListeBD.cs" />
+    <Compile Include="BD\TabRimborsiBD.cs" />
+    <Compile Include="BD\TabRisposteRivestizioneListeBD.cs" />
+    <Compile Include="BD\TabRivestizioneAnagraficaBD.cs" />
+    <Compile Include="BD\TabSelezioneReportBD.cs" />
+    <Compile Include="BD\TabSelezioneReportViewBD.cs" />
+    <Compile Include="BD\TabSentenzeBD.cs" />
+    <Compile Include="BD\TabFascePignorabilitaBeniBD.cs" />
+    <Compile Include="BD\TabIdpSpidBD.cs" />
+    <Compile Include="BD\TabVincoliBeniPignoratiBD.cs" />
+    <Compile Include="BD\AnagraficaVociContribuzioneBD.cs" />
+    <Compile Include="BD\CalcoloVociContribuzioneBD.cs" />
+    <Compile Include="BD\EntityBD.cs" />
+    <Compile Include="BD\EntityCacheBD.cs" />
+    <Compile Include="BD\JoinApplicazioniLinkBD.cs" />
+    <Compile Include="BD\JoinApplicazioniSecondarieBD.cs" />
+    <Compile Include="BD\JoinAvvPagFattEmissioneSoggettoDebitoreBD.cs" />
+    <Compile Include="BD\JoinAvvPagMovPagBD.cs" />
+    <Compile Include="BD\JoinAvvPagMovPagFattEmissioneBD.cs" />
+    <Compile Include="BD\JoinAvvPagReferenteBD.cs" />
+    <Compile Include="BD\JoinAvvPagSoggettoDebitoreBD.cs" />
+    <Compile Include="BD\JoinCausaleDocNewBD.cs" />
+    <Compile Include="BD\JoinContoEconomicoTipoVoceContribuzioneBD.cs" />
+    <Compile Include="BD\JoinControlliAvvpagFattEmissioneBD.cs" />
+    <Compile Include="BD\JoinDenunceDocInputBD.cs" />
+    <Compile Include="BD\JoinDocInputBeniAvvPagBD.cs" />
+    <Compile Include="BD\JoinDocInputNotAvvPagBD.cs" />
+    <Compile Include="BD\JoinDocInputPagAvvPagBD.cs" />
+    <Compile Include="BD\JoinDocInputRigaAvvpagBD.cs" />
+    <Compile Include="BD\JoinDocumentiContribRefBD.cs" />
+    <Compile Include="BD\JoinDocumentiDomiciliazioniBD.cs" />
+    <Compile Include="BD\JoinDocumentiFascicoloAvvpagAllegatiBD.cs" />
+    <Compile Include="BD\JoinDocumentiPraticheBD.cs" />
+    <Compile Include="BD\JoinDocumentiTabTerzoDebitoreBD.cs" />
+    <Compile Include="BD\JoinEnteEnteGestitoBD.cs" />
+    <Compile Include="BD\JoinDocumentiContribuentiBD.cs" />
+    <Compile Include="BD\JoinDocumentiReferentiBD.cs" />
+    <Compile Include="BD\JoinEnteStrutturaTipoAvvPagBD.cs" />
+    <Compile Include="BD\JoinEnteStruttureBD.cs" />
+    <Compile Include="BD\JoinEntrateMacroentrateBD.cs" />
+    <Compile Include="BD\JoinFileBD.cs" />
+    <Compile Include="BD\JoinIngfisSupervisioneBD.cs" />
+    <Compile Include="BD\JoinIspezioniIngiunzioniBD.cs" />
+    <Compile Include="BD\JoinListaVociContribuzioneBD.cs" />
+    <Compile Include="BD\JoinLstEmissioneLstSpedNotBD.cs" />
+    <Compile Include="BD\JoinMovpagRataAvvPagBD.cs" />
+    <Compile Include="BD\JoinOggContatoreBD.cs" />
+    <Compile Include="BD\JoinOggettiImmobiliBD.cs" />
+    <Compile Include="BD\JoinOggettoAgevolazioniBD.cs" />
+    <Compile Include="BD\JoinOggettoDatiMetriciBD.cs" />
+    <Compile Include="BD\JoinProcConcorsualiCreditiPrivilChiroBD.cs" />
+    <Compile Include="BD\JoinProprietariImmobiliCoattivoBD.cs" />
+    <Compile Include="BD\JoinReferenteContribuenteAvvPagBD.cs" />
+    <Compile Include="BD\JoinReferenteContribuenteBD.cs" />
+    <Compile Include="BD\JoinRisorseSerComuniBD.cs" />
+    <Compile Include="BD\JoinRisorseStruttureBD.cs" />
+    <Compile Include="BD\JoinSezioniStampaTipoAvvPagBD.cs" />
+    <Compile Include="BD\JoinTabAvvPagTabDocInputBD.cs" />
+    <Compile Include="BD\JoinTabCcRiscossTipoAvvPagBD.cs" />
+    <Compile Include="BD\JoinTabIspezioniCoattivoTipoIspezioneBD.cs" />
+    <Compile Include="BD\JoinTabSupervisioneProfiliBD.cs" />
+    <Compile Include="BD\JoinTipoAvvpagServiziBD.cs" />
+    <Compile Include="BD\JoinTipoAvvpagVociContribNewBD.cs" />
+    <Compile Include="BD\JoinTipoListaTipoAvvpagBD.cs" />
+    <Compile Include="BD\JoinTipoStatoReferenzaBD.cs" />
+    <Compile Include="BD\JoinTipoVociContribuzionePrioritaRiscossioneBD.cs" />
+    <Compile Include="BD\RabRataAvvPagFattEmissioneBD.cs" />
+    <Compile Include="BD\SerCodiciCatastaliBD.cs" />
+    <Compile Include="BD\SerStatiEsteriNewBD.cs" />
+    <Compile Include="BD\TabAgevolazioniVerificaBD.cs" />
+    <Compile Include="BD\TabAllegatiDigitaliBD.cs" />
+    <Compile Include="BD\TabAssegnazioneRilevazioniBD.cs" />
+    <Compile Include="BD\TabAvvisiAnomaliListeCaricoBD.cs" />
+    <Compile Include="BD\TabCalcoloTipoVociContribuzioneBD.cs" />
+    <Compile Include="BD\TabCategoriaTariffariaCosapBD.cs" />
+    <Compile Include="BD\TabCategoriaTariffariaImmobiliBD.cs" />
+    <Compile Include="BD\TabCitazioniBD.cs" />
+    <Compile Include="BD\TabCo1142ElencoDomiciliFiscaliBD.cs" />
+    <Compile Include="BD\TabCo1142PfBD.cs" />
+    <Compile Include="BD\TabContatoreBD.cs" />
+    <Compile Include="BD\TabContribuenteStoNewBD.cs" />
+    <Compile Include="BD\TabControlliQualitaListeCaricoBD.cs" />
+    <Compile Include="BD\TabDatiMetriciCatastaliBD.cs" />
+    <Compile Include="BD\TabDatiMetriciDichiaratiBD.cs" />
+    <Compile Include="BD\TabDelibereDetermineTariffarieBD.cs" />
+    <Compile Include="BD\TabDetRiscossoPeriodoListaBD.cs" />
+    <Compile Include="BD\TabDocumentiBD.cs" />
+    <Compile Include="BD\TabEnteServiziBD.cs" />
+    <Compile Include="BD\TabFabbricatiBD.cs" />
+    <Compile Include="BD\TabFascicoloAvvPagAllegatiBD.cs" />
+    <Compile Include="BD\TabFascicoloBD.cs" />
+    <Compile Include="BD\TabFileTrasmessiBD.cs" />
+    <Compile Include="BD\TabImmobiliCoattivoBD.cs" />
+    <Compile Include="BD\TabIngiunzioniIspezioneBD.cs" />
+    <Compile Include="BD\TabIspezioniCoattivoNewBD.cs" />
+    <Compile Include="BD\TabAbilitazioneBD.cs" />
+    <Compile Include="BD\TabAgevolazioniBD.cs" />
+    <Compile Include="BD\TabAreeBD.cs" />
+    <Compile Include="BD\TabAutoritaGiudiziariaBD.cs" />
+    <Compile Include="BD\TabCategoriaTariffariaBD.cs" />
+    <Compile Include="BD\TabCategoriaTariffariaIciBD.cs" />
+    <Compile Include="BD\TabCategoriaTariffariaImuBD.cs" />
+    <Compile Include="BD\TabCategoriaTariffariaTasiBD.cs" />
+    <Compile Include="BD\TabCategoriaTariffariaZTLBD.cs" />
+    <Compile Include="BD\TabCategorieFabbricatiBD.cs" />
+    <Compile Include="BD\TabCausaliEstrContoBD.cs" />
+    <Compile Include="BD\TabCcRiscossioneBD.cs" />
+    <Compile Include="BD\TabCcRiversamentoBD.cs" />
+    <Compile Include="BD\TabCcTesoreriaBD.cs" />
+    <Compile Include="BD\TabCicliEnteBD.cs" />
+    <Compile Include="BD\TabCicliEnteDettaglioBD.cs" />
+    <Compile Include="BD\TabConsuntivoDettListaBD.cs" />
+    <Compile Include="BD\TabConsuntivoListaBD.cs" />
+    <Compile Include="BD\TabDomandeSegreteBD.cs" />
+    <Compile Include="BD\TabDomicilioBD.cs" />
+    <Compile Include="BD\TabEsecuzioneApplicazioniBD.cs" />
+    <Compile Include="BD\TabInputconsuntiviRendicontiBD.cs" />
+    <Compile Include="BD\TabIterSupervisioneAttiCoaBD.cs" />
+    <Compile Include="BD\TabListaSpedNotificheBD.cs" />
+    <Compile Include="BD\TabModalitaRateAvvPagBD.cs" />
+    <Compile Include="BD\TabJoinAvvcoaIngfisV2BD.cs" />
+    <Compile Include="BD\TabLettureBD.cs" />
+    <Compile Include="BD\TabListaLettureBD.cs" />
+    <Compile Include="BD\TabLocazioneContrattoBD.cs" />
+    <Compile Include="BD\TabLocazioneImmobiliBD.cs" />
+    <Compile Include="BD\TabLocazioneSoggettoBD.cs" />
+    <Compile Include="BD\TabLogOperatoreBD.cs" />
+    <Compile Include="BD\TabLogOperazioniOperatoreBD.cs" />
+    <Compile Include="BD\TabLogOperazioniUtenteBD.cs" />
+    <Compile Include="BD\TabLogUtenteBD.cs" />
+    <Compile Include="BD\TabMacroentrateBD.cs" />
+    <Compile Include="BD\TabMarcaVeicoloBD.cs" />
+    <Compile Include="BD\TabModelloVeicoloBD.cs" />
+    <Compile Include="BD\TabMovPagFattEmissioneBD.cs" />
+    <Compile Include="BD\TabMultilanguageBD.cs" />
+    <Compile Include="BD\TabNotificatoreBD.cs" />
+    <Compile Include="BD\TabOggettiContribuzioneVerificaBD.cs" />
+    <Compile Include="BD\TabPecConfigurazioniBD.cs" />
+    <Compile Include="BD\TabPianificazioneCicliBD.cs" />
+    <Compile Include="BD\TabPianificazioneCicliDettaglioBD.cs" />
+    <Compile Include="BD\TabPianificazioneCicliEntiGestitiBD.cs" />
+    <Compile Include="BD\TabPianificazioneCicliInputEmissioneBD.cs" />
+    <Compile Include="BD\TabPianificazioneCicliInputImportazioneFileBD.cs" />
+    <Compile Include="BD\TabPianificazioneCicliInputRendicontazioneBD.cs" />
+    <Compile Include="BD\TabPianoContiEconomiciBD.cs" />
+    <Compile Include="BD\TabPostazioniBD.cs" />
+    <Compile Include="BD\TabPosteArcostradaleBD.cs" />
+    <Compile Include="BD\TabPosteComuneBD.cs" />
+    <Compile Include="BD\TabPosteStradaBD.cs" />
+    <Compile Include="BD\TabProcedureConcorsualiBD.cs" />
+    <Compile Include="BD\TabProfiloContribuenteNewBD.cs" />
+    <Compile Include="BD\TabProgAvvPagBD.cs" />
+    <Compile Include="BD\TabProgDocBD.cs" />
+    <Compile Include="BD\TabProgListaBD.cs" />
+    <Compile Include="BD\TabProgressiviFormalitaAciBD.cs" />
+    <Compile Include="BD\TabQualitaTerrenoBD.cs" />
+    <Compile Include="BD\TabQuantitaSpedizione.cs" />
+    <Compile Include="BD\TabQuietanzeBD.cs" />
+    <Compile Include="BD\TabRateizzazioniBD.cs" />
+    <Compile Include="BD\TabReferenteStoBD.cs" />
+    <Compile Include="BD\TabRegistroAssegnazionePraticheBD.cs" />
+    <Compile Include="BD\TabRegistroGiornalieroRiscossioniBD.cs" />
+    <Compile Include="BD\TabRegistroUfficialiRiscossioneBD.cs" />
+    <Compile Include="BD\TabRicorsiBD.cs" />
+    <Compile Include="BD\TabRilevatoriBD.cs" />
+    <Compile Include="BD\TabRilevazioneAcquedotto.cs" />
+    <Compile Include="BD\TabRilevazioneAcquedottoDettaglio.cs" />
+    <Compile Include="BD\TabRilevazioneAcquedottoSmartBD.cs" />
+    <Compile Include="BD\TabRiscossoPeriodoListaBD.cs" />
+    <Compile Include="BD\TabRiversamentiContrattualiBD.cs" />
+    <Compile Include="BD\TabSegnalazioneAnomalieElaborazioneBD.cs" />
+    <Compile Include="BD\TabSpedNotBD.cs" />
+    <Compile Include="BD\TabSpedNotFattEmissioneBD.cs" />
+    <Compile Include="BD\TabStoricoAnagrafeBD.cs" />
+    <Compile Include="BD\TabSupervisioneFinaleV2BD.cs" />
+    <Compile Include="BD\TabTerreniBD.cs" />
+    <Compile Include="BD\TabTerzoBD.cs" />
+    <Compile Include="BD\TabTerzoDebitoreBD.cs" />
+    <Compile Include="BD\TabTerzoStoBD.cs" />
+    <Compile Include="BD\TabTipoAttoUfficialiRiscossioneBD.cs" />
+    <Compile Include="BD\TabTipoBeneBD.cs" />
+    <Compile Include="BD\TabTipoDirittoBD.cs" />
+    <Compile Include="BD\TabTipoDocEntrateBD.cs" />
+    <Compile Include="BD\TabTipoInputOutputFunzioneBD.cs" />
+    <Compile Include="BD\TabTipoIspezioneBD.cs" />
+    <Compile Include="BD\TabTipoListaBD.cs" />
+    <Compile Include="BD\TabTipoOggettoBD.cs" />
+    <Compile Include="BD\TabTipoPagamentoBD.cs" />
+    <Compile Include="BD\TabTipoServizioEntrataCcBD.cs" />
+    <Compile Include="BD\TabTipoToponimoBD.cs" />
+    <Compile Include="BD\TabTipoVoceContribuzioneBD.cs" />
+    <Compile Include="BD\TabTitolaritaBD.cs" />
+    <Compile Include="BD\TabTributiMinisterialiBD.cs" />
+    <Compile Include="BD\TabUtentiBD.cs" />
+    <Compile Include="BD\SerComuniBD.cs" />
+    <Compile Include="BD\SerProvinceBD.cs" />
+    <Compile Include="BD\SerRegioniBD.cs" />
+    <Compile Include="BD\TabAnagrafeBD.cs" />
+    <Compile Include="BD\TabApplicazioniBD.cs" />
+    <Compile Include="BD\TabAvvPagBD.cs" />
+    <Compile Include="BD\TabAvvPagFattEmissioneBD.cs" />
+    <Compile Include="BD\TabAvvPagFattRettificaBD.cs" />
+    <Compile Include="BD\TabBollPagBD.cs" />
+    <Compile Include="BD\TabContribuenteBD.cs" />
+    <Compile Include="BD\TabContribuzioneBD.cs" />
+    <Compile Include="BD\TabDenunceContrattiBD.cs" />
+    <Compile Include="BD\TabDettMovPagBD.cs" />
+    <Compile Include="BD\TabDettRiscossioneBD.cs" />
+    <Compile Include="BD\TabDocInputBD.cs" />
+    <Compile Include="BD\TabFunzionalitaBD.cs" />
+    <Compile Include="BD\TabInterventoBD.cs" />
+    <Compile Include="BD\TabIspezioniCoattivoV2BD.cs" />
+    <Compile Include="BD\TabListeBD.cs" />
+    <Compile Include="BD\TabMovPagBD.cs" />
+    <Compile Include="BD\TabMovPagIciBD.cs" />
+    <Compile Include="BD\TabOggettiBD.cs" />
+    <Compile Include="BD\TabOggettiContribuzioneBD.cs" />
+    <Compile Include="BD\TabPagineBD.cs" />
+    <Compile Include="BD\TabParametriPortaleBD.cs" />
+    <Compile Include="BD\TabPersoneBD.cs" />
+    <Compile Include="BD\TabProcedureBD.cs" />
+    <Compile Include="BD\TabRataAvvPagBD.cs" />
+    <Compile Include="BD\TabReferenteBD.cs" />
+    <Compile Include="BD\TabTipoEnteBD.cs" />
+    <Compile Include="BD\TabToponimiBD.cs" />
+    <Compile Include="BD\TabUnitaContribuzioneBD.cs" />
+    <Compile Include="BD\TabUnitaContribuzioneFattEmissioneBD.cs" />
+    <Compile Include="BD\TabUnitaContribuzioneFattRettificaBD.cs" />
+    <Compile Include="BD\TabValidazioneApprovazioneListeBD.cs" />
+    <Compile Include="BD\TabValidazioneApprovazioneListeSpedizioneBD.cs" />
+    <Compile Include="BD\TabVeicoliBD.cs" />
+    <Compile Include="BD\TabVeicoliVincoliBD.cs" />
+    <Compile Include="BD\TabVeicoliZTLBD.cs" />
+    <Compile Include="BD\TabVociContrattualiNewBD.cs" />
+    <Compile Include="BD\TabZoneBD.cs" />
+    <Compile Include="BD\VerificaStatoIspezioniCoattivoBD.cs" />
+    <Compile Include="DBInfos.cs" />
+    <Compile Include="EnteContextFactory.cs" />
+    <Compile Include="Exceptions\CollegatoVariatoCalcException.cs" />
+    <Compile Include="Helper\CFHelper.cs" />
+    <Compile Include="Helper\CFToDatiNascita.cs" />
+    <Compile Include="Helper\DbHelper.cs" />
+    <Compile Include="Helper\FileBDRWInfoHelper.cs" />
+    <Compile Include="Helper\FonteHelper.cs" />
+    <Compile Include="Helper\JoinTabSupervisioneProfiliCfg.cs" />
+    <Compile Include="Helper\TabContribuentehelper.cs" />
+    <Compile Include="BD\JoinTipoAvvpagVociContribTrasmesseBD.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryIterator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Publisoftware.Data.SqlServer\Publisoftware.Data.SqlServer.csproj">
+      <Project>{76b00f9d-e3c2-41da-b5e8-401a8df6eadf}</Project>
+      <Name>Publisoftware.Data.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Publisoftware.Utilities\Publisoftware.Utilities.csproj">
+      <Project>{60085658-6957-4615-b89c-d1ab0a6a1f5a}</Project>
+      <Name>Publisoftware.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Publisoftware.Utility.Log\Publisoftware.Utility.Log.csproj">
+      <Project>{5ac27392-e99e-4797-b68b-a866c41f48bf}</Project>
+      <Name>Publisoftware.Utility.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Publisoftware.Utility\Publisoftware.Utility.csproj">
+      <Project>{465616d6-144e-4911-8d26-427cbe713a4b}</Project>
+      <Name>Publisoftware.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Documentazione\DiagrammiClassi.docx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UpdateMassivo.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Questo progetto fa riferimento a uno o più pacchetti NuGet che non sono presenti sul computer in uso. Abilitare il ripristino dei pacchetti NuGet per scaricarli. Per ulteriori informazioni, visitare http://go.microsoft.com/fwlink/?LinkID=322105. Il file mancante è {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

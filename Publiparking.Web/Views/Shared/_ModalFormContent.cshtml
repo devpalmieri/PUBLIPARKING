@@ -1,0 +1,62 @@
+﻿@* Here is the content for the modal*@
+@model Publiparking.Web.Models.CloseModal
+@{ var classButton = "btn btn-success";
+    var classHeader = "alert-success"; }
+@if (Model.MessageType == "SUCCESS")
+{
+    classButton = "btn btn-success";
+    classHeader = "alert-success";
+}
+else if (Model.MessageType == "ERROR")
+{
+    classButton = "btn btn-danger";
+    classHeader = "alert-danger";
+}
+else if (Model.MessageType == "WARNING")
+{
+    classButton = "btn btn-warning";
+    classHeader = "alert-warning";
+}
+else
+{
+    classButton = "btn btn-info";
+    classHeader = "alert-info";
+}
+<div id="target">
+    <div class="modal-header @classHeader">
+        <h4 class="modal-title">Model.Title</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+    </div>
+    <form asp-action="PostModal" asp-controller="HomeUtente" data-ajax="true" data-ajax-method="POST" data-ajax-mode="REPLACE-WITH" data-ajax-update="#target">
+        <div class="modal-body">
+            <div class="form-horizontal">
+                <span style="word-wrap: break-word"> @Html.Raw(Model.Message)</span>
+                @Html.Raw(Model.Message)
+            </div>
+        </div>
+        @if (Model.SetClose)
+        {
+<div class="modal-footer">
+    <button type="button" class='@classButton' data-dismiss="modal">OK</button>
+    @*@if (Model.MessageType == "SUCCESS")
+            {
+        <button type="button" class="btn btn-success" data-dismiss="modal">OK</button>}
+            @if (Model.MessageType == "ERROR")
+            {
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Chiudi</button>}
+            @if (Model.MessageType == "WARNING")
+            {
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Chiudi</button>}*@
+</div>}
+        @if (Model.SetManageData)
+        {
+<div class="modal-footer">
+    <button type="submit" class="btn btn-success" data-backdrop="false"></button>
+    <button type="button" class="btn btn-default" data-dismiss="modal"></button>
+</div>}
+
+    </form>
+</div>

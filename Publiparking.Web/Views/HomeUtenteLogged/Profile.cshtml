@@ -1,0 +1,68 @@
+﻿@model Publiparking.Web.Models.Account.UserProfileViewModel
+
+@{
+    ViewData["Title"] = "Profilo";
+    ViewBag.Title = "Profilo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="main" class="container-fluid body-content">
+    <div class="col-xs-12 col-md-7">
+        <div class="box box-default box-min-height">
+            <div class="box-header with-border">
+                <h3 class="box-title">Profilo Utente: dati di accesso</h3>
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label>Cod. Utente</label>
+                            <input class="form-control text_35" asp-for="UserId" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>E-Mail</label>
+                            <input class="form-control" asp-for="UserName" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" asp-for="Password" readonly="readonly">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Attivo</label>
+                            @if (Model.Attivo.ToUpper() == "ATTIVO")
+                            {
+                                <input class="form-control" style="background-color:darkgreen; color:#FFF" asp-for="Attivo">
+                            }
+                            else
+                            {
+                                <input class="form-control" style="background-color:red; color:#FFF" asp-for="Attivo">
+                            }
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label></label>
+                            <a asp-controller="HomeUtenteLogged" asp-action="ProfileAnag" asp-route-id="@ViewBag.encryptedUser"><h5>Dati Anagrafici</h5></a>
+                            @*<<<<<<<<<<<SECONDO MODO PER CRYPTARE icon PARAMETRI>>>>>>>>>>>>
+                                <a asp-controller="HomeUtenteLogged" asp-action="ProfileAnagCrypto" asp-route-id="@ViewBag.encryptedUser"><h5>Dati Anagrafici</h5></a>*@
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
