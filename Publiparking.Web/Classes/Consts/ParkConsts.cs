@@ -9,7 +9,7 @@ namespace Publiparking.Web.Classes.Consts
     {
         public const int DELAY_TIME = 1000;
         /// <summary>
-        /// Messaggio di tipo Success per la modale
+        /// Messaggio di tipo Success per la modale test test
         /// </summary>
         public const string MODAL_TYPE_SUCCESS = "SUCCESS";
 
